@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Your Before/After Photos - Aladdin General</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #faf9f8 0%, #f5f3f0 100%);
+      margin: 0;
+      padding: 40px 20px;
+      color: #1e2b2c;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 40px;
+      padding: 40px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+      border: 1px solid #f0e0d6;
+    }
+    h1 {
+      color: #0a4b4f;
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+    .upload-area {
+      border: 3px dashed #c75c2f;
+      background: #fff9f5;
+      border-radius: 30px;
+      padding: 50px 20px;
+      text-align: center;
+      margin: 30px 0;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+    .upload-area:hover {
+      background: #fff0e8;
+      border-color: #0a4b4f;
+    }
+    .upload-area i {
+      font-size: 64px;
+      color: #c75c2f;
+      margin-bottom: 15px;
+    }
+    .btn {
+      display: inline-block;
+      background: #c75c2f;
+      color: white;
+      font-weight: 600;
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin: 10px 5px;
+    }
+    .btn:hover {
+      background: #a04426;
+      transform: translateY(-2px);
+    }
+    .btn-secondary {
+      background: #0a4b4f;
+    }
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .photo-card {
+      background: #f8f4f0;
+      border-radius: 20px;
+      padding: 15px;
+      text-align: center;
+      position: relative;
+    }
+    .photo-card i {
+      font-size: 48px;
+      color: #0a4b4f;
+    }
+    .delete-btn {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      background: #c75c2f;
+      color: white;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .note {
+      background: #fef2e6;
+      border-radius: 20px;
+      padding: 20px;
+      margin-top: 30px;
+      border-left: 5px solid #c75c2f;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1><i class="fas fa-camera" style="color: #c75c2f;"></i> Your Before/After Gallery</h1>
+    <p style="font-size: 1.2rem; color: #3a4e5a;">Drag & drop your real job photos here to display them on your website.</p>
+    
+    <!-- UPLOAD AREA -->
+    <div class="upload-area" id="uploadArea" onclick="document.getElementById('fileInput').click()">
+      <i class="fas fa-cloud-upload-alt"></i>
+      <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Drag & Drop Your Photos</h3>
+      <p style="color: #666; margin-bottom: 20px;">or click to browse</p>
+      <span class="btn">📸 Select Photos</span>
+      <input type="file" id="fileInput" multiple accept="image/*" style="display: none;" onchange="handleFiles(this.files)">
+    </div>
+    
+    <!-- CURRENT PHOTOS -->
+    <h2 style="color: #0a4b4f; margin-top: 40px;"><i class="fas fa-images"></i> Your Gallery</h2>
+    <div class="photo-grid" id="photoGrid">
+      <!-- Photos will appear here -->
+    </div>
+    
+    <!-- INSTRUCTIONS -->
+    <div class="note">
+      <h3 style="color: #0a4b4f; margin-bottom: 10px;"><i class="fas fa-info-circle"></i> How to add photos to your live website:</h3>
+      <ol style="margin-left: 20px; color: #3a4e5a; line-height: 1.6;">
+        <li><strong>Upload your photos here</strong> — they will appear on this page</li>
+        <li><strong>Copy the code below</strong> and paste it into your index.html file</li>
+        <li><strong>Your before/after photos will display</strong> on your live site</li>
+      </ol>
+    </div>
+    
+    <!-- GENERATED CODE -->
+    <div style="background: #1e2b2c; color: white; border-radius: 20px; padding: 25px; margin-top: 30px;">
+      <h3 style="color: #f3b34c; margin-bottom: 15px;"><i class="fas fa-code"></i> Copy this code to your index.html:</h3>
+      <pre id="generatedCode" style="background: #2a3a3b; padding: 20px; border-radius: 15px; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word; color: #e6e6e6; font-size: 0.9rem;">&lt;!-- 📸 YOUR BEFORE/AFTER GALLERY --&gt;
+&lt;div style="margin: 60px 0 40px;"&gt;
+  &lt;h2 class="section-title"&gt;&lt;i class="fas fa-camera"&gt;&lt;/i&gt; Real Calgary Transformations&lt;/h2&gt;
+  &lt;div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;"&gt;
+    &lt;div style="background: white; border-radius: 30px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.05); padding: 20px; text-align: center;"&gt;
+      &lt;i class="fas fa-images" style="font-size: 48px; color: #c75c2f; margin-bottom: 15px;"&gt;&lt;/i&gt;
+      &lt;p&gt;Upload your before/after photos in the &lt;strong&gt;upload-placeholder.html&lt;/strong&gt; page&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+    </div>
+    
+    <div style="text-align: center; margin-top: 30px;">
+      <a href="index.html" class="btn">⬅️ Back to Website</a>
+      <a href="#" class="btn btn-secondary" onclick="copyCode()">📋 Copy Gallery Code</a>
+    </div>
+  </div>
+
+  <script>
+    // Store uploaded photos
+    let uploadedPhotos = JSON.parse(localStorage.getItem('aladdinGallery') || '[]');
+    
+    // Display existing photos
+    function displayPhotos() {
+      const grid = document.getElementById('photoGrid');
+      grid.innerHTML = '';
+      
+      if (uploadedPhotos.length === 0) {
+        grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #666;"><i class="fas fa-images" style="font-size: 48px; opacity: 0.3;"></i><p style="margin-top: 15px;">No photos yet. Drag & drop to start building your gallery!</p></div>';
+      } else {
+        uploadedPhotos.forEach((photo, index) => {
+          const card = document.createElement('div');
+          card.className = 'photo-card';
+          card.innerHTML = `
+            <div class="delete-btn" onclick="deletePhoto(${index})"><i class="fas fa-times"></i></div>
+            <i class="fas fa-image" style="font-size: 48px; color: #0a4b4f;"></i>
+            <p style="font-size: 0.8rem; color: #666; margin-top: 10px; word-break: break-all;">${photo.name}</p>
+          `;
+          grid.appendChild(card);
+        });
+      }
+    }
+    
+    // Handle file upload
+    window.handleFiles = function(files) {
+      for (let file of files) {
+        uploadedPhotos.push({
+          id: Date.now() + Math.random(),
+          name: file.name,
+          size: file.size,
+          type: file.type
+        });
+      }
+      localStorage.setItem('aladdinGallery', JSON.stringify(uploadedPhotos));
+      displayPhotos();
+    };
+    
+    // Delete photo
+    window.deletePhoto = function(index) {
+      uploadedPhotos.splice(index, 1);
+      localStorage.setItem('aladdinGallery', JSON.stringify(uploadedPhotos));
+      displayPhotos();
+    };
+    
+    // Copy code
+    window.copyCode = function() {
+      const code = document.getElementById('generatedCode').innerText;
+      navigator.clipboard.writeText(code);
+      alert('✅ Gallery code copied! Paste it into your index.html file.');
+    };
+    
+    // Initialize
+    displayPhotos();
+  </script>
+</body>
+</html>
