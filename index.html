@@ -3,412 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>ALADDIN GENERAL SERVICE INC · Junk & Handyman</title>
+  <title>ALADDIN GENERAL SERVICE INC · Estate & Property Clean-Out Specialists Calgary</title>
   <!-- Google Font & simple icons via Font Awesome 6 (free) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    * {
-    <link rel="stylesheet" href="css/style.css">
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #ffffff;
-      color: #1e1e2f;
-      line-height: 1.5;
-    }
-
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* header / navigation */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 0;
-      flex-wrap: wrap;
-      border-bottom: 2px solid #fde7d3;
-    }
-
-    .logo-area {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .logo-icon {
-      background-color: #0a4b4f;
-      color: white;
-      width: 50px;
-      height: 50px;
-      border-radius: 12px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 26px;
-      transform: rotate(-3deg);
-      box-shadow: 6px 6px 0 #f3b34c;
-    }
-
-    .company-name {
-      font-weight: 700;
-      font-size: 1.6rem;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
-    }
-    .company-name span {
-      display: block;
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: #0a4b4f;
-      letter-spacing: 1.5px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 36px;
-      font-weight: 600;
-    }
-    .nav-links a {
-      text-decoration: none;
-      color: #2d3e50;
-      transition: color 0.2s;
-      font-size: 1rem;
-    }
-    .nav-links a:hover {
-      color: #c75c2f;
-    }
-
-    /* buttons & cta */
-    .btn {
-      display: inline-block;
-      background-color: #c75c2f;
-      color: white;
-      font-weight: 600;
-      padding: 12px 28px;
-      border-radius: 40px;
-      text-decoration: none;
-      border: none;
-      transition: all 0.25s;
-      box-shadow: 0 6px 12px rgba(199, 92, 47, 0.2);
-      font-size: 1rem;
-    }
-    .btn:hover {
-      background-color: #a04426;
-      transform: scale(1.02);
-      box-shadow: 0 10px 18px rgba(167, 76, 38, 0.25);
-    }
-    .btn-secondary {
-      background-color: #0a4b4f;
-      box-shadow: 0 6px 12px rgba(10, 75, 79, 0.15);
-    }
-    .btn-secondary:hover {
-      background-color: #0c5e63;
-    }
-
-    /* hero */
-    .hero {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      padding: 48px 0 32px;
-      gap: 40px;
-    }
-
-    .hero-text {
-      flex: 1 1 350px;
-    }
-    .hero-text h1 {
-      font-size: 3.2rem;
-      font-weight: 800;
-      line-height: 1.1;
-      letter-spacing: -0.03em;
-      color: #1e2b2c;
-      margin-bottom: 20px;
-    }
-    .hero-highlight {
-      background: linear-gradient(145deg, #fdefd4, #ffe7d4);
-      padding: 0 8px;
-      border-radius: 8px;
-    }
-    .hero-sub {
-      font-size: 1.25rem;
-      color: #3a4e5a;
-      margin-bottom: 32px;
-      max-width: 550px;
-    }
-    .hero-cta {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .hero-image {
-      flex: 0 0 300px;
-      background: linear-gradient(135deg, #f6e9d7, #fadcc7);
-      border-radius: 40px 40px 40px 0;
-      padding: 25px 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      box-shadow: 25px 25px 0 #0a4b4f15;
-    }
-    .service-icon-card {
-      background: white;
-      border-radius: 24px;
-      padding: 18px 12px;
-      width: 110px;
-      text-align: center;
-      box-shadow: 0 8px 0 #e0c3a1;
-    }
-    .service-icon-card i {
-      font-size: 38px;
-      color: #0a4b4f;
-      margin-bottom: 8px;
-    }
-    .service-icon-card span {
-      display: block;
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-
-    /* trusted ribbon */
-    .trusted {
-      background: #f8f4f0;
-      border-radius: 80px;
-      padding: 14px 32px;
-      margin: 20px 0 10px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      font-weight: 500;
-    }
-    .trusted i {
-      color: #c75c2f;
-      margin-right: 6px;
-    }
-    .trusted-stars {
-      color: #f3b34c;
-      letter-spacing: 4px;
-    }
-
-    /* sections general */
-    .section-title {
-      font-size: 2.2rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-      color: #1e2b2c;
-      letter-spacing: -0.02em;
-    }
-    .section-title i {
-      color: #0a4b4f;
-      margin-right: 10px;
-    }
-
-    /* cards */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 30px;
-      margin: 48px 0 30px;
-    }
-    .service-card {
-      background: white;
-      border: 1px solid #f2e1d4;
-      border-radius: 32px;
-      padding: 30px 22px;
-      transition: all 0.2s;
-      box-shadow: 0 6px 0 #fae3d6;
-    }
-    .service-card:hover {
-      border-color: #c75c2f;
-      box-shadow: 0 16px 24px -8px rgba(0,0,0,0.08);
-      transform: translateY(-5px);
-    }
-    .service-card i {
-      font-size: 42px;
-      color: #c75c2f;
-      margin-bottom: 20px;
-    }
-    .service-card h3 {
-      font-size: 1.7rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-      color: #0a4b4f;
-    }
-    .service-card p {
-      color: #475a64;
-    }
-
-    /* about / unique */
-    .about-block {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 50px;
-      background: #fdf8f2;
-      border-radius: 60px;
-      padding: 48px 40px;
-      margin: 60px 0;
-    }
-    .about-text {
-      flex: 2 1 300px;
-    }
-    .about-highlight {
-      flex: 1 1 200px;
-      background: #0a4b4f;
-      border-radius: 40px;
-      padding: 30px;
-      color: white;
-    }
-    .about-highlight i {
-      font-size: 48px;
-      margin-bottom: 16px;
-      color: #f3b34c;
-    }
-    .stat-number {
-      font-size: 2.5rem;
-      font-weight: 800;
-      line-height: 1;
-    }
-
-    /* handy & cleaning mini list */
-    .handyman-features {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      margin-top: 24px;
-    }
-    .handyman-features li {
-      background: white;
-      padding: 10px 22px;
-      border-radius: 40px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 500;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-      border: 1px solid #f4dad0;
-    }
-
-    /* CTA banner */
-    .cta-banner {
-      background: linear-gradient(102deg, #0a4b4f 0%, #1d6d6b 100%);
-      border-radius: 48px;
-      padding: 56px 40px;
-      color: white;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      margin: 60px 0;
-    }
-    .cta-banner h2 {
-      font-size: 2.2rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    .cta-banner .btn {
-      background-color: #f3b34c;
-      color: #1e2b2c;
-      box-shadow: 0 8px 0 #b47a2e;
-      font-size: 1.25rem;
-      padding: 18px 42px;
-    }
-    .cta-banner .btn:hover {
-      background-color: #faca6e;
-    }
-
-    /* footer */
-    footer {
-      background: #1e2b2c;
-      color: #dddbd0;
-      padding: 48px 0 32px;
-      border-radius: 48px 48px 0 0;
-      margin-top: 60px;
-    }
-    .footer-content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 40px;
-    }
-    .footer-logo {
-      font-weight: 700;
-      font-size: 1.8rem;
-      color: white;
-    }
-    .footer-logo span {
-      font-size: 0.9rem;
-      color: #f3b34c;
-      display: block;
-      font-weight: 400;
-    }
-    .footer-links {
-      display: flex;
-      gap: 70px;
-      flex-wrap: wrap;
-    }
-    .footer-col a {
-      display: block;
-      color: #d6ccc2;
-      text-decoration: none;
-      margin-bottom: 12px;
-    }
-    .footer-col a:hover {
-      color: #f3b34c;
-    }
-    .social i {
-      font-size: 26px;
-      margin-right: 18px;
-      color: #e6dace;
-    }
-    .copyright {
-      margin-top: 48px;
-      border-top: 1px solid #456b6a;
-      padding-top: 24px;
-      text-align: center;
-      color: #aaae9f;
-    }
-
-    /* responsive */
-    @media (max-width: 700px) {
-      .navbar {
-        flex-direction: column;
-        gap: 16px;
-      }
-      .nav-links {
-        gap: 24px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      .hero-text h1 {
-        font-size: 2.5rem;
-      }
-      .section-title {
-        font-size: 1.9rem;
-      }
-    }
-    @media (max-width: 480px) {
-      .hero-image {
-        flex: 1 1 100%;
-      }
-    }
-
-    /* utility */
-    .text-accent { color: #c75c2f; }
-    .bg-soft { background: #fff6ed; }
-    .no-bullet { list-style: none; }
-    .italic { font-style: italic; }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -431,7 +30,7 @@
       </div>
     </div>
 
-    <!-- HERO + 3 core services visual -->
+    <!-- HERO - ESTATE & GARAGE SPECIALISTS POSITIONING -->
     <div class="hero">
       <div class="hero-text">
         <h1>
@@ -439,137 +38,204 @@
         </h1>
         <p class="hero-sub">
           <i class="fas fa-star text-accent"></i> Garage Reset System™ • Estate Clean-Outs • Full House Clear-Outs
-      </p>
-          <p style="font-size: 1.1rem; margin-top: 10px; color: #0a4b4f; font-weight: 600;">
-           We transform cluttered spaces into peace of mind. estate projects welcome.
-      </p>
+        </p>
+        <p style="font-size: 1.1rem; margin-top: 10px; color: #0a4b4f; font-weight: 600;">
+          We transform cluttered spaces into peace of mind. $3K - $15K+ estate projects welcome.
+        </p>
         <div class="hero-cta">
           <a href="tel:+18252887720" class="btn"><i class="fas fa-phone-alt"></i> (825) 288-7720</a>
-          <a href="#" class="btn btn-secondary"><i class="fas fa-calendar-check"></i> Free estimate</a>
+          <a href="#" class="btn btn-secondary"><i class="fas fa-calendar-check"></i> Free Estimate</a>
         </div>
         <div class="trusted">
-          <span><i class="fas fa-circle-check"></i> 1,500+ jobs completed</span>
+          <span><i class="fas fa-map-marker-alt"></i> Calgary • Airdrie • Chestermere • Okotoks • Cochrane</span>
+          <span><i class="fas fa-circle-check"></i> Estate • Garage • Full House</span>
           <span class="trusted-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 4.9</span>
         </div>
-<div class="hero-image">
-  <div class="service-icon-card" style="background: #0a4b4f; color: white;">
-    <i class="fas fa-home" style="color: #f3b34c;"></i>
-    <span style="color: white;">Estate Clean-Outs</span>
-  </div>
-  <div class="service-icon-card">
-    <i class="fas fa-warehouse"></i>
-    <span>Garage Reset™</span>
-  </div>
-  <div class="service-icon-card">
-    <i class="fas fa-building"></i>
-    <span>Full House</span>
-  </div>
-  <div style="font-size: 1.5rem; color: #0a4b4f; width:100%; font-weight:700;">
-    🏆 Project Experience
-  </div>
-</div>
+      </div>
+      <div class="hero-image">
+        <div class="service-icon-card" style="background: #0a4b4f; color: white;">
+          <i class="fas fa-home" style="color: #f3b34c;"></i>
+          <span style="color: white;">Estate Clean-Outs</span>
+        </div>
+        <div class="service-icon-card">
+          <i class="fas fa-warehouse"></i>
+          <span>Garage Reset™</span>
+        </div>
+        <div class="service-icon-card">
+          <i class="fas fa-building"></i>
+          <span>Full House</span>
+        </div>
+        <div style="font-size: 1.5rem; color: #0a4b4f; width:100%; font-weight:700;">
+          🏆 $13K+ Project Experience
+        </div>
+      </div>
     </div>
 
-    <!-- MAIN SERVICES SECTION (three core activities) -->
-    <h2 class="section-title"><i class="fas fa-gear"></i> Our core — junk, handyman, clean</h2>
+    <!-- 🏆 PREMIUM SERVICE PYRAMID -->
+    <h2 class="section-title"><i class="fas fa-crown"></i> We Don't Just Remove Junk — We Reset Spaces</h2>
     <div class="services-grid">
-      <!-- Junk removal card -->
-      <div class="service-card">
-        <i class="fas fa-dumpster"></i>
-        <h3>Junk removal</h3>
-        <p>Furniture, appliances, yard waste, e‑waste. We haul it all — fast, fair price, and we recycle whenever possible.</p>
+      
+      <!-- 🥇 TIER 1: ESTATE CLEAN-OUTS (HIGH TICKET) -->
+      <div class="service-card" style="border: 2px solid #f3b34c; background: linear-gradient(to bottom, #fffcf5, white);">
+        <i class="fas fa-crown" style="color: #f3b34c;"></i>
+        <h3 style="color: #0a4b4f;">Estate Clean-Outs</h3>
+        <p style="font-weight: 600; color: #c75c2f;">$3,000 – $15,000+ projects</p>
+        <p>Full houses, apartments, foreclosure clean-outs. We handle the heavy lifting so families can heal. Respectful, professional, discreet.</p>
         <ul class="no-bullet" style="margin-top:20px;">
-          <li><i class="fas fa-check-circle" style="color:#0a4b4f;"></i> Same‑day available</li>
-          <li><i class="fas fa-check-circle" style="color:#0a4b4f;"></i> Estate cleanouts</li>
+          <li><i class="fas fa-check-circle" style="color:#0a4b4f;"></i> Entire property clearance</li>
+          <li><i class="fas fa-check-circle" style="color:#0a4b4f;"></i> Donation coordination</li>
+          <li><i class="fas fa-check-circle" style="color:#0a4b4f;"></i> Realtor & lawyer trusted</li>
         </ul>
       </div>
-      <!-- Handyman card -->
+      
+      <!-- 🥈 TIER 2: GARAGE RESET SYSTEM™ (NICHE LEADER) -->
       <div class="service-card">
-        <i class="fas fa-wrench"></i>
-        <h3>Handyman</h3>
-        <p>Small repairs, drywall, furniture assembly, plumbing fixes, light electrical. One handyman can solve dozens of headaches.</p>
-        <ul class="no-bullet" style="margin-top:20px;">
-          <li><i class="fas fa-check-circle" style="color:#0a4b4f;"></i> No job too small</li>
-          <li><i class="fas fa-check-circle" style="color:#0a4b4f;"></i> Local & licensed</li>
-        </ul>
+        <i class="fas fa-warehouse"></i>
+        <h3>🏆 The 1-Day Garage Reset™</h3>
+        <p style="font-weight: 600;">Calgary's Garage Organization Specialists</p>
+        <p>Not just junk removal — we transform cluttered garages into organized, functional spaces. Completed in one day. Guaranteed.</p>
+        
+        <div style="background: #f8f4f0; border-radius: 20px; padding: 15px; margin-top: 20px;">
+          <p style="margin: 0;"><strong>📦 Garage Clear-Out</strong> — Remove & sweep</p>
+          <p style="margin: 8px 0;"><strong>🔄 Garage Refresh</strong> — ★ MOST POPULAR ★ Sort, sweep & organize</p>
+          <p style="margin: 0;"><strong>✨ Garage Reset</strong> — Full transformation + tool organization</p>
+        </div>
       </div>
-      <!-- General cleaning card -->
+      
+      <!-- 🥉 TIER 3: FULL HOUSE & PROPERTY -->
       <div class="service-card">
-        <i class="fas fa-sparkles"></i>
-        <h3>General cleaning</h3>
-        <p>Deep cleaning, post‑renovation, office sanitizing, carpet refresh. Eco‑friendly products, meticulous detail.</p>
+        <i class="fas fa-home"></i>
+        <h3>Full House Clear-Outs</h3>
+        <p>Moving? Downsizing? Hoarding situations? We clear everything from basements to bedrooms. You don't lift a finger.</p>
         <ul class="no-bullet" style="margin-top:20px;">
-          <li><i class="fas fa-check-circle" style="color:#0a4b4f;"></i> Residential / commercial</li>
-          <li><i class="fas fa-check-circle" style="color:#0a4b4f;"></i> Weekly or one‑off</li>
+          <li><i class="fas fa-check-circle" style="color:#0a4b4f;"></i> Whole home clean-outs</li>
+          <li><i class="fas fa-check-circle" style="color:#0a4b4f;"></i> Basements & attics</li>
+          <li><i class="fas fa-check-circle" style="color:#0a4b4f;"></i> Construction debris</li>
+          <li><i class="fas fa-check-circle" style="color:#0a4b4f;"></i> Same-day quotes</li>
         </ul>
       </div>
     </div>
 
-    <!-- about & handyman/cleaning deep dive -->
+    <!-- ADD-ON SERVICES ROW -->
+    <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-top: 20px; margin-bottom: 40px;">
+      <span style="background: #e9f1f0; padding: 10px 25px; border-radius: 50px; font-weight: 500;"><i class="fas fa-tools"></i> Handyman Add-Ons</span>
+      <span style="background: #e9f1f0; padding: 10px 25px; border-radius: 50px; font-weight: 500;"><i class="fas fa-broom"></i> Light Cleaning Available</span>
+      <span style="background: #0a4b4f; color: white; padding: 10px 25px; border-radius: 50px; font-weight: 600;"><i class="fas fa-gem"></i> Family Owned & Operated</span>
+    </div>
+
+    <!-- 👪 FAMILY BUSINESS + HIGH-TICKET AUTHORITY -->
     <div class="about-block">
       <div class="about-text">
-        <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 24px; color:#0a4b4f;"><i class="fas fa-user-astronaut"></i> Why Aladdin?</h2>
-        <p style="font-size: 1.25rem; margin-bottom: 32px;">We’re not just junk haulers — we fix, we scrub, we care. One team, three superpowers. Since 2012, we’ve been NYC’s friendly neighbor for odd jobs and heavy lifting.</p>
+        <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 24px; color:#0a4b4f;">
+          <i class="fas fa-family"></i> A Family Business That Treats Your Home Like Our Own
+        </h2>
+        <p style="font-size: 1.25rem; margin-bottom: 32px;">
+          We're not a franchise. Not a call center. Just my wife and I, boots on the ground, 
+          handling every job personally. Estate clean-outs require trust. We earn it, one home at a time.
+        </p>
         
-        <h3 style="margin-bottom: 18px;"><i class="fas fa-hammer text-accent"></i> Handyman services — we do it all</h3>
+        <div style="display: flex; gap: 30px; flex-wrap: wrap; margin-bottom: 30px;">
+          <div>
+            <div style="font-size: 2.5rem; font-weight: 800; color: #0a4b4f;">$13K+</div>
+            <div style="font-weight: 600;">Largest Project</div>
+          </div>
+          <div>
+            <div style="font-size: 2.5rem; font-weight: 800; color: #0a4b4f;">2+ Yrs</div>
+            <div style="font-weight: 600;">Junk Removal Experience</div>
+          </div>
+          <div>
+            <div style="font-size: 2.5rem; font-weight: 800; color: #0a4b4f;">100%</div>
+            <div style="font-weight: 600;">Family Operated</div>
+          </div>
+        </div>
+        
+        <h3 style="margin: 32px 0 18px; color: #0a4b4f;">
+          <i class="fas fa-hand-holding-heart"></i> Why Families Trust Us With Estate Clean-Outs
+        </h3>
         <ul class="handyman-features no-bullet">
-          <li><i class="fas fa-screwdriver"></i> Furniture assembly</li>
-          <li><i class="fas fa-toilet"></i> Leaky faucets</li>
-          <li><i class="fas fa-lightbulb"></i> Fixture installs</li>
-          <li><i class="fas fa-paint-roller"></i> Patching & painting</li>
-          <li><i class="fas fa-door-open"></i> Door adjustments</li>
-          <li><i class="fas fa-trowel"></i> Tile & grout</li>
+          <li><i class="fas fa-heart" style="color: #c75c2f;"></i> Respectful & discreet</li>
+          <li><i class="fas fa-recycle"></i> Donation coordination</li>
+          <li><i class="fas fa-file-signature"></i> Itemized receipts</li>
+          <li><i class="fas fa-calendar"></i> Flexible scheduling</li>
+          <li><i class="fas fa-shield-alt"></i> Fully insured</li>
+          <li><i class="fas fa-phone"></i> Direct line to owners</li>
         </ul>
-        <h3 style="margin: 32px 0 18px;"><i class="fas fa-broom"></i> General cleaning (we shine)</h3>
-        <ul class="handyman-features no-bullet">
-          <li><i class="fas fa-vacuum"></i> Deep kitchen/bath</li>
-          <li><i class="fas fa-wind"></i> Window washing</li>
-          <li><i class="fas fa-trash-alt"></i> Trash & recycling</li>
-          <li><i class="fas fa-rug"></i> Carpet steam</li>
-        </ul>
+        
+        <p style="margin-top: 30px; font-style: italic; font-size: 1.1rem; color: #0a4b4f; font-weight: 600;">
+          "When you need a house cleared, you don't want loud junk guys. You want calm, professional, respectful service. That's us."
+        </p>
       </div>
-      <div class="about-highlight">
-        <i class="fas fa-medal"></i>
-        <div class="stat-number">1,500+</div>
-        <div style="font-size:1.2rem; margin-bottom: 20px;">jobs and counting</div>
+      
+      <div class="about-highlight" style="background: linear-gradient(145deg, #0a4b4f, #1d6d6b);">
+        <i class="fas fa-quote-right" style="font-size: 48px; color: #f3b34c;"></i>
+        <div style="font-size: 1.8rem; font-weight: 700; margin: 20px 0 10px;">"Wow."</div>
+        <div style="font-size: 1.1rem; margin-bottom: 30px;">That's what we hear most.</div>
         <div style="border-top: 2px solid #f3b34c; margin: 20px 0; width: 60px;"></div>
-        <i class="fas fa-clock"></i>
-        <div style="font-size:1.8rem; font-weight:700;">30min</div>
-        <div>response for emergencies</div>
-        <p style="margin-top: 28px; font-style: italic;">“They fixed a shelf, hauled old sofa and left the kitchen spotless — all in 2 hours.”</p>
+        <i class="fas fa-map-marker-alt"></i>
+        <div style="font-size: 1.5rem; font-weight: 700; margin-top: 15px;">Calgary + Surrounding</div>
+        <div>Airdrie • Chestermere • Okotoks • Cochrane</div>
+        <div style="margin-top: 15px; font-size: 0.9rem;">1510 30 Ave SW, Calgary, AB T2T1P3</div>
+        <p style="margin-top: 28px; font-style: italic; background: rgba(255,255,255,0.1); padding: 15px; border-radius: 20px;">
+          “They cleared my mother's home of 40 years with such care. Not just junk removal — closure.”
+        </p>
       </div>
     </div>
 
-    <!-- small junk removal showcase -->
-    <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; background: #fef2e6; border-radius: 40px; padding: 32px; margin: 20px 0 20px;">
-      <div style="flex: 1 1 200px;">
-        <i class="fas fa-recycle" style="font-size: 56px; color: #0a4b4f;"></i>
+    <!-- 🚀 ESTATE & GARAGE AUTHORITY SECTION -->
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; background: linear-gradient(145deg, #0a4b4f, #1a5c5a); border-radius: 40px; padding: 40px; margin: 20px 0 40px; color: white;">
+      <div style="flex: 1 1 200px; text-align: center;">
+        <i class="fas fa-gem" style="font-size: 64px; color: #f3b34c;"></i>
       </div>
       <div style="flex: 5 1 300px;">
-        <h3 style="font-size: 1.9rem; font-weight: 700;">♻️ junk with conscience</h3>
-        <p style="font-size: 1.2rem;">We donate or recycle 70% of what we pick. Mattresses, electronics, scrap metal – we sort responsibly.</p>
+        <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 10px; color: white;">🏆 Ready For Larger Projects?</h3>
+        <p style="font-size: 1.2rem; opacity: 0.95;">
+          We specialize in estate clean-outs, full house clear-outs, and high-value garage transformations. 
+          <strong style="color: #f3b34c;">$3K – $15K+ projects welcome.</strong> Direct communication with owners.
+        </p>
+        <div style="display: flex; gap: 15px; margin-top: 20px; flex-wrap: wrap;">
+          <span style="background: rgba(255,255,255,0.2); padding: 8px 20px; border-radius: 50px;"><i class="fas fa-check-circle"></i> Realtor trusted</span>
+          <span style="background: rgba(255,255,255,0.2); padding: 8px 20px; border-radius: 50px;"><i class="fas fa-check-circle"></i> Estate lawyer approved</span>
+          <span style="background: rgba(255,255,255,0.2); padding: 8px 20px; border-radius: 50px;"><i class="fas fa-check-circle"></i> Property manager preferred</span>
+        </div>
       </div>
-      <div>
-        <a href="#" class="btn btn-secondary" style="background: #c75c2f;">Get junk estimate</a>
-      </div>
-    </div>
-
-    <!-- CTA banner : call to action -->
-    <div class="cta-banner">
-      <div>
-        <h2><i class="fas fa-lamp" style="color: #f3b34c;"></i> Your wish is our command</h2>
-        <p style="font-size: 1.3rem; opacity: 0.95; max-width: 600px;">Junk removal, handyman repairs, cleaning — one call handles it all.</p>
-        <span style="background: #00000020; padding: 8px 20px; border-radius: 40px; display: inline-block; margin-top: 16px;"><i class="fas fa-check-circle"></i> 24/7 availability</span>
-      </div>
-      <div>
-        <a href="tel:+18252887720" class="btn">📞 (825) 288-7720</a>
+      <div style="flex: 1 1 100%; text-align: center; margin-top: 20px;">
+        <a href="tel:+18252887720" class="btn" style="background: #f3b34c; color: #1e2b2c; font-size: 1.3rem; padding: 16px 40px;">📞 Call For Estate Quote: (825) 288-7720</a>
       </div>
     </div>
 
-    <!-- quick contact / mini trust -->
-    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 18px; background: white; border-radius: 48px; padding: 24px 32px; border: 2px solid #f5ddcf;">
+    <!-- CTA banner - FAMILY BUSINESS CALL TO ACTION -->
+    <div class="cta-banner" style="background: linear-gradient(102deg, #0a4b4f 0%, #1d6d6b 100%);">
+      <div>
+        <h2 style="font-size: 2.2rem; font-weight: 700; margin-bottom: 8px;">
+          <i class="fas fa-phone-alt" style="color: #f3b34c;"></i> Talk Directly To The Owners
+        </h2>
+        <p style="font-size: 1.4rem; opacity: 0.95; max-width: 600px; font-weight: 600;">
+          No call centers. No salespeople. Just me & my wife.
+        </p>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
+          <span style="background: #00000030; padding: 8px 20px; border-radius: 40px;">
+            <i class="fas fa-check-circle"></i> Free estimates
+          </span>
+          <span style="background: #00000030; padding: 8px 20px; border-radius: 40px;">
+            <i class="fas fa-check-circle"></i> Same-day available
+          </span>
+          <span style="background: #00000030; padding: 8px 20px; border-radius: 40px;">
+            <i class="fas fa-check-circle"></i> Family pricing
+          </span>
+        </div>
+      </div>
+      <div style="text-align: center;">
+        <a href="tel:+18252887720" class="btn" style="background: #f3b34c; color: #1e2b2c; font-size: 1.8rem; padding: 20px 40px; white-space: nowrap;">
+          📞 (825) 288-7720
+        </a>
+        <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">Call or text • 7am-8pm</p>
+      </div>
+    </div>
+
+    <!-- quick contact / mini trust with Calgary info -->
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 18px; background: white; border-radius: 48px; padding: 24px 32px; border: 2px solid #f5ddcf; margin-bottom: 40px;">
       <span><i class="fas fa-shield-alt" style="color: #0a4b4f;"></i> Fully insured & bonded</span>
-      <span><i class="fas fa-dollar-sign" style="color: #0a4b4f;"></i> Transparent pricing — no hidden fees</span>
+      <span><i class="fas fa-map-marker-alt" style="color: #0a4b4f;"></i> Calgary, AB</span>
       <span><i class="fas fa-clock" style="color: #0a4b4f;"></i> Same‑day / next‑day</span>
       <span><i class="fas fa-smile" style="color: #0a4b4f;"></i> 100% satisfaction</span>
     </div>
@@ -584,7 +250,14 @@
           <div class="footer-logo">
             <i class="fas fa-lamp" style="color: #f3b34c;"></i> ALADDIN<span>GENERAL SERVICE INC</span>
           </div>
-          <p style="margin-top: 18px; max-width: 300px;">Junk removal · Handyman · Cleaning. <br>NYC & surrounding boroughs.</p>
+          <p style="margin-top: 18px; max-width: 300px;">
+            Estate & Property Clean-Out Specialists<br>
+            Calgary • Airdrie • Chestermere • Okotoks • Cochrane
+          </p>
+          <div style="margin-top: 10px; font-size: 0.95rem;">
+            <i class="fas fa-map-pin" style="color: #f3b34c;"></i> 1510 30 Ave SW<br>
+            Calgary, Alberta T2T1P3
+          </div>
           <div class="social" style="margin-top: 28px;">
             <i class="fab fa-facebook"></i>
             <i class="fab fa-instagram"></i>
@@ -594,47 +267,44 @@
         <div class="footer-links">
           <div class="footer-col">
             <h4 style="color: white; margin-bottom: 22px;">Services</h4>
-            <a href="#">Junk removal</a>
-            <a href="#">Handyman repairs</a>
-            <a href="#">General cleaning</a>
-            <a href="#">Estate cleanouts</a>
-            <a href="#">Commercial</a>
+            <a href="#">Estate Clean-Outs</a>
+            <a href="#">Garage Reset System™</a>
+            <a href="#">Full House Clear-Outs</a>
+            <a href="#">Handyman Add-Ons</a>
+            <a href="#">Light Cleaning</a>
           </div>
           <div class="footer-col">
-            <h4 style="color: white; margin-bottom: 22px;">Company</h4>
-            <a href="#">About us</a>
-            <a href="#">Reviews</a>
-            <a href="#">Careers</a>
-            <a href="#">Service areas</a>
+            <h4 style="color: white; margin-bottom: 22px;">Service Areas</h4>
+            <a href="#">Calgary</a>
+            <a href="#">Airdrie</a>
+            <a href="#">Chestermere</a>
+            <a href="#">Okotoks</a>
+            <a href="#">Cochrane</a>
           </div>
           <div class="footer-col">
             <h4 style="color: white; margin-bottom: 22px;">Contact</h4>
             <a href="tel:+18252887720"><i class="fas fa-phone"></i> (825) 288-7720</a>
-            <a href="#"><i class="fas fa-envelope"></i> hello@aladdingeneral.com</a>
-            <a href="#"><i class="fas fa-map-pin"></i> 43 W 23rd St, NY</a>
+            <a href="mailto:aladdin.g.services@gmail.com"><i class="fas fa-envelope"></i> aladdin.g.services@gmail.com</a>
+            <a href="#"><i class="fas fa-map-pin"></i> 1510 30 Ave SW, Calgary, AB T2T1P3</a>
           </div>
         </div>
       </div>
       <div class="copyright">
-        © 2025 ALADDIN GENERAL SERVICE INC – junk removal, handyman & cleaning. All rights reserved.  
-        <span style="display:block; margin-top: 8px;">✨ “We grant your clean & fix wishes” ✨</span>
+        © 2025 ALADDIN GENERAL SERVICE INC – Estate & Property Clean-Out Specialists. Calgary, Airdrie, Chestermere, Okotoks, Cochrane.  
+        <span style="display:block; margin-top: 8px;">✨ “We don't just remove junk — we reset spaces.” ✨</span>
+        <span style="display:block; margin-top: 8px; font-size: 0.8rem;">1510 30 Ave SW, Calgary, Alberta T2T1P3 | aladdin.g.services@gmail.com | (825) 288-7720</span>
       </div>
     </div>
   </footer>
 
-  <!-- small decorative sticker (optional) -->
-  <div style="position: fixed; bottom: 30px; right: 30px; background: #f3b34c; color: #1e2b2c; border-radius: 100px; padding: 16px 24px; font-weight: bold; box-shadow: 0 8px 0 #a0813f; z-index: 99;">
-    📦📞 call for junk pickup
+  <!-- FLOATING CALL BUTTON - ESTATE & GARAGE SPECIALISTS -->
+  <div style="position: fixed; bottom: 30px; right: 30px; background: #c75c2f; color: white; border-radius: 100px; padding: 16px 30px; font-weight: bold; box-shadow: 0 8px 0 #8a3e22; z-index: 99; border: 2px solid white;">
+    <a href="tel:+18252887720" style="color: white; text-decoration: none; display: flex; align-items: center; gap: 10px;">
+      <i class="fas fa-phone-alt" style="font-size: 1.3rem;"></i> 
+      <span style="font-size: 1.2rem;">Estate Quote? Call (825) 288-7720</span>
+    </a>
   </div>
-<script src="js/main.js"></script>
+
+  <script src="js/main.js"></script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
