@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You - Aladdin General Service</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #faf9f8 0%, #f5f3f0 100%);
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .thank-you-card {
+      background: white;
+      border-radius: 50px;
+      padding: 60px 40px;
+      max-width: 600px;
+      margin: 40px 20px;
+      box-shadow: 0 30px 50px rgba(10,75,79,0.1);
+      text-align: center;
+      border: 1px solid #f0e0d6;
+      position: relative;
+      overflow: hidden;
+    }
+    .thank-you-card::before {
+      content: "✨";
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      font-size: 150px;
+      opacity: 0.05;
+      transform: rotate(-15deg);
+    }
+    .checkmark {
+      background: #0a4b4f;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 30px;
+      border: 8px solid #f3b34c30;
+    }
+    .checkmark i {
+      color: white;
+      font-size: 48px;
+    }
+    h1 {
+      color: #0a4b4f;
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    p {
+      color: #3a4e5a;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+    .btn-group {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .btn {
+      display: inline-block;
+      background: #c75c2f;
+      color: white;
+      font-weight: 600;
+      padding: 16px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .btn:hover {
+      background: #a04426;
+      transform: translateY(-3px);
+    }
+    .btn-secondary {
+      background: #0a4b4f;
+    }
+    .btn-secondary:hover {
+      background: #0c5e63;
+    }
+    .response-time {
+      background: #fef2e6;
+      border-radius: 30px;
+      padding: 20px;
+      margin-top: 30px;
+      border-left: 5px solid #c75c2f;
+    }
+  </style>
+</head>
+<body>
+  <div class="thank-you-card">
+    <div class="checkmark">
+      <i class="fas fa-check"></i>
+    </div>
+    
+    <h1>Thanks, Calgary! 🎉</h1>
+    <p style="font-size: 1.4rem; font-weight: 600; color: #c75c2f;">Your quote request is received.</p>
+    
+    <div style="background: #f8f4f0; border-radius: 20px; padding: 20px; margin-bottom: 30px;">
+      <p style="margin-bottom: 10px; font-size: 1.1rem;">
+        <i class="fas fa-clock" style="color: #0a4b4f;"></i> 
+        <strong>We'll respond within 1 hour</strong> — usually faster!
+      </p>
+      <p style="margin: 5px 0; color: #0a4b4f;">
+        📞 In a hurry? Call us directly: 
+        <a href="tel:+18252887720" style="color: #c75c2f; font-weight: 700; text-decoration: none;">(825) 288-7720</a>
+      </p>
+    </div>
+    
+    <div style="display: flex; flex-direction: column; gap: 15px; align-items: center;">
+      <p style="margin-bottom: 5px;"><strong>While you wait:</strong></p>
+      <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
+        <a href="upload-placeholder.html" style="background: white; border: 2px solid #0a4b4f; color: #0a4b4f; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600;">
+          <i class="fas fa-camera"></i> See Our Work
+        </a>
+        <a href="index.html" style="background: white; border: 2px solid #c75c2f; color: #c75c2f; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600;">
+          <i class="fas fa-home"></i> Back to Home
+        </a>
+      </div>
+    </div>
+    
+    <div class="response-time">
+      <p style="margin: 0; display: flex; align-items: center; gap: 10px;">
+        <i class="fas fa-shield-alt" style="color: #0a4b4f; font-size: 1.3rem;"></i>
+        <span style="font-size: 0.95rem;">Your information is secure. No spam, ever.</span>
+      </p>
+    </div>
+    
+    <p style="margin-top: 40px; font-size: 0.9rem; color: #666;">
+      <i class="fas fa-lamp" style="color: #f3b34c;"></i> 
+      Aladdin General Service Inc — Family Owned & Operated in Calgary
+    </p>
+  </div>
+</body>
+</html>
