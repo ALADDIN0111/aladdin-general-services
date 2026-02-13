@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>ALADDIN GENERAL SERVICE INC · Junk & Handyman</title>
+  <!-- Google Font & simple icons via Font Awesome 6 (free) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #1e1e2f;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* header / navigation */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      flex-wrap: wrap;
+      border-bottom: 2px solid #fde7d3;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon {
+      background-color: #0a4b4f;
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 26px;
+      transform: rotate(-3deg);
+      box-shadow: 6px 6px 0 #f3b34c;
+    }
+
+    .company-name {
+      font-weight: 700;
+      font-size: 1.6rem;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    .company-name span {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #0a4b4f;
+      letter-spacing: 1.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      font-weight: 600;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #2d3e50;
+      transition: color 0.2s;
+      font-size: 1rem;
+    }
+    .nav-links a:hover {
+      color: #c75c2f;
+    }
+
+    /* buttons & cta */
+    .btn {
+      display: inline-block;
+      background-color: #c75c2f;
+      color: white;
+      font-weight: 600;
+      padding: 12px 28px;
+      border-radius: 40px;
+      text-decoration: none;
+      border: none;
+      transition: all 0.25s;
+      box-shadow: 0 6px 12px rgba(199, 92, 47, 0.2);
+      font-size: 1rem;
+    }
+    .btn:hover {
+      background-color: #a04426;
+      transform: scale(1.02);
+      box-shadow: 0 10px 18px rgba(167, 76, 38, 0.25);
+    }
+    .btn-secondary {
+      background-color: #0a4b4f;
+      box-shadow: 0 6px 12px rgba(10, 75, 79, 0.15);
+    }
+    .btn-secondary:hover {
+      background-color: #0c5e63;
+    }
+
+    /* hero */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 48px 0 32px;
+      gap: 40px;
+    }
+
+    .hero-text {
+      flex: 1 1 350px;
+    }
+    .hero-text h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: #1e2b2c;
+      margin-bottom: 20px;
+    }
+    .hero-highlight {
+      background: linear-gradient(145deg, #fdefd4, #ffe7d4);
+      padding: 0 8px;
+      border-radius: 8px;
+    }
+    .hero-sub {
+      font-size: 1.25rem;
+      color: #3a4e5a;
+      margin-bottom: 32px;
+      max-width: 550px;
+    }
+    .hero-cta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hero-image {
+      flex: 0 0 300px;
+      background: linear-gradient(135deg, #f6e9d7, #fadcc7);
+      border-radius: 40px 40px 40px 0;
+      padding: 25px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      box-shadow: 25px 25px 0 #0a4b4f15;
+    }
+    .service-icon-card {
+      background: white;
+      border-radius: 24px;
+      padding: 18px 12px;
+      width: 110px;
+      text-align: center;
+      box-shadow: 0 8px 0 #e0c3a1;
+    }
+    .service-icon-card i {
+      font-size: 38px;
+      color: #0a4b4f;
+      margin-bottom: 8px;
+    }
+    .service-icon-card span {
+      display: block;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    /* trusted ribbon */
+    .trusted {
+      background: #f8f4f0;
+      border-radius: 80px;
+      padding: 14px 32px;
+      margin: 20px 0 10px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 500;
+    }
+    .trusted i {
+      color: #c75c2f;
+      margin-right: 6px;
+    }
+    .trusted-stars {
+      color: #f3b34c;
+      letter-spacing: 4px;
+    }
+
+    /* sections general */
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #1e2b2c;
+      letter-spacing: -0.02em;
+    }
+    .section-title i {
+      color: #0a4b4f;
+      margin-right: 10px;
+    }
+
+    /* cards */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+      margin: 48px 0 30px;
+    }
+    .service-card {
+      background: white;
+      border: 1px solid #f2e1d4;
+      border-radius: 32px;
+      padding: 30px 22px;
+      transition: all 0.2s;
+      box-shadow: 0 6px 0 #fae3d6;
+    }
+    .service-card:hover {
+      border-color: #c75c2f;
+      box-shadow: 0 16px 24px -8px rgba(0,0,0,0.08);
+      transform: translateY(-5px);
+    }
+    .service-card i {
+      font-size: 42px;
+      color: #c75c2f;
+      margin-bottom: 20px;
+    }
+    .service-card h3 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #0a4b4f;
+    }
+    .service-card p {
+      color: #475a64;
+    }
+
+    /* about / unique */
+    .about-block {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+      background: #fdf8f2;
+      border-radius: 60px;
+      padding: 48px 40px;
+      margin: 60px 0;
+    }
+    .about-text {
+      flex: 2 1 300px;
+    }
+    .about-highlight {
+      flex: 1 1 200px;
+      background: #0a4b4f;
+      border-radius: 40px;
+      padding: 30px;
+      color: white;
+    }
+    .about-highlight i {
+      font-size: 48px;
+      margin-bottom: 16px;
+      color: #f3b34c;
+    }
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    /* handy & cleaning mini list */
+    .handyman-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 24px;
+    }
+    .handyman-features li {
+      background: white;
+      padding: 10px 22px;
+      border-radius: 40px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 500;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      border: 1px solid #f4dad0;
+    }
+
+    /* CTA banner */
+    .cta-banner {
+      background: linear-gradient(102deg, #0a4b4f 0%, #1d6d6b 100%);
+      border-radius: 48px;
+      padding: 56px 40px;
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      margin: 60px 0;
+    }
+    .cta-banner h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .cta-banner .btn {
+      background-color: #f3b34c;
+      color: #1e2b2c;
+      box-shadow: 0 8px 0 #b47a2e;
+      font-size: 1.25rem;
+      padding: 18px 42px;
+    }
+    .cta-banner .btn:hover {
+      background-color: #faca6e;
+    }
+
+    /* footer */
+    footer {
+      background: #1e2b2c;
+      color: #dddbd0;
+      padding: 48px 0 32px;
+      border-radius: 48px 48px 0 0;
+      margin-top: 60px;
+    }
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    .footer-logo {
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: white;
+    }
+    .footer-logo span {
+      font-size: 0.9rem;
+      color: #f3b34c;
+      display: block;
+      font-weight: 400;
+    }
+    .footer-links {
+      display: flex;
+      gap: 70px;
+      flex-wrap: wrap;
+    }
+    .footer-col a {
+      display: block;
+      color: #d6ccc2;
+      text-decoration: none;
+      margin-bottom: 12px;
+    }
+    .footer-col a:hover {
+      color: #f3b34c;
+    }
+    .social i {
+      font-size: 26px;
+      margin-right: 18px;
+      color: #e6dace;
+    }
+    .copyright {
+      margin-top: 48px;
+      border-top: 1px solid #456b6a;
+      padding-top: 24px;
+      text-align: center;
+      color: #aaae9f;
+    }
+
+    /* responsive */
+    @media (max-width: 700px) {
+      .navbar {
+        flex-direction: column;
+        gap: 16px;
+      }
+      .nav-links {
+        gap: 24px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .hero-text h1 {
+        font-size: 2.5rem;
+      }
+      .section-title {
+        font-size: 1.9rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .hero-image {
+        flex: 1 1 100%;
+      }
+    }
+
+    /* utility */
+    .text-accent { color: #c75c2f; }
+    .bg-soft { background: #fff6ed; }
+    .no-bullet { list-style: none; }
+    .italic { font-style: italic; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER / NAVIGATION -->
+  <div class="container">
+    <div class="navbar">
+      <div class="logo-area">
+        <div class="logo-icon">
+          <i class="fas fa-lamp"></i>
+        </div>
+        <div class="company-name">
+          ALADDIN GENERAL <span>SERVICE INC</span>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+
+    <!-- HERO + 3 core services visual -->
+    <div class="hero">
+      <div class="hero-text">
+        <h1>
+          <span class="hero-highlight">Junk? Repairs?</span><br>Cleaning? <br>We’re your genie.
+        </h1>
+        <p class="hero-sub">
+          <i class="fas fa-bolt text-accent"></i> Same‑day junk removal • handyman fixes • deep cleaning. 
+          One call, and it’s done. Licensed & insured.
+        </p>
+        <div class="hero-cta">
+          <a href="#" class="btn"><i class="fas fa-phone-alt"></i> (212) 555‑7890</a>
+          <a href="#" class="btn btn-secondary"><i class="fas fa-calendar-check"></i> Free estimate</a>
+        </div>
+        <div class="trusted">
+          <span><i class="fas fa-circle-check"></i> 1,500+ jobs completed</span>
+          <span class="trusted-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 4.9</span>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="service-icon-card">
+          <i class="fas fa-truck"></i>
+          <span>Junk removal</span>
+        </div>
+        <div class="service-icon-card">
+          <i class="fas fa-tools"></i>
+          <span>Handyman</span>
+        </div>
+        <div class="service-icon-card">
+          <i class="fas fa-broom"></i>
+          <span>Cleaning</span>
+        </div>
+        <div style="font-size: 1.8rem; color: #0a4b4f; width:100%; font-weight:600;">✨ 3‑in‑1 service</div>
+      </div>
+    </div>
+
+    <!-- MAIN SERVICES SECTION (three core activities) -->
+    <h2 class="section-title"><i class="fas fa-gear"></i> Our core — junk, handyman, clean</h2>
+    <div class="services-grid">
+      <!-- Junk removal card -->
+      <div class="service-card">
+        <i class="fas fa-dumpster"></i>
+        <h3>Junk removal</h3>
+        <p>Furniture, appliances, yard waste, e‑waste. We haul it all — fast, fair price, and we recycle whenever possible.</p>
+        <ul class="no-bullet" style="margin-top:20px;">
+          <li><i class="fas fa-check-circle" style="color:#0a4b4f;"></i> Same‑day available</li>
+          <li><i class="fas fa-check-circle" style="color:#0a4b4f;"></i> Estate cleanouts</li>
+        </ul>
+      </div>
+      <!-- Handyman card -->
+      <div class="service-card">
+        <i class="fas fa-wrench"></i>
+        <h3>Handyman</h3>
+        <p>Small repairs, drywall, furniture assembly, plumbing fixes, light electrical. One handyman can solve dozens of headaches.</p>
+        <ul class="no-bullet" style="margin-top:20px;">
+          <li><i class="fas fa-check-circle" style="color:#0a4b4f;"></i> No job too small</li>
+          <li><i class="fas fa-check-circle" style="color:#0a4b4f;"></i> Local & licensed</li>
+        </ul>
+      </div>
+      <!-- General cleaning card -->
+      <div class="service-card">
+        <i class="fas fa-sparkles"></i>
+        <h3>General cleaning</h3>
+        <p>Deep cleaning, post‑renovation, office sanitizing, carpet refresh. Eco‑friendly products, meticulous detail.</p>
+        <ul class="no-bullet" style="margin-top:20px;">
+          <li><i class="fas fa-check-circle" style="color:#0a4b4f;"></i> Residential / commercial</li>
+          <li><i class="fas fa-check-circle" style="color:#0a4b4f;"></i> Weekly or one‑off</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- about & handyman/cleaning deep dive -->
+    <div class="about-block">
+      <div class="about-text">
+        <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 24px; color:#0a4b4f;"><i class="fas fa-user-astronaut"></i> Why Aladdin?</h2>
+        <p style="font-size: 1.25rem; margin-bottom: 32px;">We’re not just junk haulers — we fix, we scrub, we care. One team, three superpowers. Since 2012, we’ve been NYC’s friendly neighbor for odd jobs and heavy lifting.</p>
+        
+        <h3 style="margin-bottom: 18px;"><i class="fas fa-hammer text-accent"></i> Handyman services — we do it all</h3>
+        <ul class="handyman-features no-bullet">
+          <li><i class="fas fa-screwdriver"></i> Furniture assembly</li>
+          <li><i class="fas fa-toilet"></i> Leaky faucets</li>
+          <li><i class="fas fa-lightbulb"></i> Fixture installs</li>
+          <li><i class="fas fa-paint-roller"></i> Patching & painting</li>
+          <li><i class="fas fa-door-open"></i> Door adjustments</li>
+          <li><i class="fas fa-trowel"></i> Tile & grout</li>
+        </ul>
+        <h3 style="margin: 32px 0 18px;"><i class="fas fa-broom"></i> General cleaning (we shine)</h3>
+        <ul class="handyman-features no-bullet">
+          <li><i class="fas fa-vacuum"></i> Deep kitchen/bath</li>
+          <li><i class="fas fa-wind"></i> Window washing</li>
+          <li><i class="fas fa-trash-alt"></i> Trash & recycling</li>
+          <li><i class="fas fa-rug"></i> Carpet steam</li>
+        </ul>
+      </div>
+      <div class="about-highlight">
+        <i class="fas fa-medal"></i>
+        <div class="stat-number">1,500+</div>
+        <div style="font-size:1.2rem; margin-bottom: 20px;">jobs and counting</div>
+        <div style="border-top: 2px solid #f3b34c; margin: 20px 0; width: 60px;"></div>
+        <i class="fas fa-clock"></i>
+        <div style="font-size:1.8rem; font-weight:700;">30min</div>
+        <div>response for emergencies</div>
+        <p style="margin-top: 28px; font-style: italic;">“They fixed a shelf, hauled old sofa and left the kitchen spotless — all in 2 hours.”</p>
+      </div>
+    </div>
+
+    <!-- small junk removal showcase -->
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; background: #fef2e6; border-radius: 40px; padding: 32px; margin: 20px 0 20px;">
+      <div style="flex: 1 1 200px;">
+        <i class="fas fa-recycle" style="font-size: 56px; color: #0a4b4f;"></i>
+      </div>
+      <div style="flex: 5 1 300px;">
+        <h3 style="font-size: 1.9rem; font-weight: 700;">♻️ junk with conscience</h3>
+        <p style="font-size: 1.2rem;">We donate or recycle 70% of what we pick. Mattresses, electronics, scrap metal – we sort responsibly.</p>
+      </div>
+      <div>
+        <a href="#" class="btn btn-secondary" style="background: #c75c2f;">Get junk estimate</a>
+      </div>
+    </div>
+
+    <!-- CTA banner : call to action -->
+    <div class="cta-banner">
+      <div>
+        <h2><i class="fas fa-lamp" style="color: #f3b34c;"></i> Your wish is our command</h2>
+        <p style="font-size: 1.3rem; opacity: 0.95; max-width: 600px;">Junk removal, handyman repairs, cleaning — one call handles it all.</p>
+        <span style="background: #00000020; padding: 8px 20px; border-radius: 40px; display: inline-block; margin-top: 16px;"><i class="fas fa-check-circle"></i> 24/7 availability</span>
+      </div>
+      <div>
+        <a href="#" class="btn">📞 (212) 555-7890</a>
+      </div>
+    </div>
+
+    <!-- quick contact / mini trust -->
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 18px; background: white; border-radius: 48px; padding: 24px 32px; border: 2px solid #f5ddcf;">
+      <span><i class="fas fa-shield-alt" style="color: #0a4b4f;"></i> Fully insured & bonded</span>
+      <span><i class="fas fa-dollar-sign" style="color: #0a4b4f;"></i> Transparent pricing — no hidden fees</span>
+      <span><i class="fas fa-clock" style="color: #0a4b4f;"></i> Same‑day / next‑day</span>
+      <span><i class="fas fa-smile" style="color: #0a4b4f;"></i> 100% satisfaction</span>
+    </div>
+
+  </div> <!-- container end -->
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <div class="footer-logo">
+            <i class="fas fa-lamp" style="color: #f3b34c;"></i> ALADDIN<span>GENERAL SERVICE INC</span>
+          </div>
+          <p style="margin-top: 18px; max-width: 300px;">Junk removal · Handyman · Cleaning. <br>NYC & surrounding boroughs.</p>
+          <div class="social" style="margin-top: 28px;">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-x-twitter"></i>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4 style="color: white; margin-bottom: 22px;">Services</h4>
+            <a href="#">Junk removal</a>
+            <a href="#">Handyman repairs</a>
+            <a href="#">General cleaning</a>
+            <a href="#">Estate cleanouts</a>
+            <a href="#">Commercial</a>
+          </div>
+          <div class="footer-col">
+            <h4 style="color: white; margin-bottom: 22px;">Company</h4>
+            <a href="#">About us</a>
+            <a href="#">Reviews</a>
+            <a href="#">Careers</a>
+            <a href="#">Service areas</a>
+          </div>
+          <div class="footer-col">
+            <h4 style="color: white; margin-bottom: 22px;">Contact</h4>
+            <a href="#"><i class="fas fa-phone"></i> (212) 555-7890</a>
+            <a href="#"><i class="fas fa-envelope"></i> hello@aladdingeneral.com</a>
+            <a href="#"><i class="fas fa-map-pin"></i> 43 W 23rd St, NY</a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        © 2025 ALADDIN GENERAL SERVICE INC – junk removal, handyman & cleaning. All rights reserved.  
+        <span style="display:block; margin-top: 8px;">✨ “We grant your clean & fix wishes” ✨</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- small decorative sticker (optional) -->
+  <div style="position: fixed; bottom: 30px; right: 30px; background: #f3b34c; color: #1e2b2c; border-radius: 100px; padding: 16px 24px; font-weight: bold; box-shadow: 0 8px 0 #a0813f; z-index: 99;">
+    📦📞 call for junk pickup
+  </div>
+
+</body>
+</html>
