@@ -22,12 +22,39 @@
           ALADDIN GENERAL <span>SERVICE INC</span>
         </div>
       </div>
-      <div class="nav-links">
-        <a href="#">Home</a>
-        <a href="#">Services</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-      </div>
+      <!-- DESKTOP NAVIGATION -->
+<div class="nav-links desktop-nav">
+  <a href="#">Home</a>
+  <a href="#">Services</a>
+  <a href="#">About</a>
+  <a href="#">Contact</a>
+  <a href="tel:+18252887720" style="background: #c75c2f20; padding: 8px 16px; border-radius: 50px; color: #c75c2f; font-weight: 700;">
+    <i class="fas fa-phone-alt"></i> Call
+  </a>
+</div>
+
+<!-- MOBILE HAMBURGER -->
+<div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+  <i class="fas fa-bars"></i>
+</div>
+
+<!-- MOBILE NAVIGATION OVERLAY -->
+<div id="mobileNav" class="mobile-nav-overlay" style="display: none;">
+  <div style="display: flex; justify-content: flex-end; padding: 20px;">
+    <div onclick="toggleMobileMenu()" style="background: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; cursor: pointer;">
+      <i class="fas fa-times"></i>
+    </div>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 80%; gap: 30px; padding: 20px;">
+    <a href="#" onclick="toggleMobileMenu()" style="color: white; font-size: 2rem; font-weight: 700; text-decoration: none;">Home</a>
+    <a href="#" onclick="toggleMobileMenu()" style="color: white; font-size: 2rem; font-weight: 700; text-decoration: none;">Services</a>
+    <a href="#" onclick="toggleMobileMenu()" style="color: white; font-size: 2rem; font-weight: 700; text-decoration: none;">About</a>
+    <a href="#" onclick="toggleMobileMenu()" style="color: white; font-size: 2rem; font-weight: 700; text-decoration: none;">Contact</a>
+    <a href="tel:+18252887720" onclick="toggleMobileMenu()" style="background: #f3b34c; color: #1e2b2c; padding: 16px 40px; border-radius: 50px; font-size: 1.5rem; font-weight: 700; text-decoration: none; margin-top: 20px;">
+      <i class="fas fa-phone-alt"></i> Call Now
+    </a>
+  </div>
+</div>
     </div>
 
     <!-- HERO - ESTATE & GARAGE SPECIALISTS POSITIONING -->
@@ -250,68 +277,77 @@
       </div>
     </div>
     <!-- 📸 BEFORE & AFTER - TRUST BUILDERS -->
+<!-- 📸 REAL CALGARY TRANSFORMATIONS - YOUR PHOTOS -->
 <div style="margin: 60px 0 40px;">
-  <h2 class="section-title" style="margin-bottom: 30px;"><i class="fas fa-camera"></i> Recent Transformations</h2>
-  
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
-    
-    <div style="background: white; border-radius: 30px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.05);">
-      <div style="display: flex; height: 160px;">
-        <div style="flex: 1; background: linear-gradient(145deg, #d9d9d9, #b3b3b3); display: flex; align-items: center; justify-content: center; position: relative;">
-          <span style="background: rgba(0,0,0,0.7); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;">BEFORE</span>
-          <i class="fas fa-boxes" style="position: absolute; font-size: 40px; color: white; opacity: 0.2;"></i>
-        </div>
-        <div style="flex: 1; background: linear-gradient(145deg, #0a4b4f, #1d6d6b); display: flex; align-items: center; justify-content: center; position: relative;">
-          <span style="background: rgba(255,255,255,0.9); color: #0a4b4f; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;">AFTER</span>
-          <i class="fas fa-check-circle" style="position: absolute; font-size: 40px; color: white; opacity: 0.2;"></i>
-        </div>
-      </div>
-      <div style="padding: 20px; text-align: center;">
-        <h4 style="margin-bottom: 5px; color: #0a4b4f;">Garage Reset™</h4>
-        <p style="color: #666; font-size: 0.9rem;">Calgary, AB • 1 Day</p>
-      </div>
-    </div>
-    
-    <div style="background: white; border-radius: 30px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.05);">
-      <div style="display: flex; height: 160px;">
-        <div style="flex: 1; background: linear-gradient(145deg, #d9d9d9, #b3b3b3); display: flex; align-items: center; justify-content: center; position: relative;">
-          <span style="background: rgba(0,0,0,0.7); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;">BEFORE</span>
-          <i class="fas fa-archive" style="position: absolute; font-size: 40px; color: white; opacity: 0.2;"></i>
-        </div>
-        <div style="flex: 1; background: linear-gradient(145deg, #0a4b4f, #1d6d6b); display: flex; align-items: center; justify-content: center; position: relative;">
-          <span style="background: rgba(255,255,255,0.9); color: #0a4b4f; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;">AFTER</span>
-          <i class="fas fa-check-circle" style="position: absolute; font-size: 40px; color: white; opacity: 0.2;"></i>
-        </div>
-      </div>
-      <div style="padding: 20px; text-align: center;">
-        <h4 style="margin-bottom: 5px; color: #0a4b4f;">Estate Clean-Out</h4>
-        <p style="color: #666; font-size: 0.9rem;">Airdrie, AB • 2 Days</p>
-      </div>
-    </div>
-    
-    <div style="background: white; border-radius: 30px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.05);">
-      <div style="display: flex; height: 160px;">
-        <div style="flex: 1; background: linear-gradient(145deg, #d9d9d9, #b3b3b3); display: flex; align-items: center; justify-content: center; position: relative;">
-          <span style="background: rgba(0,0,0,0.7); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;">BEFORE</span>
-          <i class="fas fa-couch" style="position: absolute; font-size: 40px; color: white; opacity: 0.2;"></i>
-        </div>
-        <div style="flex: 1; background: linear-gradient(145deg, #0a4b4f, #1d6d6b); display: flex; align-items: center; justify-content: center; position: relative;">
-          <span style="background: rgba(255,255,255,0.9); color: #0a4b4f; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;">AFTER</span>
-          <i class="fas fa-check-circle" style="position: absolute; font-size: 40px; color: white; opacity: 0.2;"></i>
-        </div>
-      </div>
-      <div style="padding: 20px; text-align: center;">
-        <h4 style="margin-bottom: 5px; color: #0a4b4f;">Full House Clear-Out</h4>
-        <p style="color: #666; font-size: 0.9rem;">Cochrane, AB • 3 Days</p>
-      </div>
-    </div>
-    
+  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 30px;">
+    <h2 class="section-title" style="margin-bottom: 0;"><i class="fas fa-camera"></i> Real Calgary Transformations</h2>
+    <a href="upload-placeholder.html" style="background: #0a4b4f; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 8px;">
+      <i class="fas fa-plus-circle"></i> Add Your Photos
+    </a>
   </div>
   
-  <p style="text-align: center; margin-top: 20px; font-style: italic; color: #666;">
-    <i class="fas fa-image"></i> Real before/after photos coming soon — ask us for examples!
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;" id="galleryContainer">
+    <!-- GALLERY WILL LOAD HERE -->
+  </div>
+  
+  <p style="text-align: center; margin-top: 30px; color: #666;">
+    <i class="fas fa-image"></i> 
+    <a href="upload-placeholder.html" style="color: #c75c2f; font-weight: 600;">Click here</a> to upload your before/after photos and show Calgary your work!
   </p>
 </div>
+
+<script>
+  // Load gallery photos from localStorage
+  function loadGallery() {
+    const gallery = document.getElementById('galleryContainer');
+    const photos = JSON.parse(localStorage.getItem('aladdinGallery') || '[]');
+    
+    if (photos.length === 0) {
+      gallery.innerHTML = `
+        <div style="grid-column: 1/-1; background: linear-gradient(145deg, #faf8f6, white); border-radius: 40px; padding: 60px 20px; text-align: center; border: 2px dashed #c75c2f;">
+          <i class="fas fa-cloud-upload-alt" style="font-size: 64px; color: #c75c2f; margin-bottom: 20px;"></i>
+          <h3 style="font-size: 1.8rem; color: #0a4b4f; margin-bottom: 15px;">Show Off Your Work!</h3>
+          <p style="font-size: 1.2rem; color: #3a4e5a; margin-bottom: 25px; max-width: 500px; margin-left: auto; margin-right: auto;">
+            Upload your real before/after photos and let Calgary see the transformations.
+          </p>
+          <a href="upload-placeholder.html" class="btn" style="background: #c75c2f; color: white; padding: 16px 40px; font-size: 1.2rem;">
+            <i class="fas fa-camera"></i> Upload Your Photos Now
+          </a>
+        </div>
+      `;
+    } else {
+      let html = '';
+      photos.slice(0, 6).forEach((photo, index) => {
+        html += `
+          <div style="background: white; border-radius: 30px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.05);">
+            <div style="display: flex; height: 180px;">
+              <div style="flex: 1; background: linear-gradient(145deg, #d9d9d9, #b3b3b3); display: flex; align-items: center; justify-content: center; position: relative;">
+                <span style="background: rgba(0,0,0,0.7); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; z-index: 2;">BEFORE</span>
+                <i class="fas fa-image" style="position: absolute; font-size: 48px; color: white; opacity: 0.2;"></i>
+              </div>
+              <div style="flex: 1; background: linear-gradient(145deg, #0a4b4f, #1d6d6b); display: flex; align-items: center; justify-content: center; position: relative;">
+                <span style="background: rgba(255,255,255,0.9); color: #0a4b4f; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; z-index: 2;">AFTER</span>
+                <i class="fas fa-check-circle" style="position: absolute; font-size: 48px; color: white; opacity: 0.2;"></i>
+              </div>
+            </div>
+            <div style="padding: 20px; text-align: center;">
+              <p style="color: #666; font-size: 0.9rem; margin-bottom: 5px;">
+                <i class="fas fa-calendar"></i> ${new Date().toLocaleDateString()}
+              </p>
+              <p style="font-size: 0.85rem; color: #0a4b4f; background: #e9f1f0; padding: 5px 12px; border-radius: 50px; display: inline-block;">
+                <i class="fas fa-tag"></i> ${photo.name.substring(0, 20)}...
+              </p>
+            </div>
+          </div>
+        `;
+      });
+      gallery.innerHTML = html;
+    }
+  }
+  
+  // Load gallery when page loads
+  loadGallery();
+</script>
     <!-- 🚀 ESTATE & GARAGE AUTHORITY SECTION - NO PRICING MENTIONED -->
     <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; background: linear-gradient(145deg, #0a4b4f, #1a5c5a); border-radius: 40px; padding: 40px; margin: 20px 0 40px; color: white;">
       <div style="flex: 1 1 200px; text-align: center;">
@@ -362,47 +398,59 @@
         <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">Call or text • 7am-8pm</p>
       </div>
     </div>
-    <!-- 📞 QUOTE REQUEST FORM -->
+<!-- 📞 WORKING QUOTE REQUEST FORM -->
 <div style="background: linear-gradient(145deg, #ffffff, #faf8f6); border-radius: 50px; padding: 50px; margin: 60px 0; border: 1px solid #f0e0d6;">
   <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
     <div style="flex: 1 1 300px;">
       <h2 style="font-size: 2rem; font-weight: 700; color: #0a4b4f; margin-bottom: 15px;">
-        <i class="fas fa-pencil-alt" style="color: #c75c2f;"></i> Ready for a quote?
+        <i class="fas fa-pencil-alt" style="color: #c75c2f;"></i> Get Your Free Quote
       </h2>
       <p style="font-size: 1.2rem; color: #3a4e5a; margin-bottom: 20px;">
-        Tell us what you need — we'll get back to you within 1 hour.
+        Tell us what you need — we'll respond within 1 hour.
       </p>
-      <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+      <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 20px;">
         <span style="background: #e9f1f0; padding: 8px 20px; border-radius: 50px;"><i class="fas fa-check-circle" style="color: #0a4b4f;"></i> Same-day quotes</span>
         <span style="background: #e9f1f0; padding: 8px 20px; border-radius: 50px;"><i class="fas fa-check-circle" style="color: #0a4b4f;"></i> No obligation</span>
+      </div>
+      <div style="background: #fff6e9; padding: 20px; border-radius: 30px; border-left: 5px solid #c75c2f;">
+        <p style="margin: 0; display: flex; align-items: center; gap: 10px;">
+          <i class="fas fa-phone-alt" style="color: #c75c2f; font-size: 1.3rem;"></i>
+          <span style="font-weight: 600;">Prefer to call?</span>
+          <a href="tel:+18252887720" style="color: #0a4b4f; font-weight: 700; text-decoration: none;">(825) 288-7720</a>
+        </p>
       </div>
     </div>
     <div style="flex: 1 1 300px;">
       <div style="background: white; border-radius: 30px; padding: 30px; box-shadow: 0 15px 30px rgba(0,0,0,0.05);">
-        <form action="#" method="post">
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
           <div style="margin-bottom: 15px;">
-            <input type="text" placeholder="Your name" style="width: 100%; padding: 15px 20px; border: 1px solid #e0d6d0; border-radius: 50px; font-family: 'Inter', sans-serif; font-size: 1rem;">
+            <input type="text" name="name" placeholder="Your name *" required style="width: 100%; padding: 15px 20px; border: 1px solid #e0d6d0; border-radius: 50px; font-family: 'Inter', sans-serif; font-size: 1rem;">
           </div>
           <div style="margin-bottom: 15px;">
-            <input type="email" placeholder="Your email" style="width: 100%; padding: 15px 20px; border: 1px solid #e0d6d0; border-radius: 50px; font-family: 'Inter', sans-serif; font-size: 1rem;">
+            <input type="email" name="email" placeholder="Your email *" required style="width: 100%; padding: 15px 20px; border: 1px solid #e0d6d0; border-radius: 50px; font-family: 'Inter', sans-serif; font-size: 1rem;">
           </div>
           <div style="margin-bottom: 15px;">
-            <input type="tel" placeholder="Your phone" value="(825) 288-7720" style="width: 100%; padding: 15px 20px; border: 1px solid #e0d6d0; border-radius: 50px; font-family: 'Inter', sans-serif; font-size: 1rem; background: #f5f5f5; color: #666;">
-            <p style="font-size: 0.8rem; margin-top: 5px; color: #c75c2f;"><i class="fas fa-info-circle"></i> Or just call us directly</p>
+            <input type="tel" name="phone" placeholder="Your phone number" style="width: 100%; padding: 15px 20px; border: 1px solid #e0d6d0; border-radius: 50px; font-family: 'Inter', sans-serif; font-size: 1rem;">
           </div>
           <div style="margin-bottom: 20px;">
-            <select style="width: 100%; padding: 15px 20px; border: 1px solid #e0d6d0; border-radius: 50px; font-family: 'Inter', sans-serif; font-size: 1rem; background: white;">
-              <option>What service do you need?</option>
-              <option>Estate Clean-Out</option>
-              <option>Garage Reset™</option>
-              <option>Full House Clear-Out</option>
-              <option>Small Job / Single Item</option>
-              <option>Not sure — need advice</option>
+            <select name="service" style="width: 100%; padding: 15px 20px; border: 1px solid #e0d6d0; border-radius: 50px; font-family: 'Inter', sans-serif; font-size: 1rem; background: white;">
+              <option value="" disabled selected>What service do you need?</option>
+              <option value="Estate Clean-Out">Estate Clean-Out</option>
+              <option value="Garage Reset">Garage Reset System™</option>
+              <option value="Full House">Full House Clear-Out</option>
+              <option value="Small Job">Small Job / Single Item</option>
+              <option value="Not Sure">Not sure — need advice</option>
             </select>
           </div>
-          <button type="submit" style="width: 100%; background: #c75c2f; color: white; border: none; padding: 16px; border-radius: 50px; font-weight: 700; font-size: 1.1rem; cursor: pointer; transition: all 0.3s;">
+          <div style="margin-bottom: 20px;">
+            <textarea name="message" placeholder="Tell us about your project..." style="width: 100%; padding: 15px 20px; border: 1px solid #e0d6d0; border-radius: 25px; font-family: 'Inter', sans-serif; font-size: 1rem; min-height: 100px;"></textarea>
+          </div>
+          <button type="submit" style="width: 100%; background: #c75c2f; color: white; border: none; padding: 16px; border-radius: 50px; font-weight: 700; font-size: 1.1rem; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px;">
             <i class="fas fa-paper-plane"></i> Request Free Quote
           </button>
+          <p style="font-size: 0.8rem; color: #666; margin-top: 15px; text-align: center;">
+            <i class="fas fa-lock"></i> Your info is secure. No spam, ever.
+          </p>
         </form>
       </div>
     </div>
@@ -487,6 +535,7 @@
   <script src="js/main.js"></script>
 </body>
 </html>
+
 
 
 
