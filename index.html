@@ -533,8 +533,33 @@
   </div>
 
   <script src="js/main.js"></script>
+  <script>
+  // Mobile menu toggle
+  function toggleMobileMenu() {
+    const mobileNav = document.getElementById('mobileNav');
+    if (mobileNav.style.display === 'none' || mobileNav.style.display === '') {
+      mobileNav.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    } else {
+      mobileNav.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  }
+
+  // Close mobile menu on window resize (if switching to desktop)
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+      const mobileNav = document.getElementById('mobileNav');
+      if (mobileNav) {
+        mobileNav.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    }
+  });
+</script>
 </body>
 </html>
+
 
 
 
