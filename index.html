@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>ALADDIN GENERAL SERVICE INC · Estate & Property Clean-Out Specialists Calgary</title>
   <!-- Google Font & Font Awesome -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     * {
@@ -15,89 +15,67 @@
     }
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #ffffff;
+      background-color: #faf9f8;
       color: #1e2b2c;
       line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
     .container {
       max-width: 1280px;
       margin: 0 auto;
       padding: 0 24px;
-      position: relative;
-      z-index: 2;
-    }
-    
-    /* HERO SECTION WITH BACKGROUND LOGO */
-    .hero-section {
-      position: relative;
-      min-height: 800px;
-      display: flex;
-      align-items: center;
-      margin-bottom: 40px;
-    }
-    
-    /* LOGO AS BACKGROUND IMAGE - BIG AND COVERING THE AREA */
-    .hero-section::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-image: url('logo 3.png');
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      opacity: 0.15; /* Very subtle so text is readable */
-      z-index: 1;
-      pointer-events: none;
-    }
-    
-    /* Dark overlay to ensure text readability */
-    .hero-section::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
-      z-index: 1;
-      pointer-events: none;
-    }
-    
-    .hero-content {
-      position: relative;
-      z-index: 3;
       width: 100%;
-      padding: 60px 0;
     }
     
+    /* MAIN CONTENT WRAPPER */
+    .main-content {
+      flex: 1 0 auto;
+    }
+    
+    /* NAVBAR WITH GLASS EFFECT */
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 20px 0;
       flex-wrap: wrap;
-      border-bottom: 2px solid #fde7d3;
-      background: white;
-      position: relative;
-      z-index: 10;
+      border-bottom: 2px solid rgba(199, 92, 47, 0.2);
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
-    /* Simple text logo instead of image */
+    
+    /* MODERN TEXT LOGO */
     .text-logo {
-      font-size: 1.8rem;
+      font-size: 2rem;
       font-weight: 800;
       color: #0a4b4f;
-      line-height: 1.2;
+      line-height: 1.1;
+      position: relative;
+    }
+    .text-logo::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: #c75c2f;
+      border-radius: 2px;
     }
     .text-logo span {
-      font-size: 1rem;
+      font-size: 0.9rem;
       font-weight: 600;
       color: #c75c2f;
       display: block;
-      letter-spacing: 2px;
+      letter-spacing: 3px;
+      margin-top: 5px;
     }
+    
     .nav-links {
       display: flex;
       gap: 36px;
@@ -106,103 +84,272 @@
     .nav-links a {
       text-decoration: none;
       color: #2d3e50;
-      transition: color 0.2s;
+      transition: all 0.3s;
       font-size: 1rem;
       cursor: pointer;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #c75c2f;
+      transition: width 0.3s;
+    }
+    .nav-links a:hover::after {
+      width: 100%;
     }
     .nav-links a:hover {
       color: #c75c2f;
     }
+    
+    /* BUTTONS WITH LIFE */
     .btn {
       display: inline-block;
-      background-color: #c75c2f;
+      background: linear-gradient(135deg, #c75c2f, #a04426);
       color: white;
       font-weight: 600;
-      padding: 12px 28px;
-      border-radius: 40px;
+      padding: 14px 32px;
+      border-radius: 50px;
       text-decoration: none;
-      transition: all 0.25s;
-      box-shadow: 0 6px 12px rgba(199, 92, 47, 0.2);
+      transition: all 0.3s;
+      box-shadow: 0 8px 15px rgba(199, 92, 47, 0.3);
       font-size: 1rem;
       border: none;
       cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+    .btn:hover::before {
+      left: 100%;
     }
     .btn:hover {
-      background-color: #a04426;
-      transform: scale(1.02);
-      box-shadow: 0 10px 18px rgba(167, 76, 38, 0.25);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 20px rgba(199, 92, 47, 0.4);
     }
     .btn-secondary {
-      background-color: #0a4b4f;
-      box-shadow: 0 6px 12px rgba(10, 75, 79, 0.15);
+      background: linear-gradient(135deg, #0a4b4f, #0c5e63);
+      box-shadow: 0 8px 15px rgba(10, 75, 79, 0.3);
     }
-    .btn-secondary:hover {
-      background-color: #0c5e63;
+    
+    /* HERO SECTION WITH VISIBLE BACKGROUND */
+    .hero-section {
+      position: relative;
+      min-height: 700px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+      border-radius: 0 0 50px 50px;
+      overflow: hidden;
     }
+    
+    /* STRONGER BACKGROUND VISIBILITY */
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('logo 3.png');
+      background-size: 70% auto;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.3;
+      z-index: 1;
+    }
+    
+    /* DYNAMIC GRADIENT OVERLAY */
+    .hero-section::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
+      z-index: 2;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      padding: 80px 0;
+    }
+    
     .hero-text h1 {
-      font-size: 3.5rem;
+      font-size: 4rem;
       font-weight: 800;
       line-height: 1.1;
       letter-spacing: -0.03em;
       color: #1e2b2c;
       margin-bottom: 20px;
+      animation: fadeInUp 1s ease;
     }
     .hero-highlight {
       background: linear-gradient(145deg, #fdefd4, #ffe7d4);
       padding: 0 8px;
       border-radius: 8px;
+      display: inline-block;
     }
     .hero-sub {
       font-size: 1.3rem;
       color: #3a4e5a;
       margin-bottom: 32px;
       max-width: 550px;
+      animation: fadeInUp 1s ease 0.2s both;
     }
     .hero-cta {
       display: flex;
       gap: 16px;
       flex-wrap: wrap;
+      animation: fadeInUp 1s ease 0.4s both;
     }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* SECTION TITLES WITH STYLE */
     .section-title {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       font-weight: 700;
-      margin: 60px 0 40px;
+      margin: 80px 0 40px;
       color: #1e2b2c;
       letter-spacing: -0.02em;
       text-align: center;
       position: relative;
-      z-index: 5;
+    }
+    .section-title::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: #c75c2f;
+      border-radius: 2px;
     }
     .section-title i {
       color: #c75c2f;
-      margin-right: 10px;
+      margin: 0 10px;
+      font-size: 2.5rem;
     }
+    
+    /* SERVICE CARDS WITH IMAGE SPOTS */
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin: 30px 0 50px;
-      position: relative;
-      z-index: 5;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+      margin: 40px 0 60px;
     }
+    
     .service-card {
       background: white;
-      border: 1px solid #f2e1d4;
-      border-radius: 32px;
-      padding: 35px 25px;
-      transition: all 0.3s;
-      box-shadow: 0 6px 0 #fae3d6;
+      border-radius: 40px;
+      padding: 0 0 30px 0;
+      transition: all 0.4s;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.05);
       text-decoration: none;
       color: inherit;
       display: block;
       cursor: pointer;
-      height: 100%;
+      overflow: hidden;
+      border: 1px solid #f0e0d6;
     }
     .service-card:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 25px 40px rgba(10,75,79,0.15);
       border-color: #c75c2f;
-      box-shadow: 0 16px 24px -8px rgba(0,0,0,0.08);
-      transform: translateY(-8px);
     }
+    
+    /* IMAGE SPOT - READY FOR YOUR PHOTOS */
+    .card-image-spot {
+      height: 250px;
+      background: linear-gradient(135deg, #e9f1f0, #d9e3e0);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 3px solid #c75c2f;
+    }
+    
+    /* IMAGE PLACEHOLDER WITH UPLOAD INSTRUCTION */
+    .image-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #0a4b4f;
+      background: rgba(10,75,79,0.05);
+      transition: all 0.3s;
+    }
+    .service-card:hover .image-placeholder {
+      background: rgba(199,92,47,0.1);
+    }
+    .image-placeholder i {
+      font-size: 48px;
+      color: #c75c2f;
+      margin-bottom: 10px;
+    }
+    .image-placeholder span {
+      font-size: 0.9rem;
+      font-weight: 500;
+      background: white;
+      padding: 5px 15px;
+      border-radius: 50px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    
+    /* READY FOR YOUR ACTUAL IMAGES - CSS CLASS TO APPLY LATER */
+    .actual-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;
+    }
+    
+    .card-content {
+      padding: 25px;
+    }
+    
+    .badge {
+      display: inline-block;
+      background: #f3b34c;
+      color: #1e2b2c;
+      padding: 6px 18px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.8rem;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+    
     .service-card i {
       font-size: 48px;
       color: #c75c2f;
@@ -214,32 +361,66 @@
       margin-bottom: 15px;
       color: #0a4b4f;
     }
-    .service-card p {
-      color: #475a64;
-      margin-bottom: 20px;
-      line-height: 1.6;
-    }
     .service-card ul {
       list-style: none;
-      margin-top: 15px;
+      margin-top: 20px;
     }
     .service-card ul li {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
+      color: #475a64;
     }
     .service-card ul li i {
       font-size: 1rem;
       margin-bottom: 0;
       color: #0a4b4f;
     }
+    
+    /* FIVE STAR BANNER - MORE DYNAMIC */
+    .five-star-banner {
+      background: linear-gradient(135deg, #0a4b4f, #1d6d6b, #0a4b4f);
+      background-size: 200% 200%;
+      animation: gradientMove 5s ease infinite;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      border-radius: 60px;
+      margin: 60px 0;
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      box-shadow: 0 20px 30px rgba(10,75,79,0.3);
+      position: relative;
+      overflow: hidden;
+    }
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .five-star-banner i {
+      color: #f3b34c;
+      margin: 0 10px;
+      font-size: 2rem;
+      animation: starPulse 2s ease infinite;
+    }
+    @keyframes starPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+    
+    /* FOOTER ALWAYS AT BOTTOM */
     .footer {
       background: #1e2b2c;
       color: #dddbd0;
       padding: 60px 0 32px;
       border-radius: 48px 48px 0 0;
-      margin-top: 60px;
+      margin-top: 80px;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 10;
     }
     .footer-content {
       display: flex;
@@ -248,7 +429,7 @@
       gap: 40px;
     }
     .footer-logo-text {
-      font-size: 1.8rem;
+      font-size: 2rem;
       font-weight: 700;
       color: white;
       margin-bottom: 15px;
@@ -257,6 +438,8 @@
       font-size: 0.9rem;
       color: #f3b34c;
       display: block;
+      letter-spacing: 2px;
+      margin-top: 5px;
     }
     .footer-links {
       display: flex;
@@ -268,9 +451,11 @@
       color: #d6ccc2;
       text-decoration: none;
       margin-bottom: 12px;
+      transition: all 0.3s;
     }
     .footer-col a:hover {
       color: #f3b34c;
+      transform: translateX(5px);
     }
     .copyright {
       margin-top: 48px;
@@ -279,18 +464,26 @@
       text-align: center;
       color: #aaae9f;
     }
+    
+    /* FLOATING CALL BUTTON - MORE VISIBLE */
     .floating-call {
       position: fixed;
       bottom: 30px;
       right: 30px;
-      background: #c75c2f;
+      background: linear-gradient(135deg, #c75c2f, #a04426);
       color: white;
       border-radius: 100px;
-      padding: 16px 30px;
+      padding: 18px 35px;
       font-weight: bold;
-      box-shadow: 0 8px 0 #8a3e22;
+      box-shadow: 0 10px 20px rgba(199, 92, 47, 0.4);
       z-index: 99;
       border: 2px solid white;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
     }
     .floating-call a {
       color: white;
@@ -299,37 +492,73 @@
       align-items: center;
       gap: 10px;
     }
-    .badge {
-      display: inline-block;
-      background: #f3b34c;
-      color: #1e2b2c;
-      padding: 5px 15px;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: 0.8rem;
-      margin-bottom: 15px;
-    }
-    .five-star-banner {
-      background: linear-gradient(135deg, #0a4b4f, #1d6d6b);
-      color: white;
-      text-align: center;
-      padding: 20px;
+    
+    /* ABOUT SECTION WITH CHARACTER */
+    .about-section {
+      background: linear-gradient(135deg, #fdf8f2, #fff);
       border-radius: 60px;
-      margin: 40px 0;
-      font-size: 1.5rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      padding: 60px 50px;
+      margin: 60px 0;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+      border: 1px solid #f0e0d6;
+      position: relative;
+      overflow: hidden;
     }
-    .five-star-banner i {
-      color: #f3b34c;
-      margin: 0 5px;
+    .about-section::before {
+      content: "🧞";
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      font-size: 150px;
+      opacity: 0.05;
+      transform: rotate(-15deg);
     }
+    
+    .stats {
+      display: flex;
+      gap: 50px;
+      margin: 30px 0;
+    }
+    .stat-item {
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #0a4b4f;
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 1rem;
+      color: #c75c2f;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    
+    .service-area-card {
+      background: #0a4b4f;
+      border-radius: 40px;
+      padding: 40px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-area-card::before {
+      content: "📍";
+      position: absolute;
+      bottom: -10px;
+      right: -10px;
+      font-size: 100px;
+      opacity: 0.1;
+    }
+    
+    /* RESPONSIVE */
     @media (max-width: 700px) {
       .navbar { flex-direction: column; gap: 16px; }
       .nav-links { gap: 24px; flex-wrap: wrap; justify-content: center; }
       .hero-text h1 { font-size: 2.5rem; }
-      .hero-section { min-height: 600px; }
+      .hero-section { min-height: 500px; }
+      .stats { flex-direction: column; gap: 20px; }
     }
   </style>
 </head>
@@ -339,226 +568,338 @@
   <div class="floating-call">
     <a href="tel:+18252887720">
       <i class="fas fa-phone-alt"></i> 
-      <span>Free Quote? Call (825) 288-7720</span>
+      <span>Free Quote? (825) 288-7720</span>
     </a>
   </div>
 
-  <!-- SIMPLE TEXT LOGO IN NAVBAR -->
-  <div class="container">
-    <div class="navbar">
-      <div class="text-logo">
-        ALADDIN
-        <span>GENERAL SERVICES INC.</span>
-      </div>
-      <div class="nav-links">
-        <a onclick="showPage('home')">Home</a>
-        <a onclick="showPage('services')">Services</a>
-        <a onclick="showPage('about')">About</a>
-        <a onclick="showPage('contact')">Contact</a>
-      </div>
-    </div>
-  </div>
+  <!-- MAIN CONTENT WRAPPER -->
+  <div class="main-content">
 
-  <!-- HOME PAGE -->
-  <div id="home">
-    <!-- HERO SECTION WITH BIG BACKGROUND LOGO -->
-    <div class="hero-section">
-      <div class="container">
-        <div class="hero-content">
-          <div class="hero-text">
-            <h1>
-              <span class="hero-highlight">Estate & Property</span><br>Clean-Out Specialists<br>in Calgary
-            </h1>
-            <p class="hero-sub">
-              Garage Reset • Junk Removal • Estate Clean-Outs • Full House Clear-Outs
-            </p>
-            <p style="font-size: 1.1rem; margin-top: 10px; color: #0a4b4f; font-weight: 600;">
-              We transform cluttered spaces into peace of mind. Fair, transparent pricing for every job.
-            </p>
-            <p style="font-size: 1rem; margin-top: 5px; color: #c75c2f; font-weight: 600;">
-              <i class="fas fa-smile"></i> Small jobs? Single item pickup? Everyone is welcome — no project too small!
-            </p>
-            <div class="hero-cta">
-              <a href="tel:+18252887720" class="btn"><i class="fas fa-phone-alt"></i> (825) 288-7720</a>
-              <a onclick="showPage('contact')" class="btn btn-secondary"><i class="fas fa-calendar-check"></i> Free Estimate</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    <!-- NAVBAR -->
     <div class="container">
-      <!-- FIVE STAR SERVICES BANNER (not reviews) -->
-      <div class="five-star-banner">
-        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-        FIVE STAR SERVICES
-        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-      </div>
-
-      <!-- SERVICES GRID -->
-      <h2 class="section-title"><i class="fas fa-crown"></i> Our Premium Services</h2>
-      <div class="services-grid">
-        
-        <!-- JUNK REMOVAL CARD -->
-        <div class="service-card" onclick="showService('junkremoval')">
-          <div class="badge">Most Popular</div>
-          <i class="fas fa-truck"></i>
-          <h3>Junk Removal</h3>
-          <p>Fast, friendly, and affordable junk removal for homes and businesses. We haul it all — furniture, appliances, electronics, yard waste, and more.</p>
-          <ul>
-            <li><i class="fas fa-check-circle"></i> Same-day service available</li>
-            <li><i class="fas fa-check-circle"></i> Furniture & appliance removal</li>
-            <li><i class="fas fa-check-circle"></i> Electronics recycling</li>
-            <li><i class="fas fa-check-circle"></i> Yard waste & construction debris</li>
-            <li><i class="fas fa-check-circle"></i> We do the heavy lifting</li>
-          </ul>
+      <div class="navbar">
+        <div class="text-logo">
+          ALADDIN
+          <span>GENERAL SERVICES INC.</span>
         </div>
-        
-        <!-- ESTATE CLEAN-OUTS CARD -->
-        <div class="service-card" onclick="showService('estate')">
-          <i class="fas fa-home"></i>
-          <h3>Estate Clean-Outs</h3>
-          <p>Full property clearance with respect and discretion. We handle the heavy lifting so families can heal.</p>
-          <ul>
-            <li><i class="fas fa-check-circle"></i> Entire property clearance</li>
-            <li><i class="fas fa-check-circle"></i> Donation coordination</li>
-            <li><i class="fas fa-check-circle"></i> Realtor & lawyer trusted</li>
-          </ul>
-        </div>
-        
-        <!-- GARAGE RESET CARD -->
-        <div class="service-card" onclick="showService('garage')">
-          <i class="fas fa-warehouse"></i>
-          <h3>Garage Reset</h3>
-          <p>One-day garage transformation. We remove junk, sweep clean, and organize your space.</p>
-          <div style="background: #f8f4f0; border-radius: 20px; padding: 15px; margin-top: 20px;">
-            <p style="margin: 0;"><strong>Clear-Out</strong> — Remove & sweep</p>
-            <p style="margin: 8px 0;"><strong>Refresh</strong> — Sort, sweep & organize</p>
-            <p style="margin: 0;"><strong>Reset</strong> — Full transformation</p>
-          </div>
-        </div>
-        
-        <!-- FULL HOUSE CARD -->
-        <div class="service-card" onclick="showService('fullhouse')">
-          <i class="fas fa-building"></i>
-          <h3>Full House Clear-Outs</h3>
-          <p>Moving or downsizing? We clear everything from basements to bedrooms. You don't lift a finger.</p>
-          <ul>
-            <li><i class="fas fa-check-circle"></i> Whole home clean-outs</li>
-            <li><i class="fas fa-check-circle"></i> Basements & attics</li>
-            <li><i class="fas fa-check-circle"></i> Hoarding situations</li>
-          </ul>
-        </div>
-        
-        <!-- HANDYMAN ADD-ON CARD - UPDATED (no plumbing or electrical) -->
-        <div class="service-card" onclick="showService('handyman')">
-          <i class="fas fa-tools"></i>
-          <h3>Handyman Services</h3>
-          <p>Small repairs and fixes to complete your space reset. Available as add-ons to any service.</p>
-          <ul>
-            <li><i class="fas fa-check-circle"></i> Furniture assembly</li>
-            <li><i class="fas fa-check-circle"></i> Shelving installation</li>
-            <li><i class="fas fa-check-circle"></i> Picture hanging</li>
-            <li><i class="fas fa-check-circle"></i> Drywall patching</li>
-            <li><i class="fas fa-check-circle"></i> Door adjustments</li>
-          </ul>
-        </div>
-        
-        <!-- LIGHT CLEANING CARD -->
-        <div class="service-card" onclick="showService('cleaning')">
-          <i class="fas fa-broom"></i>
-          <h3>Light Cleaning</h3>
-          <p>Post-clean-up touch-ups to leave your space fresh and ready.</p>
-          <ul>
-            <li><i class="fas fa-check-circle"></i> Sweeping & vacuuming</li>
-            <li><i class="fas fa-check-circle"></i> Surface wiping</li>
-            <li><i class="fas fa-check-circle"></i> Garage floor sweeping</li>
-          </ul>
+        <div class="nav-links">
+          <a onclick="showPage('home')">Home</a>
+          <a onclick="showPage('services')">Services</a>
+          <a onclick="showPage('about')">About</a>
+          <a onclick="showPage('contact')">Contact</a>
         </div>
       </div>
+    </div>
 
-      <!-- ADD-ON SERVICES BADGES -->
-      <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin: 40px 0;">
-        <span style="background: #e9f1f0; padding: 10px 25px; border-radius: 50px; font-weight: 500;"><i class="fas fa-tools"></i> Handyman Add-Ons</span>
-        <span style="background: #e9f1f0; padding: 10px 25px; border-radius: 50px; font-weight: 500;"><i class="fas fa-broom"></i> Light Cleaning Available</span>
-        <span style="background: #0a4b4f; color: white; padding: 10px 25px; border-radius: 50px; font-weight: 600;">Family Owned & Operated</span>
-        <span style="background: #c75c2f; color: white; padding: 10px 25px; border-radius: 50px; font-weight: 600;">No job too small • Everyone welcome</span>
-      </div>
-
-      <!-- ABOUT SECTION (no reviews) -->
-      <div style="background: #fdf8f2; border-radius: 60px; padding: 48px 40px; margin: 60px 0;">
-        <div style="display: flex; flex-wrap: wrap; gap: 40px;">
-          <div style="flex: 1;">
-            <h2 style="font-size: 2.2rem; font-weight: 700; color:#0a4b4f;">A Family Business</h2>
-            <p style="font-size: 1.2rem; margin: 20px 0;">We're not a franchise. Just my wife and I, handling every job personally.</p>
-            <div style="display: flex; gap: 40px; margin: 30px 0;">
-              <div><div style="font-size: 2.5rem; font-weight: 800; color: #0a4b4f;">2+ Yrs</div><div>Experience</div></div>
-              <div><div style="font-size: 2.5rem; font-weight: 800; color: #0a4b4f;">100%</div><div>Family Operated</div></div>
+    <!-- HOME PAGE -->
+    <div id="home">
+      <!-- HERO WITH VISIBLE BACKGROUND -->
+      <div class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-text">
+              <h1>
+                <span class="hero-highlight">Estate & Property</span><br>Clean-Out Specialists<br>in Calgary
+              </h1>
+              <p class="hero-sub">
+                Garage Reset • Junk Removal • Estate Clean-Outs • Full House Clear-Outs
+              </p>
+              <p style="font-size: 1.1rem; margin: 20px 0; color: #0a4b4f; font-weight: 600;">
+                We transform cluttered spaces into peace of mind. Fair, transparent pricing for every job.
+              </p>
+              <div class="hero-cta">
+                <a href="tel:+18252887720" class="btn"><i class="fas fa-phone-alt"></i> (825) 288-7720</a>
+                <a onclick="showPage('contact')" class="btn btn-secondary"><i class="fas fa-calendar-check"></i> Free Estimate</a>
+              </div>
             </div>
           </div>
-          <div style="flex: 0 0 250px; background: #0a4b4f; border-radius: 40px; padding: 30px; color: white;">
-            <div style="font-size: 1.8rem; font-weight: 700;">Calgary + Area</div>
-            <div style="margin-top: 15px;">Airdrie • Chestermere • Okotoks • Cochrane</div>
-            <div style="margin-top: 20px;">1510 30 Ave SW, Calgary</div>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- FIVE STAR BANNER -->
+        <div class="five-star-banner">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          FIVE STAR SERVICE
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+
+        <!-- SERVICES SECTION WITH IMAGE SPOTS -->
+        <h2 class="section-title"><i class="fas fa-crown"></i> Our Premium Services</h2>
+        <div class="services-grid" id="services-grid-home">
+          
+          <!-- JUNK REMOVAL CARD - WITH IMAGE SPOT -->
+          <div class="service-card" onclick="showService('junkremoval')">
+            <div class="card-image-spot" id="junk-image-spot">
+              <!-- IMAGE SPOT - UPLOAD junk-before.jpg / junk-after.jpg HERE -->
+              <div class="image-placeholder">
+                <i class="fas fa-camera"></i>
+                <span>📸 Before/After Junk Removal</span>
+              </div>
+              <!-- WHEN YOU UPLOAD IMAGES, REPLACE THE DIV ABOVE WITH THIS:
+              <img src="junk-before.jpg" class="actual-image" style="display:block; position:absolute; top:0; left:0; width:50%; height:100%; object-fit:cover;">
+              <img src="junk-after.jpg" class="actual-image" style="display:block; position:absolute; top:0; right:0; width:50%; height:100%; object-fit:cover; border-left:3px solid white;">
+              -->
+            </div>
+            <div class="card-content">
+              <div class="badge">Most Popular</div>
+              <i class="fas fa-truck"></i>
+              <h3>Junk Removal</h3>
+              <ul>
+                <li><i class="fas fa-check-circle"></i> Same-day service available</li>
+                <li><i class="fas fa-check-circle"></i> Furniture & appliance removal</li>
+                <li><i class="fas fa-check-circle"></i> Electronics recycling</li>
+                <li><i class="fas fa-check-circle"></i> Yard waste & construction debris</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- ESTATE CLEAN-OUTS CARD - WITH IMAGE SPOT -->
+          <div class="service-card" onclick="showService('estate')">
+            <div class="card-image-spot" id="estate-image-spot">
+              <div class="image-placeholder">
+                <i class="fas fa-camera"></i>
+                <span>📸 Before/After Estate</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <i class="fas fa-home"></i>
+              <h3>Estate Clean-Outs</h3>
+              <ul>
+                <li><i class="fas fa-check-circle"></i> Full property clearance</li>
+                <li><i class="fas fa-check-circle"></i> Donation coordination</li>
+                <li><i class="fas fa-check-circle"></i> Realtor trusted</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- GARAGE RESET CARD - WITH IMAGE SPOT -->
+          <div class="service-card" onclick="showService('garage')">
+            <div class="card-image-spot" id="garage-image-spot">
+              <div class="image-placeholder">
+                <i class="fas fa-camera"></i>
+                <span>📸 Before/After Garage</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <i class="fas fa-warehouse"></i>
+              <h3>Garage Reset</h3>
+              <ul>
+                <li><i class="fas fa-check-circle"></i> 1-Day transformation</li>
+                <li><i class="fas fa-check-circle"></i> Remove & sweep</li>
+                <li><i class="fas fa-check-circle"></i> Sort & organize</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- FULL HOUSE CARD - WITH IMAGE SPOT -->
+          <div class="service-card" onclick="showService('fullhouse')">
+            <div class="card-image-spot" id="house-image-spot">
+              <div class="image-placeholder">
+                <i class="fas fa-camera"></i>
+                <span>📸 Before/After House</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <i class="fas fa-building"></i>
+              <h3>Full House Clear-Outs</h3>
+              <ul>
+                <li><i class="fas fa-check-circle"></i> Whole home clean-outs</li>
+                <li><i class="fas fa-check-circle"></i> Basements & attics</li>
+                <li><i class="fas fa-check-circle"></i> Hoarding situations</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- HANDYMAN CARD - WITH IMAGE SPOT -->
+          <div class="service-card" onclick="showService('handyman')">
+            <div class="card-image-spot" id="handyman-image-spot">
+              <div class="image-placeholder">
+                <i class="fas fa-camera"></i>
+                <span>📸 Handyman Work</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <i class="fas fa-tools"></i>
+              <h3>Handyman Services</h3>
+              <ul>
+                <li><i class="fas fa-check-circle"></i> Furniture assembly</li>
+                <li><i class="fas fa-check-circle"></i> Shelving installation</li>
+                <li><i class="fas fa-check-circle"></i> Picture hanging</li>
+                <li><i class="fas fa-check-circle"></i> Drywall patching</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- CLEANING CARD - WITH IMAGE SPOT -->
+          <div class="service-card" onclick="showService('cleaning')">
+            <div class="card-image-spot" id="cleaning-image-spot">
+              <div class="image-placeholder">
+                <i class="fas fa-camera"></i>
+                <span>📸 After Cleaning</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <i class="fas fa-broom"></i>
+              <h3>Light Cleaning</h3>
+              <ul>
+                <li><i class="fas fa-check-circle"></i> Sweeping & vacuuming</li>
+                <li><i class="fas fa-check-circle"></i> Surface wiping</li>
+                <li><i class="fas fa-check-circle"></i> Garage floor sweeping</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- ABOUT SECTION -->
+        <div class="about-section">
+          <div style="display: flex; flex-wrap: wrap; gap: 50px; align-items: center;">
+            <div style="flex: 2;">
+              <h2 style="font-size: 2.5rem; color: #0a4b4f; margin-bottom: 20px;">A Family Business</h2>
+              <p style="font-size: 1.2rem; line-height: 1.8;">We're not a franchise. Just my wife and I, boots on the ground, handling every job personally. Estate clean-outs require trust. We earn it, one home at a time.</p>
+              
+              <div class="stats">
+                <div class="stat-item">
+                  <div class="stat-number">2+</div>
+                  <div class="stat-label">YEARS</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">100%</div>
+                  <div class="stat-label">FAMILY OWNED</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">500+</div>
+                  <div class="stat-label">JOBS DONE</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="service-area-card" style="flex: 1;">
+              <h3 style="font-size: 2rem; margin-bottom: 20px;">📍 Calgary + Area</h3>
+              <p style="font-size: 1.2rem; margin-bottom: 15px;">Airdrie • Chestermere • Okotoks • Cochrane</p>
+              <p style="font-size: 1rem; opacity: 0.9;">1510 30 Ave SW, Calgary</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICES PAGE (simplified) -->
+    <div id="services" style="display: none;">
+      <div class="container" style="padding: 60px 24px;">
+        <h2 class="section-title">All Services</h2>
+        <div class="services-grid">
+          <!-- Same cards as home but simplified for brevity -->
+          <div class="service-card" onclick="showService('junkremoval')"><div class="card-content"><h3>Junk Removal</h3></div></div>
+          <div class="service-card" onclick="showService('estate')"><div class="card-content"><h3>Estate Clean-Outs</h3></div></div>
+          <div class="service-card" onclick="showService('garage')"><div class="card-content"><h3>Garage Reset</h3></div></div>
+          <div class="service-card" onclick="showService('fullhouse')"><div class="card-content"><h3>Full House</h3></div></div>
+          <div class="service-card" onclick="showService('handyman')"><div class="card-content"><h3>Handyman</h3></div></div>
+          <div class="service-card" onclick="showService('cleaning')"><div class="card-content"><h3>Cleaning</h3></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INDIVIDUAL SERVICE PAGES WITH IMAGE SPOTS -->
+    <div id="junkremoval-page" style="display: none;">
+      <div class="container" style="padding: 60px 24px;">
+        <h1 class="section-title">Junk Removal</h1>
+        <div style="height: 400px; background: linear-gradient(135deg, #e9f1f0, #d9e3e0); border-radius: 40px; margin-bottom: 40px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+          <!-- IMAGE SPOT FOR JUNK REMOVAL BEFORE/AFTER -->
+          <div class="image-placeholder" style="height:100%; background: rgba(10,75,79,0.1);">
+            <i class="fas fa-camera" style="font-size: 80px;"></i>
+            <span style="font-size: 1.2rem;">📸 Upload Before/After Junk Removal Photos Here</span>
+          </div>
+        </div>
+        <p style="font-size: 1.2rem; margin-bottom: 30px;">Fast, friendly, and affordable junk removal for homes and businesses. We haul it all so you don't have to lift a finger.</p>
+        <a onclick="showPage('contact')" class="btn">Get Free Quote</a>
+      </div>
+    </div>
+
+    <div id="estate-page" style="display: none;">
+      <div class="container" style="padding: 60px 24px;">
+        <h1 class="section-title">Estate Clean-Outs</h1>
+        <div style="height: 400px; background: linear-gradient(135deg, #e9f1f0, #d9e3e0); border-radius: 40px; margin-bottom: 40px; display: flex; align-items: center; justify-content: center;">
+          <div class="image-placeholder" style="height:100%;"><i class="fas fa-camera" style="font-size: 80px;"></i><span>📸 Upload Estate Before/After</span></div>
+        </div>
+        <p style="font-size: 1.2rem; margin-bottom: 30px;">Full property clearance with respect and discretion. We handle the heavy lifting so families can heal.</p>
+        <a onclick="showPage('contact')" class="btn">Get Free Quote</a>
+      </div>
+    </div>
+
+    <div id="garage-page" style="display: none;">
+      <div class="container" style="padding: 60px 24px;">
+        <h1 class="section-title">Garage Reset</h1>
+        <div style="height: 400px; background: linear-gradient(135deg, #e9f1f0, #d9e3e0); border-radius: 40px; margin-bottom: 40px; display: flex; align-items: center; justify-content: center;">
+          <div class="image-placeholder" style="height:100%;"><i class="fas fa-camera" style="font-size: 80px;"></i><span>📸 Upload Garage Before/After</span></div>
+        </div>
+        <p style="font-size: 1.2rem; margin-bottom: 30px;">One-day garage transformation. We remove junk, sweep clean, and organize your space.</p>
+        <a onclick="showPage('contact')" class="btn">Get Free Quote</a>
+      </div>
+    </div>
+
+    <div id="fullhouse-page" style="display: none;">
+      <div class="container" style="padding: 60px 24px;">
+        <h1 class="section-title">Full House Clear-Outs</h1>
+        <div style="height: 400px; background: linear-gradient(135deg, #e9f1f0, #d9e3e0); border-radius: 40px; margin-bottom: 40px; display: flex; align-items: center; justify-content: center;">
+          <div class="image-placeholder" style="height:100%;"><i class="fas fa-camera" style="font-size: 80px;"></i><span>📸 Upload House Before/After</span></div>
+        </div>
+        <p style="font-size: 1.2rem; margin-bottom: 30px;">Moving or downsizing? We clear everything from basements to bedrooms.</p>
+        <a onclick="showPage('contact')" class="btn">Get Free Quote</a>
+      </div>
+    </div>
+
+    <div id="handyman-page" style="display: none;">
+      <div class="container" style="padding: 60px 24px;">
+        <h1 class="section-title">Handyman Services</h1>
+        <div style="height: 400px; background: linear-gradient(135deg, #e9f1f0, #d9e3e0); border-radius: 40px; margin-bottom: 40px; display: flex; align-items: center; justify-content: center;">
+          <div class="image-placeholder" style="height:100%;"><i class="fas fa-camera" style="font-size: 80px;"></i><span>📸 Upload Handyman Work</span></div>
+        </div>
+        <p style="font-size: 1.2rem; margin-bottom: 30px;">Furniture assembly, shelving, picture hanging, drywall patching.</p>
+        <a onclick="showPage('contact')" class="btn">Get Free Quote</a>
+      </div>
+    </div>
+
+    <div id="cleaning-page" style="display: none;">
+      <div class="container" style="padding: 60px 24px;">
+        <h1 class="section-title">Light Cleaning</h1>
+        <div style="height: 400px; background: linear-gradient(135deg, #e9f1f0, #d9e3e0); border-radius: 40px; margin-bottom: 40px; display: flex; align-items: center; justify-content: center;">
+          <div class="image-placeholder" style="height:100%;"><i class="fas fa-camera" style="font-size: 80px;"></i><span>📸 Upload After Cleaning</span></div>
+        </div>
+        <p style="font-size: 1.2rem; margin-bottom: 30px;">Post-clean-up touch-ups to leave your space fresh and ready.</p>
+        <a onclick="showPage('contact')" class="btn">Get Free Quote</a>
+      </div>
+    </div>
+
+    <!-- ABOUT PAGE -->
+    <div id="about" style="display: none;">
+      <div class="container" style="padding: 60px 24px;">
+        <h1 class="section-title">About Us</h1>
+        <div style="height: 400px; background: linear-gradient(135deg, #e9f1f0, #d9e3e0); border-radius: 40px; margin-bottom: 40px; display: flex; align-items: center; justify-content: center;">
+          <div class="image-placeholder" style="height:100%;"><i class="fas fa-camera" style="font-size: 80px;"></i><span>📸 Upload Family Business Photo</span></div>
+        </div>
+        <p style="font-size: 1.2rem; line-height: 1.8;">We're a family-owned and operated business serving Calgary and surrounding areas. With over 2 years of experience, we treat every home like our own.</p>
+      </div>
+    </div>
+
+    <!-- CONTACT PAGE -->
+    <div id="contact" style="display: none;">
+      <div class="container" style="padding: 60px 24px; text-align: center;">
+        <h1 class="section-title">Contact Us</h1>
+        <div style="max-width: 600px; margin: 0 auto;">
+          <div style="background: white; border-radius: 40px; padding: 50px; box-shadow: 0 20px 40px rgba(0,0,0,0.05);">
+            <i class="fas fa-envelope-open-text" style="font-size: 70px; color: #c75c2f; margin-bottom: 30px;"></i>
+            <h2 style="margin-bottom: 30px;">Get Your Free Quote</h2>
+            <a href="mailto:aladdin.g.services@gmail.com" class="btn" style="display:block; margin-bottom: 20px; font-size: 1.3rem;">📧 Email Us</a>
+            <a href="tel:+18252887720" class="btn btn-secondary" style="display:block; font-size: 1.3rem;">📞 (825) 288-7720</a>
+            <p style="margin-top: 30px;">1510 30 Ave SW, Calgary, AB T2T1P3</p>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- OTHER PAGES (simplified for brevity - they work the same) -->
-  <div id="services" style="display: none;">
-    <div class="container" style="padding: 60px 24px;">
-      <h1 class="section-title">Our Services</h1>
-      <div class="services-grid">
-        <div class="service-card" onclick="showService('junkremoval')">
-          <i class="fas fa-truck"></i>
-          <h3>Junk Removal</h3>
-        </div>
-        <div class="service-card" onclick="showService('estate')">
-          <i class="fas fa-home"></i>
-          <h3>Estate Clean-Outs</h3>
-        </div>
-        <div class="service-card" onclick="showService('garage')">
-          <i class="fas fa-warehouse"></i>
-          <h3>Garage Reset</h3>
-        </div>
-        <div class="service-card" onclick="showService('fullhouse')">
-          <i class="fas fa-building"></i>
-          <h3>Full House</h3>
-        </div>
-        <div class="service-card" onclick="showService('handyman')">
-          <i class="fas fa-tools"></i>
-          <h3>Handyman</h3>
-        </div>
-        <div class="service-card" onclick="showService('cleaning')">
-          <i class="fas fa-broom"></i>
-          <h3>Cleaning</h3>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- SERVICE PAGES (simplified but functional) -->
-  <div id="junkremoval-page" style="display: none;"><div class="container service-page"><h1>Junk Removal</h1><p>Service details here...</p><a onclick="showPage('contact')" class="btn">Get Quote</a></div></div>
-  <div id="estate-page" style="display: none;"><div class="container service-page"><h1>Estate Clean-Outs</h1><p>Service details here...</p><a onclick="showPage('contact')" class="btn">Get Quote</a></div></div>
-  <div id="garage-page" style="display: none;"><div class="container service-page"><h1>Garage Reset</h1><p>Service details here...</p><a onclick="showPage('contact')" class="btn">Get Quote</a></div></div>
-  <div id="fullhouse-page" style="display: none;"><div class="container service-page"><h1>Full House Clear-Outs</h1><p>Service details here...</p><a onclick="showPage('contact')" class="btn">Get Quote</a></div></div>
-  <div id="handyman-page" style="display: none;"><div class="container service-page"><h1>Handyman Services</h1><p>Furniture assembly, shelving, picture hanging, drywall patching, door adjustments.</p><a onclick="showPage('contact')" class="btn">Get Quote</a></div></div>
-  <div id="cleaning-page" style="display: none;"><div class="container service-page"><h1>Light Cleaning</h1><p>Sweeping, vacuuming, surface wiping, garage floor cleaning.</p><a onclick="showPage('contact')" class="btn">Get Quote</a></div></div>
-  <div id="about" style="display: none;"><div class="container service-page"><h1>About Us</h1><p>Family owned and operated since 2025.</p></div></div>
-  <div id="contact" style="display: none;">
-    <div class="container service-page">
-      <h1>Contact Us</h1>
-      <div style="max-width: 500px; margin: 0 auto;">
-        <a href="mailto:aladdin.g.services@gmail.com" class="btn" style="display:block; margin:20px 0;">Email Us</a>
-        <a href="tel:+18252887720" class="btn btn-secondary" style="display:block;">Call (825) 288-7720</a>
-        <p style="margin-top:30px;">1510 30 Ave SW, Calgary</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- FOOTER (simple text logo) -->
+  <!-- FOOTER - ALWAYS AT BOTTOM -->
   <div class="footer">
     <div class="container">
       <div class="footer-content">
@@ -567,32 +908,48 @@
             ALADDIN
             <span>GENERAL SERVICES INC.</span>
           </div>
-          <p>Calgary • Airdrie • Chestermere • Okotoks • Cochrane</p>
+          <p>Estate & Property Clean-Out Specialists</p>
+          <p>📍 Calgary • Airdrie • Chestermere • Okotoks • Cochrane</p>
         </div>
         <div class="footer-links">
           <div class="footer-col">
-            <h4 style="color: white;">Links</h4>
+            <h4 style="color: white;">Quick Links</h4>
             <a onclick="showPage('home')">Home</a>
             <a onclick="showPage('services')">Services</a>
+            <a onclick="showPage('about')">About</a>
+            <a onclick="showPage('contact')">Contact</a>
+          </div>
+          <div class="footer-col">
+            <h4 style="color: white;">Services</h4>
+            <a onclick="showService('junkremoval')">Junk Removal</a>
+            <a onclick="showService('estate')">Estate Clean-Outs</a>
+            <a onclick="showService('garage')">Garage Reset</a>
           </div>
           <div class="footer-col">
             <h4 style="color: white;">Contact</h4>
             <a href="tel:+18252887720">(825) 288-7720</a>
-            <a href="mailto:aladdin.g.services@gmail.com">Email</a>
+            <a href="mailto:aladdin.g.services@gmail.com">aladdin.g.services@gmail.com</a>
           </div>
         </div>
       </div>
       <div class="copyright">
-        © 2025 ALADDIN GENERAL SERVICE INC.
+        © 2025 ALADDIN GENERAL SERVICE INC. All rights reserved.
       </div>
     </div>
   </div>
 
   <script>
     function showPage(page) {
-      const pages = ['home','services','about','contact','junkremoval-page','estate-page','garage-page','fullhouse-page','handyman-page','cleaning-page'];
-      pages.forEach(p => document.getElementById(p).style.display = 'none');
+      // Hide all main pages
+      const pages = ['home', 'services', 'about', 'contact', 
+                     'junkremoval-page', 'estate-page', 'garage-page', 
+                     'fullhouse-page', 'handyman-page', 'cleaning-page'];
+      pages.forEach(p => {
+        const el = document.getElementById(p);
+        if (el) el.style.display = 'none';
+      });
       
+      // Show selected page
       if(page === 'home') document.getElementById('home').style.display = 'block';
       else if(page === 'services') document.getElementById('services').style.display = 'block';
       else if(page === 'about') document.getElementById('about').style.display = 'block';
@@ -604,9 +961,14 @@
       else if(page === 'handyman') document.getElementById('handyman-page').style.display = 'block';
       else if(page === 'cleaning') document.getElementById('cleaning-page').style.display = 'block';
       
-      window.scrollTo(0,0);
+      window.scrollTo(0, 0);
     }
-    function showService(s) { showPage(s); }
+    
+    function showService(service) {
+      showPage(service);
+    }
+    
+    // Show home page by default
     showPage('home');
   </script>
 </body>
