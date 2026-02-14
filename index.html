@@ -696,53 +696,89 @@
       </div>
       
       <div style="max-width: 600px; margin: 40px auto;">
-        <!-- FORMSpREE FORM - REPLACE WITH YOUR ENDPOINT -->
-        <div class="form-container">
-          <form action="https://formspree.io/f/mpqjpvbn" method="POST">
-            
-            <div class="form-group">
-              <input type="text" name="name" placeholder="Your full name *" required>
-            </div>
-            
-            <div class="form-group">
-              <input type="email" name="email" placeholder="Your email address *" required>
-            </div>
-            
-            <div class="form-group">
-              <input type="tel" name="phone" placeholder="Your phone number">
-            </div>
-            
-            <div class="form-group">
-              <select name="service" required>
-                <option value="" disabled selected>What service do you need? *</option>
-                <option value="Estate Clean-Out">Estate Clean-Out</option>
-                <option value="Garage Reset">Garage Reset</option>
-                <option value="Full House">Full House Clear-Out</option>
-                <option value="Small Job">Small Job / Single Item</option>
-              </select>
-            </div>
-            
-            <div class="form-group">
-              <textarea name="message" placeholder="Tell us about your project..." required></textarea>
-            </div>
-            
-            <button type="submit" class="btn" style="width: 100%;">Request Free Quote</button>
-            
-            <div class="image-note" style="margin-top: 20px;">
-              <i class="fas fa-info-circle"></i> 
-              After submitting, you'll see a confirmation from Formspree. We'll email you back within 1 hour.
-            </div>
-          </form>
-        </div>
-      </div>
-      
-      <div style="text-align: center; margin: 40px 0;">
-        <p><i class="fas fa-phone-alt" style="color: #c75c2f;"></i> <strong>Call us:</strong> <a href="tel:+18252887720" style="color: #0a4b4f;">(825) 288-7720</a></p>
-        <p><i class="fas fa-envelope" style="color: #c75c2f;"></i> <strong>Email:</strong> aladdin.g.services@gmail.com</p>
-        <p><i class="fas fa-map-marker-alt" style="color: #c75c2f;"></i> 1510 30 Ave SW, Calgary, AB T2T1P3</p>
-      </div>
+       <!-- 📞 FORMSpREE CONTACT FORM - WORKING VERSION -->
+<div style="background: white; border-radius: 30px; padding: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); max-width: 600px; margin: 0 auto;">
+  
+  <!-- IMPORTANT: This is the CORRECT syntax -->
+  <form action="https://formspree.io/f/mpqjvbh" method="POST">
+    
+    <!-- Name field -->
+    <div style="margin-bottom: 20px;">
+      <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #0a4b4f;">
+        Your Name *
+      </label>
+      <input type="text" name="name" placeholder="Enter your full name" required 
+             style="width: 100%; padding: 15px 20px; border: 1px solid #e0d6d0; border-radius: 50px; font-family: 'Inter', sans-serif; font-size: 1rem;">
     </div>
+    
+    <!-- Email field -->
+    <div style="margin-bottom: 20px;">
+      <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #0a4b4f;">
+        Your Email *
+      </label>
+      <input type="email" name="email" placeholder="Enter your email address" required 
+             style="width: 100%; padding: 15px 20px; border: 1px solid #e0d6d0; border-radius: 50px; font-family: 'Inter', sans-serif; font-size: 1rem;">
+    </div>
+    
+    <!-- Phone field -->
+    <div style="margin-bottom: 20px;">
+      <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #0a4b4f;">
+        Phone Number
+      </label>
+      <input type="tel" name="phone" placeholder="(825) 288-7720" 
+             style="width: 100%; padding: 15px 20px; border: 1px solid #e0d6d0; border-radius: 50px; font-family: 'Inter', sans-serif; font-size: 1rem;">
+    </div>
+    
+    <!-- Service dropdown -->
+    <div style="margin-bottom: 20px;">
+      <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #0a4b4f;">
+        What service do you need? *
+      </label>
+      <select name="service" required 
+              style="width: 100%; padding: 15px 20px; border: 1px solid #e0d6d0; border-radius: 50px; font-family: 'Inter', sans-serif; font-size: 1rem; background: white;">
+        <option value="" disabled selected>Select a service</option>
+        <option value="Estate Clean-Out">Estate Clean-Out</option>
+        <option value="Garage Reset">Garage Reset</option>
+        <option value="Full House">Full House Clear-Out</option>
+        <option value="Small Job">Small Job / Single Item</option>
+        <option value="Not Sure">Not sure - need advice</option>
+      </select>
+    </div>
+    
+    <!-- Message field -->
+    <div style="margin-bottom: 20px;">
+      <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #0a4b4f;">
+        Tell us about your project *
+      </label>
+      <textarea name="message" placeholder="Describe your project, location, timeline..." required 
+                style="width: 100%; padding: 15px 20px; border: 1px solid #e0d6d0; border-radius: 25px; font-family: 'Inter', sans-serif; font-size: 1rem; min-height: 120px;"></textarea>
+    </div>
+    
+    <!-- Hidden fields for better email delivery -->
+    <input type="hidden" name="_subject" value="New Quote Request from Aladdin Website">
+    <input type="hidden" name="_replyto" value="email">
+    <input type="hidden" name="_captcha" value="false">
+    
+    <!-- Submit button -->
+    <button type="submit" 
+            style="width: 100%; background: #c75c2f; color: white; border: none; padding: 16px; border-radius: 50px; font-weight: 700; font-size: 1.1rem; cursor: pointer; transition: all 0.3s;">
+      <i class="fas fa-paper-plane"></i> Request Free Quote
+    </button>
+    
+    <!-- Success message will appear here after submission -->
+    <div id="form-status" style="margin-top: 20px; text-align: center; color: #0a4b4f;"></div>
+    
+  </form>
+  
+  <!-- Note about what happens after submit -->
+  <div style="margin-top: 30px; padding: 20px; background: #fff6e9; border-radius: 20px; border-left: 5px solid #c75c2f;">
+    <p style="margin: 0; display: flex; align-items: center; gap: 10px;">
+      <i class="fas fa-info-circle" style="color: #c75c2f;"></i>
+      <span>After submitting, you'll see a Formspree success page. We'll email you back within 1 hour.</span>
+    </p>
   </div>
+  
+</div>
 
   <!-- FOOTER -->
   <div class="footer">
@@ -807,4 +843,5 @@
   </script>
 </body>
 </html>
+
 
