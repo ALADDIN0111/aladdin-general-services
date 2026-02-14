@@ -44,10 +44,10 @@
       background-position: center;
       background-repeat: no-repeat;
       background-attachment: fixed;
-      opacity: 0.35; /* Increased from 0.12 to 0.35 for more vivid appearance */
+      opacity: 0.35;
       pointer-events: none;
       z-index: 0;
-      filter: drop-shadow(0 0 10px rgba(243, 179, 76, 0.3)); /* Adds a subtle gold glow */
+      filter: drop-shadow(0 0 10px rgba(243, 179, 76, 0.3));
     }
     
     /* MAIN CONTENT WRAPPER */
@@ -61,12 +61,12 @@
       margin-top: 20px;
     }
     
-    /* NAVBAR - CLEAN WITH TEXT LOGO */
+    /* NAVBAR - WITH LOGO IN BETWEEN */
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 0;
+      padding: 15px 0;
       flex-wrap: wrap;
       border-bottom: 2px solid rgba(243, 179, 76, 0.3);
       background: rgba(10, 12, 14, 0.95);
@@ -78,21 +78,45 @@
       box-shadow: 0 4px 20px rgba(0,0,0,0.5);
     }
     
-    /* TEXT LOGO - REPLACES IMAGE LOGO */
+    /* LEFT SIDE WITH LOGO AND COMPANY NAME */
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    /* NAVBAR LOGO - PROPORTIONAL SIZE */
+    .navbar-logo {
+      height: 60px;
+      width: auto;
+      max-width: 180px;
+      object-fit: contain;
+      transition: all 0.3s ease;
+      filter: drop-shadow(0 0 5px rgba(243, 179, 76, 0.3));
+      cursor: pointer;
+    }
+    
+    /* BACK LIGHT EFFECT ON HOVER - LIKE CARDS */
+    .navbar-logo:hover {
+      transform: scale(1.05);
+      filter: drop-shadow(0 0 15px rgba(243, 179, 76, 0.7));
+      transition: all 0.3s ease;
+    }
+    
     .text-logo {
-      font-size: 2.2rem;
+      font-size: 2rem;
       font-weight: 800;
-      color: #f3b34c; /* Goldish yellow */
+      color: #f3b34c;
       line-height: 1.1;
       letter-spacing: -0.5px;
     }
     .text-logo span {
-      font-size: 1rem;
+      font-size: 0.9rem;
       font-weight: 500;
       color: #ffffff;
       display: block;
       letter-spacing: 2px;
-      margin-top: 5px;
+      margin-top: 3px;
     }
     
     .nav-links {
@@ -126,7 +150,7 @@
       color: #f3b34c;
     }
     
-    /* BUTTONS - UPDATED FOR DARK BACKGROUND */
+    /* BUTTONS */
     .btn {
       display: inline-block;
       background: #f3b34c;
@@ -191,10 +215,11 @@
       opacity: 1;
     }
     
-    /* SLIDER IMAGES - USING YOUR FILE NAMES */
-    .slide1 { background-image: url('slider1.jpg'); }
-    .slide2 { background-image: url('slider2.jpg'); }
-    .slide3 { background-image: url('slider3.jpg'); }
+    /* SLIDER IMAGES - LOGO4.JPG FIRST, THEN OTHERS */
+    .slide1 { background-image: url('logo4.jpg'); }
+    .slide2 { background-image: url('slider1.jpg'); }
+    .slide3 { background-image: url('slider2.jpg'); }
+    .slide4 { background-image: url('slider3.jpg'); }
     
     .slider-overlay {
       position: absolute;
@@ -276,7 +301,7 @@
       border-radius: 2px;
     }
     
-    /* DISCOUNT BADGE - MORE VISIBLE */
+    /* DISCOUNT BADGE */
     .discount-badge {
       display: inline-block;
       background: #f3b34c;
@@ -300,7 +325,7 @@
     }
     
     .service-card {
-      background: #1a1a1a; /* Black background */
+      background: #1a1a1a;
       border-radius: 30px;
       overflow: hidden;
       transition: all 0.4s;
@@ -369,7 +394,7 @@
       font-size: 1.6rem;
       font-weight: 700;
       margin-bottom: 15px;
-      color: #f3b34c; /* Goldish yellow */
+      color: #f3b34c;
     }
     
     .service-card ul {
@@ -388,7 +413,7 @@
       width: 20px;
     }
     
-    /* SERVICE DETAIL PAGES - DARK THEME */
+    /* SERVICE DETAIL PAGES */
     .service-detail {
       padding: 40px 0;
     }
@@ -407,9 +432,6 @@
       color: #f3b34c;
       margin-bottom: 20px;
     }
-    .service-header p {
-      color: #cccccc;
-    }
     
     .service-showcase {
       display: grid;
@@ -425,25 +447,18 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative;
-      overflow: hidden;
     }
     
     .service-features {
       background: #1a1a1a;
       border-radius: 30px;
       padding: 30px;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.3);
       border: 1px solid #333;
     }
     .service-features h3 {
       color: #f3b34c;
       font-size: 1.8rem;
       margin-bottom: 20px;
-    }
-    .service-features ul li {
-      color: #cccccc;
-      margin-bottom: 10px;
     }
     
     .price-note {
@@ -455,7 +470,7 @@
       color: #ffffff;
     }
     
-    /* ABOUT PAGE - DARK THEME */
+    /* ABOUT PAGE */
     .about-showcase {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -491,7 +506,7 @@
       margin: 15px 0 5px;
     }
     
-    /* CONTACT PAGE - DARK THEME */
+    /* CONTACT PAGE */
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -520,15 +535,12 @@
     .contact-info-item h4 {
       color: #f3b34c;
     }
-    .contact-info-item p {
-      color: #cccccc;
-    }
     .contact-info-item a {
       color: #f3b34c;
       text-decoration: none;
     }
     
-    /* FOOTER - UPDATED WITH ALL SERVICES AND EMAIL */
+    /* FOOTER */
     .footer {
       background: #0a0c0e;
       color: #cccccc;
@@ -545,17 +557,45 @@
       justify-content: space-between;
       gap: 40px;
     }
-    .footer-logo-text {
+    
+    /* FOOTER LOGO SECTION */
+    .footer-logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    
+    .footer-logo {
+      height: 50px;
+      width: auto;
+      max-width: 150px;
+      object-fit: contain;
+      transition: all 0.3s ease;
+      filter: drop-shadow(0 0 5px rgba(243, 179, 76, 0.3));
+      cursor: pointer;
+    }
+    
+    .footer-logo:hover {
+      transform: scale(1.05);
+      filter: drop-shadow(0 0 15px rgba(243, 179, 76, 0.7));
+      transition: all 0.3s ease;
+    }
+    
+    .footer-text-logo {
       font-size: 1.8rem;
       font-weight: 700;
       color: #f3b34c;
-      margin-bottom: 15px;
+      line-height: 1.1;
     }
-    .footer-logo-text span {
+    .footer-text-logo span {
       font-size: 0.9rem;
       color: #ffffff;
       display: block;
+      font-weight: 500;
+      letter-spacing: 1px;
     }
+    
     .footer-links {
       display: flex;
       gap: 70px;
@@ -589,7 +629,7 @@
       color: #888;
     }
     
-    /* FLOATING CALL BUTTON - UPDATED */
+    /* FLOATING CALL BUTTON */
     .floating-call {
       position: fixed;
       bottom: 30px;
@@ -618,6 +658,7 @@
     
     @media (max-width: 700px) {
       .navbar { flex-direction: column; gap: 16px; }
+      .logo-container { justify-content: center; }
       .nav-links { gap: 20px; flex-wrap: wrap; justify-content: center; }
       .slider-content h1 { font-size: 2.5rem; }
       .service-showcase { grid-template-columns: 1fr; }
@@ -636,12 +677,17 @@
     </a>
   </div>
 
-  <!-- NAVBAR WITH TEXT LOGO -->
+  <!-- NAVBAR WITH LOGO IN BETWEEN -->
   <div class="container">
     <div class="navbar">
-      <div class="text-logo">
-        ALADDIN
-        <span>CLEAN-OUT SPECIALISTS</span>
+      <div class="logo-container">
+        <!-- LOGO FIRST -->
+        <img src="logo4.jpg" alt="ALADDIN Logo" class="navbar-logo">
+        <!-- THEN COMPANY NAME -->
+        <div class="text-logo">
+          ALADDIN GENERAL SERVICES INC.
+          <span>CLEAN-OUT SPECIALISTS</span>
+        </div>
       </div>
       <div class="nav-links">
         <a onclick="showPage('home')">Home</a>
@@ -656,14 +702,15 @@
   <div class="main-content">
     <div class="container">
 
-      <!-- HOME PAGE (with slider) -->
+      <!-- HOME PAGE -->
       <div id="home">
-        <!-- SLIDER WITH YOUR IMAGES -->
+        <!-- SLIDER WITH LOGO4 FIRST -->
         <div class="slider-container">
           <div class="slider">
             <div class="slide slide1 active"></div>
             <div class="slide slide2"></div>
             <div class="slide slide3"></div>
+            <div class="slide slide4"></div>
           </div>
           <div class="slider-overlay"></div>
           <div class="slider-content">
@@ -678,12 +725,13 @@
             <div class="dot active" onclick="currentSlide(0)"></div>
             <div class="dot" onclick="currentSlide(1)"></div>
             <div class="dot" onclick="currentSlide(2)"></div>
+            <div class="dot" onclick="currentSlide(3)"></div>
           </div>
         </div>
 
         <!-- SERVICES GRID WITH 10% OFF BADGE -->
         <h2 class="section-title">Our Premium Services <span class="discount-badge">10% OFF</span></h2>
-        <div class="services-grid" id="services-grid-home">
+        <div class="services-grid">
           
           <!-- JUNK REMOVAL CARD -->
           <div class="service-card" onclick="showService('junkremoval')">
@@ -840,13 +888,13 @@
         </div>
       </div>
 
-      <!-- SERVICE DETAIL PAGES (simplified for brevity - same structure as before) -->
-      <div id="junkremoval-page" style="display: none;"><div class="service-detail">[Junk Removal Content with image spots]</div></div>
-      <div id="estate-page" style="display: none;"><div class="service-detail">[Estate Content with image spots]</div></div>
-      <div id="garage-page" style="display: none;"><div class="service-detail">[Garage Content with image spots]</div></div>
-      <div id="fullhouse-page" style="display: none;"><div class="service-detail">[Full House Content with image spots]</div></div>
-      <div id="handyman-page" style="display: none;"><div class="service-detail">[Handyman Content with image spots]</div></div>
-      <div id="cleaning-page" style="display: none;"><div class="service-detail">[Cleaning Content with image spots]</div></div>
+      <!-- SERVICE PAGES (simplified) -->
+      <div id="junkremoval-page" style="display: none;"><div class="service-detail"><h1 style="color:#f3b34c;">Junk Removal</h1></div></div>
+      <div id="estate-page" style="display: none;"><div class="service-detail"><h1 style="color:#f3b34c;">Estate Clean-Outs</h1></div></div>
+      <div id="garage-page" style="display: none;"><div class="service-detail"><h1 style="color:#f3b34c;">Garage Reset</h1></div></div>
+      <div id="fullhouse-page" style="display: none;"><div class="service-detail"><h1 style="color:#f3b34c;">Full House</h1></div></div>
+      <div id="handyman-page" style="display: none;"><div class="service-detail"><h1 style="color:#f3b34c;">Handyman</h1></div></div>
+      <div id="cleaning-page" style="display: none;"><div class="service-detail"><h1 style="color:#f3b34c;">Cleaning</h1></div></div>
 
       <!-- ABOUT PAGE -->
       <div id="about" style="display: none;">
@@ -860,11 +908,7 @@
           </div>
           <div style="background: #1a1a1a; border-radius: 40px; padding: 40px; border: 1px solid #333;">
             <h3 style="font-size: 2rem; color: #f3b34c;">A Family Business</h3>
-            <p style="font-size: 1.1rem; line-height: 1.8; margin: 20px 0; color: #cccccc;">We're not a franchise. Just my wife and I, handling every job personally. Estate clean-outs require trust. We earn it, one home at a time.</p>
-            <div style="display: flex; gap: 40px; margin-top: 30px;">
-              <div><span style="font-size: 2.5rem; font-weight: 800; color: #f3b34c;">2+</span><br><span style="color: #cccccc;">Years</span></div>
-              <div><span style="font-size: 2.5rem; font-weight: 800; color: #f3b34c;">100%</span><br><span style="color: #cccccc;">Family</span></div>
-            </div>
+            <p style="color: #cccccc; line-height: 1.8;">We're not a franchise. Just my wife and I, handling every job personally.</p>
           </div>
         </div>
       </div>
@@ -874,35 +918,14 @@
         <h2 class="section-title">Contact Us</h2>
         <div class="contact-grid">
           <div class="contact-info">
-            <h3 style="font-size: 2rem; margin-bottom: 30px;">Get Your Free Quote</h3>
+            <h3>Get Your Free Quote</h3>
             <div class="contact-info-item">
-              <i class="fas fa-phone-alt" style="font-size: 30px; color: #f3b34c;"></i>
-              <div>
-                <h4>Call Us</h4>
-                <p><a href="tel:+18252887720">(825) 288-7720</a></p>
-              </div>
+              <i class="fas fa-phone-alt"></i>
+              <div><h4>Call Us</h4><p><a href="tel:+18252887720">(825) 288-7720</a></p></div>
             </div>
             <div class="contact-info-item">
-              <i class="fas fa-envelope" style="font-size: 30px; color: #f3b34c;"></i>
-              <div>
-                <h4>Email Us</h4>
-                <p><a href="mailto:aladdin.g.services@gmail.com">aladdin.g.services@gmail.com</a></p>
-              </div>
-            </div>
-            <div class="contact-info-item">
-              <i class="fas fa-map-marker-alt" style="font-size: 30px; color: #f3b34c;"></i>
-              <div>
-                <h4>Visit Us</h4>
-                <p>1510 30 Ave SW<br>Calgary, AB T2T1P3</p>
-              </div>
-            </div>
-          </div>
-          <div style="background: #1a1a1a; border-radius: 40px; padding: 40px; border: 1px solid #333;">
-            <h3 style="color: #f3b34c; margin-bottom: 30px;">Send Us a Message</h3>
-            <a href="mailto:aladdin.g.services@gmail.com" class="btn" style="display: block; text-align: center; margin-bottom: 20px;">📧 Email Us Directly</a>
-            <div style="background: #2a2a2a; border-radius: 30px; padding: 20px; margin-top: 30px;">
-              <p style="color: #cccccc;"><i class="fas fa-clock" style="color: #f3b34c;"></i> Mon-Sat: 7am - 8pm</p>
-              <p style="color: #cccccc;"><i class="fas fa-clock" style="color: #f3b34c;"></i> Sun: By appointment</p>
+              <i class="fas fa-envelope"></i>
+              <div><h4>Email Us</h4><p><a href="mailto:aladdin.g.services@gmail.com">aladdin.g.services@gmail.com</a></p></div>
             </div>
           </div>
         </div>
@@ -910,14 +933,17 @@
     </div>
   </div>
 
-  <!-- FOOTER - UPDATED WITH ALL SERVICES AND EMAIL -->
+  <!-- FOOTER WITH LOGO AND COMPANY NAME SAME AS TOP -->
   <div class="footer">
     <div class="container">
       <div class="footer-content">
         <div>
-          <div class="footer-logo-text">
-            ALADDIN
-            <span>CLEAN-OUT SPECIALISTS</span>
+          <div class="footer-logo-container">
+            <img src="logo4.jpg" alt="ALADDIN Logo" class="footer-logo">
+            <div class="footer-text-logo">
+              ALADDIN GENERAL SERVICES INC.
+              <span>CLEAN-OUT SPECIALISTS</span>
+            </div>
           </div>
           <p>📍 Calgary • Airdrie • Chestermere • Okotoks • Cochrane</p>
           <p>1510 30 Ave SW, Calgary, AB T2T1P3</p>
@@ -931,9 +957,9 @@
             <a onclick="showService('junkremoval')">Junk Removal</a>
             <a onclick="showService('estate')">Estate Clean-Outs</a>
             <a onclick="showService('garage')">Garage Reset</a>
-            <a onclick="showService('fullhouse')">Full House Clear-Outs</a>
-            <a onclick="showService('handyman')">Handyman Services</a>
-            <a onclick="showService('cleaning')">Light Cleaning</a>
+            <a onclick="showService('fullhouse')">Full House</a>
+            <a onclick="showService('handyman')">Handyman</a>
+            <a onclick="showService('cleaning')">Cleaning</a>
           </div>
           <div class="footer-col">
             <h4>Quick Links</h4>
@@ -1004,7 +1030,6 @@
       showPage(service);
     }
     
-    // Show home page by default
     showPage('home');
   </script>
 </body>
