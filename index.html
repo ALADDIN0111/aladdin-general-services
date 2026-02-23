@@ -178,149 +178,6 @@
       color: #f3b34c;
     }
     
-    /* FORMSUBMIT BUTTON */
-    .form-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      background: #f3b34c;
-      color: #0a0c0e;
-      font-weight: 700;
-      padding: 18px 45px;
-      border-radius: 60px;
-      text-decoration: none;
-      transition: all 0.3s;
-      box-shadow: 0 8px 20px rgba(243, 179, 76, 0.4);
-      font-size: 1.3rem;
-      border: 2px solid #ffffff;
-      cursor: pointer;
-      width: fit-content;
-      margin: 0 auto;
-    }
-    .form-btn:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 30px rgba(243, 179, 76, 0.6);
-      background: #ffc55c;
-    }
-    .form-btn i {
-      font-size: 1.6rem;
-    }
-    
-    /* FORM MODAL */
-    .form-modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.9);
-      z-index: 1000;
-      justify-content: center;
-      align-items: center;
-      backdrop-filter: blur(5px);
-    }
-    
-    .form-modal.active {
-      display: flex;
-    }
-    
-    .form-modal-content {
-      background: #1a1a1a;
-      border-radius: 40px;
-      padding: 50px;
-      max-width: 500px;
-      width: 90%;
-      border: 2px solid #f3b34c;
-      position: relative;
-      animation: modalPop 0.3s ease;
-      max-height: 90vh;
-      overflow-y: auto;
-    }
-    
-    @keyframes modalPop {
-      from { transform: scale(0.8); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
-    
-    .close-modal {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      font-size: 30px;
-      color: #f3b34c;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-    .close-modal:hover {
-      transform: scale(1.2);
-      color: #ffffff;
-    }
-    
-    .form-modal-content h2 {
-      color: #f3b34c;
-      font-size: 2rem;
-      margin-bottom: 30px;
-      text-align: center;
-    }
-    
-    .form-group {
-      margin-bottom: 20px;
-    }
-    
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 15px 20px;
-      background: #2a2a2a;
-      border: 1px solid #444;
-      border-radius: 30px;
-      font-family: 'Inter', sans-serif;
-      font-size: 1rem;
-      color: #ffffff;
-      transition: all 0.3s;
-    }
-    
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: #f3b34c;
-      background: #333;
-    }
-    
-    .form-group input::placeholder,
-    .form-group textarea::placeholder {
-      color: #888;
-    }
-    
-    .form-group select option {
-      background: #1a1a1a;
-      color: #ffffff;
-    }
-    
-    .form-submit-btn {
-      width: 100%;
-      background: #f3b34c;
-      color: #0a0c0e;
-      font-weight: 700;
-      padding: 16px;
-      border-radius: 50px;
-      border: none;
-      font-size: 1.2rem;
-      cursor: pointer;
-      transition: all 0.3s;
-      margin-top: 10px;
-    }
-    
-    .form-submit-btn:hover {
-      background: #ffc55c;
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(243, 179, 76, 0.3);
-    }
-    
     /* HERO SLIDER */
     .slider-container {
       position: relative;
@@ -644,7 +501,7 @@
       line-height: 1.8;
     }
     
-    /* EMAIL SECTION */
+    /* FORM SECTION */
     .form-section {
       background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
       border-radius: 60px;
@@ -668,6 +525,34 @@
       max-width: 600px;
       margin-left: auto;
       margin-right: auto;
+    }
+    
+    .form-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: #f3b34c;
+      color: #0a0c0e;
+      font-weight: 700;
+      padding: 18px 45px;
+      border-radius: 60px;
+      text-decoration: none;
+      transition: all 0.3s;
+      box-shadow: 0 8px 20px rgba(243, 179, 76, 0.4);
+      font-size: 1.3rem;
+      border: 2px solid #ffffff;
+      cursor: pointer;
+      width: fit-content;
+      margin: 0 auto;
+    }
+    .form-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(243, 179, 76, 0.6);
+      background: #ffc55c;
+    }
+    .form-btn i {
+      font-size: 1.6rem;
     }
     
     /* FOOTER */
@@ -739,6 +624,7 @@
       text-decoration: none;
       margin-bottom: 12px;
       transition: all 0.3s;
+      cursor: pointer;
     }
     .footer-col a:hover {
       color: #f3b34c;
@@ -757,32 +643,8 @@
       color: #888;
     }
     
-    /* FLOATING CALL BUTTON */
-    .floating-call {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: #f3b34c;
-      color: #0a0c0e;
-      border-radius: 100px;
-      padding: 16px 30px;
-      font-weight: bold;
-      box-shadow: 0 8px 15px rgba(243, 179, 76, 0.3);
-      z-index: 99;
-      border: 2px solid #ffffff;
-      animation: gentlePulse 3s infinite;
-    }
-    @keyframes gentlePulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.03); }
-    }
-    .floating-call a {
-      color: #0a0c0e;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+    /* FLOATING CALL BUTTON - REMOVED TO AVOID CONFLICT WITH FORMBUTTON */
+    /* FORMBUTTON WILL PROVIDE ITS OWN FLOATING BUTTON */
     
     @media (max-width: 700px) {
       .navbar { flex-direction: column; gap: 16px; }
@@ -797,62 +659,57 @@
 </head>
 <body>
 
-  <!-- FLOATING CALL BUTTON -->
-  <div class="floating-call">
-    <a href="tel:+18252887720">
-      <i class="fas fa-phone-alt"></i> 
-      <span>(825) 288-7720</span>
-    </a>
-  </div>
-
-  <!-- FORMSpREE MODAL -->
-  <div id="formModal" class="form-modal">
-    <div class="form-modal-content">
-      <span class="close-modal" onclick="closeFormModal()">&times;</span>
-      <h2>📋 Get Your Free Quote</h2>
-      
-      <form id="contactForm" action="https://formspree.io/f/mpqjpvbn" method="POST">
-        <!-- Formspree configuration -->
-        <input type="hidden" name="_subject" value="New Quote Request from Aladdin Website">
-        <input type="hidden" name="_replyto" value="email">
-        <input type="hidden" name="_captcha" value="false">
-        
-        <div class="form-group">
-          <input type="text" name="name" placeholder="Your Full Name *" required>
-        </div>
-        
-        <div class="form-group">
-          <input type="email" name="email" placeholder="Your Email Address *" required>
-        </div>
-        
-        <div class="form-group">
-          <input type="tel" name="phone" placeholder="Your Phone Number">
-        </div>
-        
-        <div class="form-group">
-          <select name="service" required>
-            <option value="" disabled selected>Select Service *</option>
-            <option value="Junk Removal">Junk Removal</option>
-            <option value="Estate Clean-Out">Estate Clean-Out</option>
-            <option value="Garage Reset">Garage Reset</option>
-            <option value="Full House Clear-Out">Full House Clear-Out</option>
-            <option value="Handyman Services">Handyman Services</option>
-            <option value="Light Cleaning">Light Cleaning</option>
-          </select>
-        </div>
-        
-        <div class="form-group">
-          <textarea name="message" placeholder="Tell us about your project (size, location, timeline)..." rows="4" required></textarea>
-        </div>
-        
-        <button type="submit" class="form-submit-btn">Send Quote Request</button>
-      </form>
-      
-      <p style="text-align: center; color: #888; margin-top: 20px; font-size: 0.9rem;">
-        <i class="fas fa-lock"></i> Your information is secure. We'll respond within 1 hour.
-      </p>
-    </div>
-  </div>
+  <!-- FORMSpREE FORMBUTTON - THIS CREATES THE FLOATING CONTACT BUTTON -->
+  <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+  <script>
+    /* paste this line in verbatim */
+    window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+    
+    /* customize formbutton below - UPDATED WITH YOUR FORM ID AND CUSTOM COLORS */     
+    formbutton("create", {
+      action: "https://formspree.io/f/mpqjpvbn",
+      title: "How can we help?",
+      fields: [
+        { 
+          type: "email", 
+          label: "Email:", 
+          name: "email",
+          required: true,
+          placeholder: "your@email.com"
+        },
+        {
+          type: "textarea",
+          label: "Message:",
+          name: "message",
+          placeholder: "Tell us about your project...",
+        },
+        { type: "submit" }      
+      ],
+      styles: {
+        title: {
+          backgroundColor: "#f3b34c",
+          color: "#0a0c0e",
+          fontFamily: "'Inter', sans-serif",
+          fontWeight: "700"
+        },
+        button: {
+          backgroundColor: "#f3b34c",
+          color: "#0a0c0e"
+        },
+        modal: {
+          fontFamily: "'Inter', sans-serif"
+        },
+        label: {
+          color: "#ffffff"
+        },
+        input: {
+          backgroundColor: "#2a2a2a",
+          color: "#ffffff",
+          borderColor: "#f3b34c"
+        }
+      }
+    });
+  </script>
 
   <!-- NAVBAR -->
   <div class="container">
@@ -893,7 +750,7 @@
             <p>Garage Reset • Junk Removal • Estate Clean-Outs • Full House Clear-Outs</p>
             <div style="display: flex; gap: 15px; flex-wrap: wrap;">
               <a href="tel:+18252887720" class="btn">📞 (825) 288-7720</a>
-              <button onclick="openFormModal()" class="btn btn-secondary">📋 Get Quote</button>
+              <button onclick="formbutton('show')" class="btn btn-secondary">📋 Get Quote</button>
             </div>
           </div>
           <div class="slider-dots">
@@ -909,7 +766,7 @@
         <div class="services-grid" id="services-grid-home">
           
           <!-- JUNK REMOVAL CARD -->
-          <div class="service-card" onclick="openFormModal()">
+          <div class="service-card" onclick="formbutton('show')">
             <div class="card-image-spot" id="junk-card-slider">
               <div class="card-slider-container">
                 <div class="card-slider">
@@ -940,7 +797,7 @@
           </div>
           
           <!-- ESTATE CLEAN-OUTS CARD -->
-          <div class="service-card" onclick="openFormModal()">
+          <div class="service-card" onclick="formbutton('show')">
             <div class="card-image-spot" id="estate-card-slider">
               <div class="card-slider-container">
                 <div class="card-slider">
@@ -974,7 +831,7 @@
           </div>
           
           <!-- GARAGE RESET CARD -->
-          <div class="service-card" onclick="openFormModal()">
+          <div class="service-card" onclick="formbutton('show')">
             <div class="card-image-spot" id="garage-card-slider">
               <div class="card-slider-container">
                 <div class="card-slider">
@@ -1000,7 +857,7 @@
           </div>
           
           <!-- FULL HOUSE CARD -->
-          <div class="service-card" onclick="openFormModal()">
+          <div class="service-card" onclick="formbutton('show')">
             <div class="card-image-spot" id="fullhouse-card-slider">
               <div class="card-slider-container">
                 <div class="card-slider">
@@ -1034,7 +891,7 @@
           </div>
           
           <!-- HANDYMAN CARD -->
-          <div class="service-card" onclick="openFormModal()">
+          <div class="service-card" onclick="formbutton('show')">
             <div class="card-image-spot" id="handyman-card-slider">
               <div class="card-slider-container">
                 <div class="card-slider">
@@ -1058,7 +915,7 @@
           </div>
           
           <!-- LIGHT CLEANING CARD -->
-          <div class="service-card" onclick="openFormModal()">
+          <div class="service-card" onclick="formbutton('show')">
             <div class="card-image-spot" id="cleaning-card-slider">
               <div class="card-slider-container">
                 <div class="card-slider">
@@ -1089,8 +946,8 @@
         <!-- FORM SECTION ON HOME PAGE -->
         <div class="form-section">
           <h2>📋 Get Your Free Quote Today</h2>
-          <p>Fill out our quick form and we'll respond within 1 hour. No obligation, no hidden fees.</p>
-          <button onclick="openFormModal()" class="form-btn">
+          <p>Click the button below and fill out our quick form. We'll respond within 1 hour. No obligation, no hidden fees.</p>
+          <button onclick="formbutton('show')" class="form-btn">
             <i class="fas fa-paper-plane"></i> Request Free Quote
           </button>
         </div>
@@ -1119,12 +976,12 @@
       <div id="services" style="display: none;">
         <h2 class="section-title">All Services <span class="discount-badge">10% OFF</span></h2>
         <div class="services-grid">
-          <div class="service-card" onclick="openFormModal()"><div class="card-content"><h3>Junk Removal</h3><p>Fast, friendly removal for homes & businesses</p></div></div>
-          <div class="service-card" onclick="openFormModal()"><div class="card-content"><h3>Estate Clean-Outs</h3><p>Full property clearance with compassion</p></div></div>
-          <div class="service-card" onclick="openFormModal()"><div class="card-content"><h3>Garage Reset</h3><p>1-day garage transformation</p></div></div>
-          <div class="service-card" onclick="openFormModal()"><div class="card-content"><h3>Full House</h3><p>Complete home clean-outs</p></div></div>
-          <div class="service-card" onclick="openFormModal()"><div class="card-content"><h3>Handyman</h3><p>Small repairs & fixes</p></div></div>
-          <div class="service-card" onclick="openFormModal()"><div class="card-content"><h3>Cleaning</h3><p>Post-clean-up touch-ups</p></div></div>
+          <div class="service-card" onclick="formbutton('show')"><div class="card-content"><h3>Junk Removal</h3><p>Fast, friendly removal for homes & businesses</p></div></div>
+          <div class="service-card" onclick="formbutton('show')"><div class="card-content"><h3>Estate Clean-Outs</h3><p>Full property clearance with compassion</p></div></div>
+          <div class="service-card" onclick="formbutton('show')"><div class="card-content"><h3>Garage Reset</h3><p>1-day garage transformation</p></div></div>
+          <div class="service-card" onclick="formbutton('show')"><div class="card-content"><h3>Full House</h3><p>Complete home clean-outs</p></div></div>
+          <div class="service-card" onclick="formbutton('show')"><div class="card-content"><h3>Handyman</h3><p>Small repairs & fixes</p></div></div>
+          <div class="service-card" onclick="formbutton('show')"><div class="card-content"><h3>Cleaning</h3><p>Post-clean-up touch-ups</p></div></div>
         </div>
       </div>
 
@@ -1169,7 +1026,7 @@
             <p>Furniture, appliances, electronics, yard waste, construction debris, and more. Same-day service available. We do all the heavy lifting so you don't have to.</p>
           </div>
           <div style="text-align: center; margin: 40px 0;">
-            <button onclick="openFormModal()" class="form-btn">
+            <button onclick="formbutton('show')" class="form-btn">
               <i class="fas fa-paper-plane"></i> Get Free Quote
             </button>
           </div>
@@ -1221,7 +1078,7 @@
             <p>We coordinate donations, provide itemized receipts, and work with realtors and lawyers to ensure a smooth process during difficult times.</p>
           </div>
           <div style="text-align: center; margin: 40px 0;">
-            <button onclick="openFormModal()" class="form-btn">
+            <button onclick="formbutton('show')" class="form-btn">
               <i class="fas fa-paper-plane"></i> Get Free Quote
             </button>
           </div>
@@ -1257,7 +1114,7 @@
             <p><strong>Clear-Out:</strong> Remove junk + sweep • <strong>Refresh:</strong> Sort, sweep & organize • <strong>Reset:</strong> Full transformation with tool organization</p>
           </div>
           <div style="text-align: center; margin: 40px 0;">
-            <button onclick="openFormModal()" class="form-btn">
+            <button onclick="formbutton('show')" class="form-btn">
               <i class="fas fa-paper-plane"></i> Get Free Quote
             </button>
           </div>
@@ -1309,7 +1166,7 @@
             <p>Basements, attics, garages, and every room in between. We handle it all so you can focus on your next chapter.</p>
           </div>
           <div style="text-align: center; margin: 40px 0;">
-            <button onclick="openFormModal()" class="form-btn">
+            <button onclick="formbutton('show')" class="form-btn">
               <i class="fas fa-paper-plane"></i> Get Free Quote
             </button>
           </div>
@@ -1334,7 +1191,7 @@
             <p>Furniture assembly, shelving installation, picture hanging, drywall patching, and more. Just ask!</p>
           </div>
           <div style="text-align: center; margin: 40px 0;">
-            <button onclick="openFormModal()" class="form-btn">
+            <button onclick="formbutton('show')" class="form-btn">
               <i class="fas fa-paper-plane"></i> Get Free Quote
             </button>
           </div>
@@ -1372,7 +1229,7 @@
             <p>Sweeping & vacuuming, surface wiping, garage floor sweeping, and light tidying after your junk removal or clean-out.</p>
           </div>
           <div style="text-align: center; margin: 40px 0;">
-            <button onclick="openFormModal()" class="form-btn">
+            <button onclick="formbutton('show')" class="form-btn">
               <i class="fas fa-paper-plane"></i> Get Free Quote
             </button>
           </div>
@@ -1408,8 +1265,8 @@
         <!-- FORM SECTION ON CONTACT PAGE -->
         <div class="form-section" style="margin-top: 0;">
           <h2>📋 Get Your Free Quote</h2>
-          <p>Fill out our quick form and we'll respond within 1 hour. No obligation, no hidden fees.</p>
-          <button onclick="openFormModal()" class="form-btn">
+          <p>Click the button below and fill out our quick form. We'll respond within 1 hour. No obligation, no hidden fees.</p>
+          <button onclick="formbutton('show')" class="form-btn">
             <i class="fas fa-paper-plane"></i> Request Free Quote
           </button>
         </div>
@@ -1463,12 +1320,12 @@
         <div class="footer-links">
           <div class="footer-col">
             <h4>Services</h4>
-            <a onclick="openFormModal()">Junk Removal</a>
-            <a onclick="openFormModal()">Estate Clean-Outs</a>
-            <a onclick="openFormModal()">Garage Reset</a>
-            <a onclick="openFormModal()">Full House</a>
-            <a onclick="openFormModal()">Handyman</a>
-            <a onclick="openFormModal()">Cleaning</a>
+            <a onclick="formbutton('show')">Junk Removal</a>
+            <a onclick="formbutton('show')">Estate Clean-Outs</a>
+            <a onclick="formbutton('show')">Garage Reset</a>
+            <a onclick="formbutton('show')">Full House</a>
+            <a onclick="formbutton('show')">Handyman</a>
+            <a onclick="formbutton('show')">Cleaning</a>
           </div>
           <div class="footer-col">
             <h4>Quick Links</h4>
@@ -1486,25 +1343,6 @@
   </div>
 
   <script>
-    // FORMSpREE MODAL FUNCTIONS
-    function openFormModal() {
-      document.getElementById('formModal').classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-    
-    function closeFormModal() {
-      document.getElementById('formModal').classList.remove('active');
-      document.body.style.overflow = 'auto';
-    }
-    
-    // Close modal when clicking outside
-    window.onclick = function(event) {
-      const modal = document.getElementById('formModal');
-      if (event.target === modal) {
-        closeFormModal();
-      }
-    }
-    
     // HERO SLIDER
     let slideIndex = 0;
     const slides = document.querySelectorAll('.slider .slide');
