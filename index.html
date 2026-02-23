@@ -644,7 +644,6 @@
     }
     
     /* FLOATING CALL BUTTON - REMOVED TO AVOID CONFLICT WITH FORMBUTTON */
-    /* FORMBUTTON WILL PROVIDE ITS OWN FLOATING BUTTON */
     
     @media (max-width: 700px) {
       .navbar { flex-direction: column; gap: 16px; }
@@ -660,7 +659,7 @@
 <body>
 
   <!-- FORMSpREE FORMBUTTON - THIS CREATES THE FLOATING CONTACT BUTTON -->
-  <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+  <script src="https://formspree.io/js/formbutton-v1.min.js"></script>
   <script>
     /* paste this line in verbatim */
     window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
@@ -669,19 +668,28 @@
     formbutton("create", {
       action: "https://formspree.io/f/mpqjpvbn",
       title: "How can we help?",
+      description: "We'll get back to you within 1 hour.",
       fields: [
+        {
+          type: "text",
+          label: "Your Name:",
+          name: "name",
+          required: true,
+          placeholder: "Enter your name"
+        },
         { 
           type: "email", 
-          label: "Email:", 
+          label: "Your Email:", 
           name: "email",
           required: true,
           placeholder: "your@email.com"
         },
         {
           type: "textarea",
-          label: "Message:",
+          label: "Your Message:",
           name: "message",
           placeholder: "Tell us about your project...",
+          required: true
         },
         { type: "submit" }      
       ],
@@ -694,21 +702,55 @@
         },
         button: {
           backgroundColor: "#f3b34c",
-          color: "#0a0c0e"
+          color: "#0a0c0e",
+          fontFamily: "'Inter', sans-serif",
+          fontWeight: "700"
+        },
+        description: {
+          color: "#ffffff"
         },
         modal: {
-          fontFamily: "'Inter', sans-serif"
+          fontFamily: "'Inter', sans-serif",
+          backgroundColor: "#1a1a1a"
         },
         label: {
-          color: "#ffffff"
+          color: "#f3b34c",
+          fontWeight: "600"
         },
         input: {
           backgroundColor: "#2a2a2a",
           color: "#ffffff",
-          borderColor: "#f3b34c"
+          borderColor: "#f3b34c",
+          borderRadius: "30px",
+          padding: "12px 20px"
+        },
+        submit: {
+          backgroundColor: "#f3b34c",
+          color: "#0a0c0e",
+          fontWeight: "700",
+          borderRadius: "50px",
+          padding: "14px 28px",
+          border: "2px solid #ffffff"
         }
       }
     });
+  </script>
+
+  <!-- SAFE BUTTON HANDLER - This ensures the button works even if script loads slowly -->
+  <script>
+    function safeShowForm() {
+      if (typeof formbutton === 'function') {
+        formbutton('show');
+      } else {
+        alert('Contact form is loading. Please try again in a moment.');
+        // Retry after a short delay
+        setTimeout(function() {
+          if (typeof formbutton === 'function') {
+            formbutton('show');
+          }
+        }, 500);
+      }
+    }
   </script>
 
   <!-- NAVBAR -->
@@ -750,7 +792,7 @@
             <p>Garage Reset • Junk Removal • Estate Clean-Outs • Full House Clear-Outs</p>
             <div style="display: flex; gap: 15px; flex-wrap: wrap;">
               <a href="tel:+18252887720" class="btn">📞 (825) 288-7720</a>
-              <button onclick="formbutton('show')" class="btn btn-secondary">📋 Get Quote</button>
+              <button onclick="safeShowForm()" class="btn btn-secondary">📋 Get Quote</button>
             </div>
           </div>
           <div class="slider-dots">
@@ -766,7 +808,7 @@
         <div class="services-grid" id="services-grid-home">
           
           <!-- JUNK REMOVAL CARD -->
-          <div class="service-card" onclick="formbutton('show')">
+          <div class="service-card" onclick="safeShowForm()">
             <div class="card-image-spot" id="junk-card-slider">
               <div class="card-slider-container">
                 <div class="card-slider">
@@ -797,7 +839,7 @@
           </div>
           
           <!-- ESTATE CLEAN-OUTS CARD -->
-          <div class="service-card" onclick="formbutton('show')">
+          <div class="service-card" onclick="safeShowForm()">
             <div class="card-image-spot" id="estate-card-slider">
               <div class="card-slider-container">
                 <div class="card-slider">
@@ -831,7 +873,7 @@
           </div>
           
           <!-- GARAGE RESET CARD -->
-          <div class="service-card" onclick="formbutton('show')">
+          <div class="service-card" onclick="safeShowForm()">
             <div class="card-image-spot" id="garage-card-slider">
               <div class="card-slider-container">
                 <div class="card-slider">
@@ -857,7 +899,7 @@
           </div>
           
           <!-- FULL HOUSE CARD -->
-          <div class="service-card" onclick="formbutton('show')">
+          <div class="service-card" onclick="safeShowForm()">
             <div class="card-image-spot" id="fullhouse-card-slider">
               <div class="card-slider-container">
                 <div class="card-slider">
@@ -891,7 +933,7 @@
           </div>
           
           <!-- HANDYMAN CARD -->
-          <div class="service-card" onclick="formbutton('show')">
+          <div class="service-card" onclick="safeShowForm()">
             <div class="card-image-spot" id="handyman-card-slider">
               <div class="card-slider-container">
                 <div class="card-slider">
@@ -915,7 +957,7 @@
           </div>
           
           <!-- LIGHT CLEANING CARD -->
-          <div class="service-card" onclick="formbutton('show')">
+          <div class="service-card" onclick="safeShowForm()">
             <div class="card-image-spot" id="cleaning-card-slider">
               <div class="card-slider-container">
                 <div class="card-slider">
@@ -947,7 +989,7 @@
         <div class="form-section">
           <h2>📋 Get Your Free Quote Today</h2>
           <p>Click the button below and fill out our quick form. We'll respond within 1 hour. No obligation, no hidden fees.</p>
-          <button onclick="formbutton('show')" class="form-btn">
+          <button onclick="safeShowForm()" class="form-btn">
             <i class="fas fa-paper-plane"></i> Request Free Quote
           </button>
         </div>
@@ -976,12 +1018,12 @@
       <div id="services" style="display: none;">
         <h2 class="section-title">All Services <span class="discount-badge">10% OFF</span></h2>
         <div class="services-grid">
-          <div class="service-card" onclick="formbutton('show')"><div class="card-content"><h3>Junk Removal</h3><p>Fast, friendly removal for homes & businesses</p></div></div>
-          <div class="service-card" onclick="formbutton('show')"><div class="card-content"><h3>Estate Clean-Outs</h3><p>Full property clearance with compassion</p></div></div>
-          <div class="service-card" onclick="formbutton('show')"><div class="card-content"><h3>Garage Reset</h3><p>1-day garage transformation</p></div></div>
-          <div class="service-card" onclick="formbutton('show')"><div class="card-content"><h3>Full House</h3><p>Complete home clean-outs</p></div></div>
-          <div class="service-card" onclick="formbutton('show')"><div class="card-content"><h3>Handyman</h3><p>Small repairs & fixes</p></div></div>
-          <div class="service-card" onclick="formbutton('show')"><div class="card-content"><h3>Cleaning</h3><p>Post-clean-up touch-ups</p></div></div>
+          <div class="service-card" onclick="safeShowForm()"><div class="card-content"><h3>Junk Removal</h3><p>Fast, friendly removal for homes & businesses</p></div></div>
+          <div class="service-card" onclick="safeShowForm()"><div class="card-content"><h3>Estate Clean-Outs</h3><p>Full property clearance with compassion</p></div></div>
+          <div class="service-card" onclick="safeShowForm()"><div class="card-content"><h3>Garage Reset</h3><p>1-day garage transformation</p></div></div>
+          <div class="service-card" onclick="safeShowForm()"><div class="card-content"><h3>Full House</h3><p>Complete home clean-outs</p></div></div>
+          <div class="service-card" onclick="safeShowForm()"><div class="card-content"><h3>Handyman</h3><p>Small repairs & fixes</p></div></div>
+          <div class="service-card" onclick="safeShowForm()"><div class="card-content"><h3>Cleaning</h3><p>Post-clean-up touch-ups</p></div></div>
         </div>
       </div>
 
@@ -1026,7 +1068,7 @@
             <p>Furniture, appliances, electronics, yard waste, construction debris, and more. Same-day service available. We do all the heavy lifting so you don't have to.</p>
           </div>
           <div style="text-align: center; margin: 40px 0;">
-            <button onclick="formbutton('show')" class="form-btn">
+            <button onclick="safeShowForm()" class="form-btn">
               <i class="fas fa-paper-plane"></i> Get Free Quote
             </button>
           </div>
@@ -1078,7 +1120,7 @@
             <p>We coordinate donations, provide itemized receipts, and work with realtors and lawyers to ensure a smooth process during difficult times.</p>
           </div>
           <div style="text-align: center; margin: 40px 0;">
-            <button onclick="formbutton('show')" class="form-btn">
+            <button onclick="safeShowForm()" class="form-btn">
               <i class="fas fa-paper-plane"></i> Get Free Quote
             </button>
           </div>
@@ -1114,7 +1156,7 @@
             <p><strong>Clear-Out:</strong> Remove junk + sweep • <strong>Refresh:</strong> Sort, sweep & organize • <strong>Reset:</strong> Full transformation with tool organization</p>
           </div>
           <div style="text-align: center; margin: 40px 0;">
-            <button onclick="formbutton('show')" class="form-btn">
+            <button onclick="safeShowForm()" class="form-btn">
               <i class="fas fa-paper-plane"></i> Get Free Quote
             </button>
           </div>
@@ -1166,7 +1208,7 @@
             <p>Basements, attics, garages, and every room in between. We handle it all so you can focus on your next chapter.</p>
           </div>
           <div style="text-align: center; margin: 40px 0;">
-            <button onclick="formbutton('show')" class="form-btn">
+            <button onclick="safeShowForm()" class="form-btn">
               <i class="fas fa-paper-plane"></i> Get Free Quote
             </button>
           </div>
@@ -1191,7 +1233,7 @@
             <p>Furniture assembly, shelving installation, picture hanging, drywall patching, and more. Just ask!</p>
           </div>
           <div style="text-align: center; margin: 40px 0;">
-            <button onclick="formbutton('show')" class="form-btn">
+            <button onclick="safeShowForm()" class="form-btn">
               <i class="fas fa-paper-plane"></i> Get Free Quote
             </button>
           </div>
@@ -1229,7 +1271,7 @@
             <p>Sweeping & vacuuming, surface wiping, garage floor sweeping, and light tidying after your junk removal or clean-out.</p>
           </div>
           <div style="text-align: center; margin: 40px 0;">
-            <button onclick="formbutton('show')" class="form-btn">
+            <button onclick="safeShowForm()" class="form-btn">
               <i class="fas fa-paper-plane"></i> Get Free Quote
             </button>
           </div>
@@ -1266,7 +1308,7 @@
         <div class="form-section" style="margin-top: 0;">
           <h2>📋 Get Your Free Quote</h2>
           <p>Click the button below and fill out our quick form. We'll respond within 1 hour. No obligation, no hidden fees.</p>
-          <button onclick="formbutton('show')" class="form-btn">
+          <button onclick="safeShowForm()" class="form-btn">
             <i class="fas fa-paper-plane"></i> Request Free Quote
           </button>
         </div>
@@ -1320,12 +1362,12 @@
         <div class="footer-links">
           <div class="footer-col">
             <h4>Services</h4>
-            <a onclick="formbutton('show')">Junk Removal</a>
-            <a onclick="formbutton('show')">Estate Clean-Outs</a>
-            <a onclick="formbutton('show')">Garage Reset</a>
-            <a onclick="formbutton('show')">Full House</a>
-            <a onclick="formbutton('show')">Handyman</a>
-            <a onclick="formbutton('show')">Cleaning</a>
+            <a onclick="safeShowForm()">Junk Removal</a>
+            <a onclick="safeShowForm()">Estate Clean-Outs</a>
+            <a onclick="safeShowForm()">Garage Reset</a>
+            <a onclick="safeShowForm()">Full House</a>
+            <a onclick="safeShowForm()">Handyman</a>
+            <a onclick="safeShowForm()">Cleaning</a>
           </div>
           <div class="footer-col">
             <h4>Quick Links</h4>
