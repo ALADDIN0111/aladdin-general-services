@@ -31,8 +31,8 @@
       z-index: 2;
     }
     
-    /* BACKGROUND LOGO - more visible on white */
-    body::before {
+    /* BACKGROUND LOGO - REMOVED */
+    /* body::before {
       content: "";
       position: fixed;
       top: 0;
@@ -47,15 +47,14 @@
       opacity: 0.15;
       pointer-events: none;
       z-index: 0;
-    }
+    } */
     
     /* MAIN CONTENT WRAPPER */
     .main-content {
       flex: 1 0 auto;
       position: relative;
       z-index: 2;
-      background-color: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(2px);
+      background-color: #ffffff;
       border-radius: 40px 40px 0 0;
       margin-top: 20px;
     }
@@ -69,7 +68,6 @@
       flex-wrap: wrap;
       border-bottom: 2px solid #e6d7c0;
       background: #ffffff;
-      backdrop-filter: blur(10px);
       position: sticky;
       top: 0;
       z-index: 100;
@@ -1462,5 +1460,3 @@
   </script>
 </body>
 </html>
-</html>
-
