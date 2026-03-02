@@ -15,8 +15,8 @@
     }
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #0a0c0e;
-      color: #ffffff;
+      background-color: #ffffff;
+      color: #333333;
       line-height: 1.5;
       min-height: 100vh;
       display: flex;
@@ -31,7 +31,7 @@
       z-index: 2;
     }
     
-    /* BACKGROUND LOGO */
+    /* BACKGROUND LOGO - more visible on white */
     body::before {
       content: "";
       position: fixed;
@@ -44,10 +44,9 @@
       background-position: center;
       background-repeat: no-repeat;
       background-attachment: fixed;
-      opacity: 0.35;
+      opacity: 0.15;
       pointer-events: none;
       z-index: 0;
-      filter: drop-shadow(0 0 10px rgba(243, 179, 76, 0.3));
     }
     
     /* MAIN CONTENT WRAPPER */
@@ -55,8 +54,8 @@
       flex: 1 0 auto;
       position: relative;
       z-index: 2;
-      background-color: rgba(10, 12, 14, 0.85);
-      backdrop-filter: blur(3px);
+      background-color: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(2px);
       border-radius: 40px 40px 0 0;
       margin-top: 20px;
     }
@@ -68,14 +67,14 @@
       align-items: center;
       padding: 15px 0;
       flex-wrap: wrap;
-      border-bottom: 2px solid rgba(243, 179, 76, 0.3);
-      background: rgba(10, 12, 14, 0.95);
+      border-bottom: 2px solid #e6d7c0;
+      background: #ffffff;
       backdrop-filter: blur(10px);
       position: sticky;
       top: 0;
       z-index: 100;
       border-radius: 0 0 30px 30px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     }
     
     .logo-container {
@@ -90,27 +89,27 @@
       max-width: 180px;
       object-fit: contain;
       transition: all 0.3s ease;
-      filter: drop-shadow(0 0 5px rgba(243, 179, 76, 0.3));
+      filter: drop-shadow(0 0 5px rgba(199, 92, 47, 0.2));
       cursor: pointer;
     }
     
     .navbar-logo:hover {
       transform: scale(1.05);
-      filter: drop-shadow(0 0 15px rgba(243, 179, 76, 0.7));
+      filter: drop-shadow(0 0 15px rgba(199, 92, 47, 0.4));
       transition: all 0.3s ease;
     }
     
     .text-logo {
       font-size: 2rem;
       font-weight: 800;
-      color: #f3b34c;
+      color: #0a4b4f;
       line-height: 1.1;
       letter-spacing: -0.5px;
     }
     .text-logo span {
       font-size: 0.9rem;
       font-weight: 500;
-      color: #ffffff;
+      color: #c75c2f;
       display: block;
       letter-spacing: 2px;
       margin-top: 3px;
@@ -123,7 +122,7 @@
     }
     .nav-links a {
       text-decoration: none;
-      color: #ffffff;
+      color: #4a4a4a;
       transition: all 0.3s;
       font-size: 1rem;
       cursor: pointer;
@@ -137,45 +136,42 @@
       left: 0;
       width: 0;
       height: 2px;
-      background: #f3b34c;
+      background: #c75c2f;
       transition: width 0.3s;
     }
     .nav-links a:hover::after {
       width: 100%;
     }
     .nav-links a:hover {
-      color: #f3b34c;
+      color: #c75c2f;
     }
     
     /* BUTTONS */
     .btn {
       display: inline-block;
-      background: #f3b34c;
-      color: #0a0c0e;
+      background: #c75c2f;
+      color: #ffffff;
       font-weight: 700;
       padding: 14px 32px;
       border-radius: 50px;
       text-decoration: none;
       transition: all 0.3s;
-      box-shadow: 0 8px 15px rgba(243, 179, 76, 0.3);
+      box-shadow: 0 8px 15px rgba(199, 92, 47, 0.2);
       font-size: 1rem;
       border: none;
       cursor: pointer;
     }
     .btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 12px 20px rgba(243, 179, 76, 0.4);
-      background: #ffc55c;
+      box-shadow: 0 12px 20px rgba(199, 92, 47, 0.3);
+      background: #b34f24;
     }
     .btn-secondary {
-      background: transparent;
-      color: #ffffff;
-      border: 2px solid #f3b34c;
-      box-shadow: none;
+      background: #0a4b4f;
+      box-shadow: 0 8px 15px rgba(10, 75, 79, 0.2);
     }
     .btn-secondary:hover {
-      background: rgba(243, 179, 76, 0.1);
-      color: #f3b34c;
+      background: #0c5e63;
     }
     
     /* HERO SLIDER */
@@ -186,6 +182,7 @@
       overflow: hidden;
       border-radius: 0 0 50px 50px;
       margin-bottom: 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
     
     .slider {
@@ -223,7 +220,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.2) 100%);
+      background: linear-gradient(90deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%);
       z-index: 2;
     }
     
@@ -271,7 +268,7 @@
     }
     
     .dot.active {
-      background: #f3b34c;
+      background: #c75c2f;
       transform: scale(1.3);
     }
     
@@ -280,7 +277,7 @@
       font-size: 2.8rem;
       font-weight: 700;
       margin: 60px 0 40px;
-      color: #f3b34c;
+      color: #0a4b4f;
       letter-spacing: -0.02em;
       text-align: center;
       position: relative;
@@ -293,22 +290,22 @@
       transform: translateX(-50%);
       width: 80px;
       height: 4px;
-      background: #f3b34c;
+      background: #c75c2f;
       border-radius: 2px;
     }
     
     /* DISCOUNT BADGE */
     .discount-badge {
       display: inline-block;
-      background: #f3b34c;
-      color: #0a0c0e;
+      background: #c75c2f;
+      color: #ffffff;
       padding: 8px 20px;
       border-radius: 50px;
       font-weight: 800;
       font-size: 1rem;
       margin-left: 15px;
       vertical-align: middle;
-      box-shadow: 0 0 15px rgba(243, 179, 76, 0.5);
+      box-shadow: 0 0 15px rgba(199, 92, 47, 0.3);
       border: 2px solid #ffffff;
     }
     
@@ -357,14 +354,14 @@
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: rgba(255,255,255,0.5);
+      background: rgba(255,255,255,0.7);
       cursor: pointer;
       transition: all 0.3s;
       z-index: 10;
     }
     
     .card-dot.active {
-      background: #f3b34c;
+      background: #c75c2f;
       transform: scale(1.2);
     }
     
@@ -377,21 +374,21 @@
     }
     
     .service-card {
-      background: #1a1a1a;
+      background: #ffffff;
       border-radius: 30px;
       overflow: hidden;
       transition: all 0.4s;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
       text-decoration: none;
-      color: #ffffff;
+      color: #333333;
       display: block;
       cursor: pointer;
-      border: 1px solid #333;
+      border: 1px solid #eaeaea;
     }
     .service-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 25px 40px rgba(243, 179, 76, 0.2);
-      border-color: #f3b34c;
+      box-shadow: 0 25px 40px rgba(199, 92, 47, 0.15);
+      border-color: #c75c2f;
     }
     
     .card-image-spot {
@@ -406,8 +403,8 @@
     
     .badge {
       display: inline-block;
-      background: #f3b34c;
-      color: #0a0c0e;
+      background: #c75c2f;
+      color: #ffffff;
       padding: 5px 15px;
       border-radius: 50px;
       font-weight: 700;
@@ -419,11 +416,11 @@
       font-size: 1.6rem;
       font-weight: 700;
       margin-bottom: 15px;
-      color: #f3b34c;
+      color: #0a4b4f;
     }
     
     .service-card p {
-      color: #cccccc;
+      color: #666666;
       margin-bottom: 15px;
     }
     
@@ -436,10 +433,10 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      color: #cccccc;
+      color: #666666;
     }
     .service-card ul li i {
-      color: #f3b34c;
+      color: #0a4b4f;
       width: 20px;
     }
     
@@ -454,16 +451,16 @@
     }
     .service-header h1 {
       font-size: 3.5rem;
-      color: #f3b34c;
+      color: #0a4b4f;
       margin-bottom: 20px;
     }
     .service-header i {
       font-size: 80px;
-      color: #f3b34c;
+      color: #c75c2f;
       margin-bottom: 20px;
     }
     .service-header p {
-      color: #cccccc;
+      color: #666666;
       font-size: 1.2rem;
       max-width: 800px;
       margin: 0 auto;
@@ -481,45 +478,46 @@
       border-radius: 30px;
       overflow: hidden;
       position: relative;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     }
     
     .service-description {
-      background: #1a1a1a;
+      background: #f9f9f9;
       border-radius: 30px;
       padding: 40px;
       margin: 40px 0;
-      border: 1px solid #333;
+      border: 1px solid #eaeaea;
     }
     .service-description h3 {
-      color: #f3b34c;
+      color: #0a4b4f;
       font-size: 2rem;
       margin-bottom: 20px;
     }
     .service-description p {
-      color: #cccccc;
+      color: #666666;
       font-size: 1.1rem;
       line-height: 1.8;
     }
     
     /* EMAIL SECTION */
     .email-section {
-      background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+      background: linear-gradient(135deg, #f9f9f9, #ffffff);
       border-radius: 60px;
       padding: 60px;
       margin: 60px 0;
       text-align: center;
-      border: 1px solid #f3b34c;
-      box-shadow: 0 20px 40px rgba(243, 179, 76, 0.1);
+      border: 1px solid #c75c2f;
+      box-shadow: 0 20px 40px rgba(199, 92, 47, 0.1);
     }
     
     .email-section h2 {
-      color: #f3b34c;
+      color: #0a4b4f;
       font-size: 2.5rem;
       margin-bottom: 20px;
     }
     
     .email-section p {
-      color: #cccccc;
+      color: #666666;
       font-size: 1.2rem;
       margin-bottom: 30px;
       max-width: 600px;
@@ -532,14 +530,14 @@
       align-items: center;
       justify-content: center;
       gap: 12px;
-      background: #f3b34c;
-      color: #0a0c0e;
+      background: #c75c2f;
+      color: #ffffff;
       font-weight: 700;
       padding: 18px 45px;
       border-radius: 60px;
       text-decoration: none;
       transition: all 0.3s;
-      box-shadow: 0 8px 20px rgba(243, 179, 76, 0.4);
+      box-shadow: 0 8px 20px rgba(199, 92, 47, 0.3);
       font-size: 1.3rem;
       border: 2px solid #ffffff;
       cursor: pointer;
@@ -548,8 +546,8 @@
     }
     .email-direct-btn:hover {
       transform: translateY(-5px);
-      box-shadow: 0 15px 30px rgba(243, 179, 76, 0.6);
-      background: #ffc55c;
+      box-shadow: 0 15px 30px rgba(199, 92, 47, 0.4);
+      background: #b34f24;
     }
     .email-direct-btn i {
       font-size: 1.6rem;
@@ -557,14 +555,13 @@
     
     /* FOOTER */
     .footer {
-      background: #0a0c0e;
-      color: #cccccc;
+      background: #0a4b4f;
+      color: #ffffff;
       padding: 60px 0 32px;
       border-radius: 48px 48px 0 0;
       margin-top: 60px;
       position: relative;
       z-index: 2;
-      border-top: 1px solid #333;
     }
     .footer-content {
       display: flex;
@@ -586,24 +583,24 @@
       max-width: 150px;
       object-fit: contain;
       transition: all 0.3s ease;
-      filter: drop-shadow(0 0 5px rgba(243, 179, 76, 0.3));
+      filter: brightness(0) invert(1);
       cursor: pointer;
     }
     
     .footer-logo:hover {
       transform: scale(1.05);
-      filter: drop-shadow(0 0 15px rgba(243, 179, 76, 0.7));
+      filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(255,255,255,0.5));
     }
     
     .footer-text-logo {
       font-size: 1.8rem;
       font-weight: 700;
-      color: #f3b34c;
+      color: #ffffff;
       line-height: 1.1;
     }
     .footer-text-logo span {
       font-size: 0.9rem;
-      color: #ffffff;
+      color: #f3b34c;
       display: block;
       font-weight: 500;
       letter-spacing: 1px;
@@ -620,7 +617,7 @@
     }
     .footer-col a {
       display: block;
-      color: #cccccc;
+      color: #dddddd;
       text-decoration: none;
       margin-bottom: 12px;
       transition: all 0.3s;
@@ -637,10 +634,10 @@
     }
     .copyright {
       margin-top: 48px;
-      border-top: 1px solid #333;
+      border-top: 1px solid #2d6b6f;
       padding-top: 24px;
       text-align: center;
-      color: #888;
+      color: #dddddd;
     }
     
     /* FLOATING CALL BUTTON */
@@ -648,12 +645,12 @@
       position: fixed;
       bottom: 30px;
       right: 30px;
-      background: #f3b34c;
-      color: #0a0c0e;
+      background: #c75c2f;
+      color: #ffffff;
       border-radius: 100px;
       padding: 16px 30px;
       font-weight: bold;
-      box-shadow: 0 8px 15px rgba(243, 179, 76, 0.3);
+      box-shadow: 0 8px 15px rgba(199, 92, 47, 0.3);
       z-index: 99;
       border: 2px solid #ffffff;
       animation: gentlePulse 3s infinite;
@@ -663,11 +660,63 @@
       50% { transform: scale(1.03); }
     }
     .floating-call a {
-      color: #0a0c0e;
+      color: #ffffff;
       text-decoration: none;
       display: flex;
       align-items: center;
       gap: 10px;
+    }
+    
+    /* ABOUT PREVIEW SECTION */
+    .about-preview {
+      background: #f9f9f9;
+      border-radius: 50px;
+      padding: 40px;
+      margin: 60px 0;
+      border: 1px solid #eaeaea;
+    }
+    
+    .about-preview h2 {
+      color: #0a4b4f;
+    }
+    
+    .about-preview p {
+      color: #666666;
+    }
+    
+    .area-card {
+      background: #0a4b4f;
+      border-radius: 30px;
+      padding: 30px;
+      color: white;
+    }
+    
+    .area-card h3 {
+      color: #f3b34c;
+    }
+    
+    /* CONTACT PAGE STYLES */
+    .contact-info-card {
+      background: #ffffff;
+      border-radius: 40px;
+      padding: 40px;
+      border: 1px solid #eaeaea;
+    }
+    
+    .contact-info-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 30px;
+      padding: 20px;
+      background: #f9f9f9;
+      border-radius: 30px;
+    }
+    
+    .hours-card {
+      background: #f9f9f9;
+      border-radius: 30px;
+      padding: 30px;
     }
     
     @media (max-width: 700px) {
@@ -933,20 +982,20 @@
         </div>
 
         <!-- ABOUT PREVIEW -->
-        <div style="background: #1a1a1a; border-radius: 50px; padding: 40px; margin: 60px 0; border: 1px solid #333;">
+        <div class="about-preview">
           <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
             <div style="flex: 1; min-width: 250px;">
-              <h2 style="font-size: 2.5rem; color: #f3b34c;">Family Owned</h2>
-              <p style="font-size: 1.2rem; margin: 20px 0; color: #cccccc;">Just my wife and I, handling every job personally.</p>
+              <h2 style="font-size: 2.5rem;">Family Owned</h2>
+              <p style="font-size: 1.2rem; margin: 20px 0;">Just my wife and I, handling every job personally.</p>
               <div style="display: flex; gap: 30px;">
-                <div><span style="font-size: 2rem; font-weight: 800; color: #f3b34c;">2+</span><br><span style="color: #cccccc;">Years</span></div>
-                <div><span style="font-size: 2rem; font-weight: 800; color: #f3b34c;">100%</span><br><span style="color: #cccccc;">Family</span></div>
+                <div><span style="font-size: 2rem; font-weight: 800; color: #c75c2f;">2+</span><br><span>Years</span></div>
+                <div><span style="font-size: 2rem; font-weight: 800; color: #c75c2f;">100%</span><br><span>Family</span></div>
               </div>
             </div>
-            <div style="flex: 1; background: #2a2a2a; border-radius: 30px; padding: 30px; border: 1px solid #333;">
-              <h3 style="color: #f3b34c;">Calgary + Area</h3>
-              <p style="color: #cccccc;">Airdrie • Chestermere • Okotoks • Cochrane</p>
-              <p style="color: #cccccc;">1510 30 Ave SW</p>
+            <div class="area-card" style="flex: 1;">
+              <h3>Calgary + Area</h3>
+              <p style="color: #dddddd;">Airdrie • Chestermere • Okotoks • Cochrane</p>
+              <p style="color: #dddddd;">1510 30 Ave SW</p>
             </div>
           </div>
         </div>
@@ -1219,20 +1268,20 @@
       <!-- ABOUT PAGE -->
       <div id="about" style="display: none;">
         <h2 class="section-title">About Us</h2>
-        <div style="background: #1a1a1a; border-radius: 50px; padding: 50px; margin: 40px 0; border: 1px solid #333;">
+        <div class="about-preview" style="padding: 50px;">
           <div style="display: flex; flex-wrap: wrap; gap: 50px; align-items: center;">
             <div style="flex: 1;">
-              <h3 style="font-size: 2.5rem; color: #f3b34c;">A Family Business</h3>
-              <p style="font-size: 1.2rem; line-height: 1.8; color: #cccccc; margin: 30px 0;">We're not a franchise. Not a call center. Just my wife and I, boots on the ground, handling every job personally. Estate clean-outs require trust. We earn it, one home at a time.</p>
+              <h3 style="font-size: 2.5rem;">A Family Business</h3>
+              <p style="font-size: 1.2rem; line-height: 1.8; margin: 30px 0;">We're not a franchise. Not a call center. Just my wife and I, boots on the ground, handling every job personally. Estate clean-outs require trust. We earn it, one home at a time.</p>
               <div style="display: flex; gap: 40px;">
-                <div><span style="font-size: 2.5rem; font-weight: 800; color: #f3b34c;">2+</span><br><span style="color: #cccccc;">Years</span></div>
-                <div><span style="font-size: 2.5rem; font-weight: 800; color: #f3b34c;">100%</span><br><span style="color: #cccccc;">Family</span></div>
+                <div><span style="font-size: 2.5rem; font-weight: 800; color: #c75c2f;">2+</span><br><span>Years</span></div>
+                <div><span style="font-size: 2.5rem; font-weight: 800; color: #c75c2f;">100%</span><br><span>Family</span></div>
               </div>
             </div>
-            <div style="flex: 1; background: #2a2a2a; border-radius: 40px; padding: 40px;">
+            <div class="area-card" style="flex: 1; padding: 40px;">
               <h3 style="color: #f3b34c;">Calgary + Area</h3>
-              <p style="color: #cccccc; margin: 20px 0;">Airdrie • Chestermere • Okotoks • Cochrane</p>
-              <p style="color: #cccccc;">1510 30 Ave SW, Calgary</p>
+              <p style="color: #dddddd; margin: 20px 0;">Airdrie • Chestermere • Okotoks • Cochrane</p>
+              <p style="color: #dddddd;">1510 30 Ave SW, Calgary</p>
             </div>
           </div>
         </div>
@@ -1252,26 +1301,26 @@
         </div>
         
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin: 40px 0;">
-          <div style="background: #1a1a1a; border-radius: 40px; padding: 40px; border: 1px solid #333;">
-            <h3 style="color: #f3b34c; font-size: 2rem; margin-bottom: 30px;">Contact Info</h3>
-            <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px; padding: 20px; background: #2a2a2a; border-radius: 30px;">
-              <i class="fas fa-phone-alt" style="font-size: 30px; color: #f3b34c;"></i>
-              <div><h4 style="color: #f3b34c;">Call Us</h4><p><a href="tel:+18252887720" style="color: #f3b34c; text-decoration: none;">(825) 288-7720</a></p></div>
+          <div class="contact-info-card">
+            <h3 style="color: #0a4b4f; font-size: 2rem; margin-bottom: 30px;">Contact Info</h3>
+            <div class="contact-info-item">
+              <i class="fas fa-phone-alt" style="font-size: 30px; color: #c75c2f;"></i>
+              <div><h4 style="color: #0a4b4f;">Call Us</h4><p><a href="tel:+18252887720" style="color: #c75c2f; text-decoration: none;">(825) 288-7720</a></p></div>
             </div>
-            <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px; padding: 20px; background: #2a2a2a; border-radius: 30px;">
-              <i class="fas fa-envelope" style="font-size: 30px; color: #f3b34c;"></i>
-              <div><h4 style="color: #f3b34c;">Email Us</h4><p><a href="mailto:aladdin.g.services@gmail.com" style="color: #f3b34c; text-decoration: none;">aladdin.g.services@gmail.com</a></p></div>
+            <div class="contact-info-item">
+              <i class="fas fa-envelope" style="font-size: 30px; color: #c75c2f;"></i>
+              <div><h4 style="color: #0a4b4f;">Email Us</h4><p><a href="mailto:aladdin.g.services@gmail.com" style="color: #c75c2f; text-decoration: none;">aladdin.g.services@gmail.com</a></p></div>
             </div>
-            <div style="display: flex; align-items: center; gap: 20px; padding: 20px; background: #2a2a2a; border-radius: 30px;">
-              <i class="fas fa-map-marker-alt" style="font-size: 30px; color: #f3b34c;"></i>
-              <div><h4 style="color: #f3b34c;">Visit Us</h4><p style="color: #cccccc;">1510 30 Ave SW, Calgary, AB T2T1P3</p></div>
+            <div class="contact-info-item">
+              <i class="fas fa-map-marker-alt" style="font-size: 30px; color: #c75c2f;"></i>
+              <div><h4 style="color: #0a4b4f;">Visit Us</h4><p style="color: #666666;">1510 30 Ave SW, Calgary, AB T2T1P3</p></div>
             </div>
           </div>
-          <div style="background: #1a1a1a; border-radius: 40px; padding: 40px; border: 1px solid #333;">
-            <h3 style="color: #f3b34c; font-size: 2rem; margin-bottom: 30px;">Hours</h3>
-            <div style="background: #2a2a2a; border-radius: 30px; padding: 30px;">
-              <p style="color: #cccccc; margin-bottom: 15px;"><i class="fas fa-clock" style="color: #f3b34c; margin-right: 10px;"></i> Mon-Sat: 7am - 8pm</p>
-              <p style="color: #cccccc;"><i class="fas fa-clock" style="color: #f3b34c; margin-right: 10px;"></i> Sun: By appointment</p>
+          <div class="contact-info-card">
+            <h3 style="color: #0a4b4f; font-size: 2rem; margin-bottom: 30px;">Hours</h3>
+            <div class="hours-card">
+              <p style="margin-bottom: 15px;"><i class="fas fa-clock" style="color: #c75c2f; margin-right: 10px;"></i> Mon-Sat: 7am - 8pm</p>
+              <p><i class="fas fa-clock" style="color: #c75c2f; margin-right: 10px;"></i> Sun: By appointment</p>
             </div>
           </div>
         </div>
@@ -1413,3 +1462,5 @@
   </script>
 </body>
 </html>
+</html>
+
