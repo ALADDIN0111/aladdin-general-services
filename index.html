@@ -31,6 +31,100 @@
       z-index: 2;
     }
     
+    /* TOP CONTACT BAR */
+    .top-contact-bar {
+      background: #0a4b4f;
+      color: white;
+      padding: 12px 0;
+      font-size: 0.95rem;
+      border-radius: 0 0 25px 25px;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .top-contact-bar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .contact-info-top {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+    .contact-info-top a {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.3s;
+    }
+    .contact-info-top a:hover {
+      color: #f3b34c;
+    }
+    .contact-info-top i {
+      color: #f3b34c;
+      font-size: 1.1rem;
+    }
+    .contact-info-top span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    /* REVIEW BUTTON STYLES */
+    .review-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #f3b34c;
+      color: #0a4b4f !important;
+      font-weight: 700;
+      padding: 8px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s;
+      font-size: 0.95rem;
+      border: 2px solid #ffffff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .review-btn:hover {
+      background: #ffc107;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(243, 179, 76, 0.4);
+      color: #0a4b4f !important;
+    }
+    .review-btn i {
+      color: #ffffff;
+      font-size: 1rem;
+    }
+    
+    /* QR CODE STYLES */
+    .qr-container {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      padding: 15px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+    }
+    .qr-container img {
+      width: 120px;
+      height: 120px;
+      border: 3px solid #ffffff;
+      border-radius: 10px;
+      padding: 5px;
+      background: white;
+    }
+    .qr-container p {
+      color: #f3b34c;
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+    
     /* MAIN CONTENT WRAPPER */
     .main-content {
       flex: 1 0 auto;
@@ -38,7 +132,7 @@
       z-index: 2;
       background-color: #ffffff;
       border-radius: 40px 40px 0 0;
-      margin-top: 20px;
+      margin-top: 10px;
     }
     
     /* NAVBAR */
@@ -534,55 +628,6 @@
       font-size: 1.6rem;
     }
     
-    /* REVIEW BUTTON STYLES */
-    .review-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: #f3b34c;
-      color: #0a4b4f;
-      font-weight: 700;
-      padding: 10px 20px;
-      border-radius: 50px;
-      text-decoration: none;
-      transition: all 0.3s;
-      font-size: 0.95rem;
-      border: 2px solid #ffffff;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      margin-top: 10px;
-    }
-    .review-btn:hover {
-      background: #ffc107;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 15px rgba(243, 179, 76, 0.4);
-    }
-    .review-btn i {
-      color: #ffffff;
-      font-size: 1rem;
-    }
-    
-    /* QR CODE STYLES */
-    .qr-container {
-      text-align: center;
-      margin-top: 20px;
-      padding: 15px;
-      background: rgba(255,255,255,0.1);
-      border-radius: 15px;
-    }
-    .qr-container img {
-      width: 120px;
-      height: 120px;
-      border: 3px solid #ffffff;
-      border-radius: 10px;
-      padding: 5px;
-      background: white;
-    }
-    .qr-container p {
-      color: #f3b34c;
-      font-size: 0.9rem;
-      margin-top: 10px;
-    }
-    
     /* FOOTER */
     .footer {
       background: #0a4b4f;
@@ -661,6 +706,10 @@
       color: #f3b34c;
       font-size: 1.1rem;
       margin-top: 15px;
+    }
+    .footer-phone {
+      color: #f3b34c;
+      font-size: 1.1rem;
     }
     .copyright {
       margin-top: 48px;
@@ -761,6 +810,24 @@
   </style>
 </head>
 <body>
+
+  <!-- TOP CONTACT BAR WITH REVIEW BUTTON -->
+  <div class="top-contact-bar">
+    <div class="container">
+      <div class="contact-info-top">
+        <a href="tel:+18252887720">
+          <i class="fas fa-phone-alt"></i> (825) 288-7720
+        </a>
+        <a href="mailto:aladdin.g.services@gmail.com">
+          <i class="fas fa-envelope"></i> aladdin.g.services@gmail.com
+        </a>
+      </div>
+      <!-- REVIEW BUTTON AT THE TOP -->
+      <a href="https://g.page/r/CazmvfBhqn6PEBE/review" target="_blank" class="review-btn">
+        <i class="fas fa-star"></i> Leave us a Review
+      </a>
+    </div>
+  </div>
 
   <!-- FLOATING CALL BUTTON -->
   <div class="floating-call">
@@ -1372,13 +1439,18 @@
           </div>
           <p>📍 Calgary • Airdrie • Chestermere • Okotoks • Cochrane</p>
           <p>1510 30 Ave SW, Calgary, AB T2T1P3</p>
-          <div class="footer-email">
-            <i class="fas fa-envelope"></i> aladdin.g.services@gmail.com
+          <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 10px;">
+            <div class="footer-email">
+              <i class="fas fa-envelope"></i> aladdin.g.services@gmail.com
+            </div>
+            <div class="footer-phone">
+              <i class="fas fa-phone-alt"></i> (825) 288-7720
+            </div>
+            <!-- REVIEW BUTTON IN FOOTER -->
+            <a href="https://g.page/r/CazmvfBhqn6PEBE/review" target="_blank" class="review-btn">
+              <i class="fas fa-star"></i> Leave us a Review
+            </a>
           </div>
-          <!-- REVIEW BUTTON ADDED HERE -->
-          <a href="https://g.page/r/CazmvfBhqn6PEBE/review" target="_blank" class="review-btn" style="margin-top: 15px;">
-            <i class="fas fa-star"></i> Leave us a Review
-          </a>
         </div>
         <div class="footer-links">
           <div class="footer-col">
@@ -1400,9 +1472,9 @@
         </div>
       </div>
       
-      <!-- QR CODE SECTION ADDED HERE -->
+      <!-- QR CODE SECTION WITH CORRECT FILENAME -->
       <div class="qr-container">
-        <img src="qr QGS.png" alt="Scan to review Aladdin General Services on Google">
+        <img src="qr AGS.png" alt="Scan to review Aladdin General Services on Google">
         <p><i class="fas fa-qrcode"></i> Scan with your phone camera to leave a review</p>
       </div>
       
@@ -1503,5 +1575,3 @@
   </script>
 </body>
 </html>
-</html>
-
