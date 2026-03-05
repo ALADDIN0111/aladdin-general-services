@@ -31,8 +31,6 @@
       z-index: 2;
     }
     
-    /* BACKGROUND LOGO - REMOVED */
-    
     /* MAIN CONTENT WRAPPER */
     .main-content {
       flex: 1 0 auto;
@@ -534,6 +532,55 @@
     }
     .email-direct-btn i {
       font-size: 1.6rem;
+    }
+    
+    /* REVIEW BUTTON STYLES */
+    .review-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #f3b34c;
+      color: #0a4b4f;
+      font-weight: 700;
+      padding: 10px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s;
+      font-size: 0.95rem;
+      border: 2px solid #ffffff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-top: 10px;
+    }
+    .review-btn:hover {
+      background: #ffc107;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(243, 179, 76, 0.4);
+    }
+    .review-btn i {
+      color: #ffffff;
+      font-size: 1rem;
+    }
+    
+    /* QR CODE STYLES */
+    .qr-container {
+      text-align: center;
+      margin-top: 20px;
+      padding: 15px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+    }
+    .qr-container img {
+      width: 120px;
+      height: 120px;
+      border: 3px solid #ffffff;
+      border-radius: 10px;
+      padding: 5px;
+      background: white;
+    }
+    .qr-container p {
+      color: #f3b34c;
+      font-size: 0.9rem;
+      margin-top: 10px;
     }
     
     /* FOOTER */
@@ -1328,6 +1375,10 @@
           <div class="footer-email">
             <i class="fas fa-envelope"></i> aladdin.g.services@gmail.com
           </div>
+          <!-- REVIEW BUTTON ADDED HERE -->
+          <a href="https://g.page/r/CazmvfBhqn6PEBE/review" target="_blank" class="review-btn" style="margin-top: 15px;">
+            <i class="fas fa-star"></i> Leave us a Review
+          </a>
         </div>
         <div class="footer-links">
           <div class="footer-col">
@@ -1348,6 +1399,13 @@
           </div>
         </div>
       </div>
+      
+      <!-- QR CODE SECTION ADDED HERE -->
+      <div class="qr-container">
+        <img src="qr QGS.png" alt="Scan to review Aladdin General Services on Google">
+        <p><i class="fas fa-qrcode"></i> Scan with your phone camera to leave a review</p>
+      </div>
+      
       <div class="copyright">
         © 2025 ALADDIN GENERAL SERVICE INC. Family owned & operated.
       </div>
@@ -1445,3 +1503,5 @@
   </script>
 </body>
 </html>
+</html>
+
