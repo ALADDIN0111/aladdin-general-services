@@ -650,28 +650,31 @@
       align-items: center;
       gap: 15px;
       margin-bottom: 15px;
+      flex-wrap: wrap;
     }
     
     .footer-logo {
-      height: 50px;
+      height: 70px;
       width: auto;
-      max-width: 150px;
+      max-width: 180px;
       object-fit: contain;
       transition: all 0.3s ease;
-      filter: brightness(0) invert(1);
       cursor: pointer;
+      background: transparent;
+      display: inline-block;
+      border: none;
     }
     
     .footer-logo:hover {
       transform: scale(1.05);
-      filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(255,255,255,0.5));
+      filter: drop-shadow(0 0 10px rgba(255,255,255,0.5));
     }
     
     .footer-text-logo {
       font-size: 1.8rem;
       font-weight: 700;
       color: #ffffff;
-      line-height: 1.1;
+      line-height: 1.2;
     }
     .footer-text-logo span {
       font-size: 0.9rem;
@@ -679,6 +682,7 @@
       display: block;
       font-weight: 500;
       letter-spacing: 1px;
+      margin-top: 3px;
     }
     
     .footer-links {
