@@ -870,10 +870,10 @@
         </div>
       </div>
       <div class="nav-links">
-        <a onclick="showPage('home')">Home</a>
-        <a onclick="showPage('services')">Services</a>
-        <a onclick="showPage('about')">About</a>
-        <a onclick="showPage('contact')">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="#services">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
       </div>
     </div>
   </div>
@@ -894,7 +894,7 @@
           </div>
           <div class="slider-overlay"></div>
           <div class="slider-content">
-            <h1>Junk Removal & Estate<br>Clean-Out Specialists</h1>
+            <h1>Junk Removal & Estate<br>Clean-Out Specialists in Calgary</h1>
             <p>Shed & Deck Demolition • Garage Reset • Junk Removal • Estate Clean-Outs • Full House Clear-Outs</p>
             <div style="display: flex; gap: 15px; flex-wrap: wrap;">
               <a href="tel:+18252887720" class="btn">📞 (825) 288-7720</a>
@@ -910,23 +910,19 @@
         </div>
 
         <!-- SERVICES GRID WITH 10% OFF BADGE -->
-        <h2 class="section-title">Our Premium Services <span class="discount-badge">10% OFF</span></h2>
-        <div class="services-grid" id="services-grid-home">
+        <h2 class="section-title" id="services">Our Calgary Services <span class="discount-badge">10% OFF</span></h2>
+        <div class="services-grid">
           
           <!-- JUNK REMOVAL CARD -->
-          <div class="service-card" onclick="showService('junkremoval')">
-            <div class="card-image-spot" id="junk-card-slider">
+          <a href="junk-removal-calgary.html" class="service-card">
+            <div class="card-image-spot">
               <div class="card-slider-container">
                 <div class="card-slider">
                   <div class="card-slide active" style="background-image: url('junkremoval1before.jpg');"></div>
                   <div class="card-slide" style="background-image: url('junkremoval1after.jpg');"></div>
-                  <div class="card-slide" style="background-image: url('junkremoval2before.jpg');"></div>
-                  <div class="card-slide" style="background-image: url('junkremoval2after.jpg');"></div>
                 </div>
                 <div class="card-slider-dots">
                   <div class="card-dot active"></div>
-                  <div class="card-dot"></div>
-                  <div class="card-dot"></div>
                   <div class="card-dot"></div>
                 </div>
               </div>
@@ -934,53 +930,45 @@
             <div class="card-content">
               <div class="badge">Most Popular</div>
               <i class="fas fa-truck"></i>
-              <h3>Junk Removal</h3>
-              <p>Fast, friendly removal for homes & businesses</p>
+              <h3>Junk Removal Calgary</h3>
+              <p>Fast, friendly junk removal for Calgary homes & businesses</p>
               <ul>
-                <li><i class="fas fa-check-circle"></i> Same-day service</li>
+                <li><i class="fas fa-check-circle"></i> Same-day service in Calgary</li>
                 <li><i class="fas fa-check-circle"></i> Furniture & appliances</li>
                 <li><i class="fas fa-check-circle"></i> Electronics recycling</li>
               </ul>
             </div>
-          </div>
+          </a>
           
           <!-- ESTATE CLEAN-OUTS CARD -->
-          <div class="service-card" onclick="showService('estate')">
-            <div class="card-image-spot" id="estate-card-slider">
+          <a href="estate-cleanouts-calgary.html" class="service-card">
+            <div class="card-image-spot">
               <div class="card-slider-container">
                 <div class="card-slider">
                   <div class="card-slide active" style="background-image: url('house1.jpg');"></div>
                   <div class="card-slide" style="background-image: url('house2.jpg');"></div>
-                  <div class="card-slide" style="background-image: url('house3.jpg');"></div>
-                  <div class="card-slide" style="background-image: url('house4.jpg');"></div>
-                  <div class="card-slide" style="background-image: url('house5.jpg');"></div>
-                  <div class="card-slide" style="background-image: url('house6.jpg');"></div>
                 </div>
                 <div class="card-slider-dots">
                   <div class="card-dot active"></div>
-                  <div class="card-dot"></div>
-                  <div class="card-dot"></div>
-                  <div class="card-dot"></div>
-                  <div class="card-dot"></div>
                   <div class="card-dot"></div>
                 </div>
               </div>
             </div>
             <div class="card-content">
               <i class="fas fa-home"></i>
-              <h3>Estate Clean-Outs</h3>
-              <p>Full property clearance with compassion</p>
+              <h3>Estate Clean-Outs Calgary</h3>
+              <p>Full property clearance with compassion in Calgary</p>
               <ul>
                 <li><i class="fas fa-check-circle"></i> Entire property clearance</li>
                 <li><i class="fas fa-check-circle"></i> Donation coordination</li>
                 <li><i class="fas fa-check-circle"></i> Realtor trusted</li>
               </ul>
             </div>
-          </div>
+          </a>
           
           <!-- GARAGE RESET CARD -->
-          <div class="service-card" onclick="showService('garage')">
-            <div class="card-image-spot" id="garage-card-slider">
+          <a href="garage-reset-calgary.html" class="service-card">
+            <div class="card-image-spot">
               <div class="card-slider-container">
                 <div class="card-slider">
                   <div class="card-slide active" style="background-image: url('garagebf.jpg');"></div>
@@ -994,53 +982,45 @@
             </div>
             <div class="card-content">
               <i class="fas fa-warehouse"></i>
-              <h3>Garage Reset</h3>
-              <p>1-day garage transformation</p>
+              <h3>Garage Reset Calgary</h3>
+              <p>1-day garage transformation in Calgary</p>
               <ul>
                 <li><i class="fas fa-check-circle"></i> Remove & sweep</li>
                 <li><i class="fas fa-check-circle"></i> Sort & organize</li>
                 <li><i class="fas fa-check-circle"></i> Full transformation</li>
               </ul>
             </div>
-          </div>
+          </a>
           
           <!-- FULL HOUSE CARD -->
-          <div class="service-card" onclick="showService('fullhouse')">
-            <div class="card-image-spot" id="fullhouse-card-slider">
+          <a href="full-house-clearouts-calgary.html" class="service-card">
+            <div class="card-image-spot">
               <div class="card-slider-container">
                 <div class="card-slider">
                   <div class="card-slide active" style="background-image: url('house1.jpg');"></div>
                   <div class="card-slide" style="background-image: url('house2.jpg');"></div>
-                  <div class="card-slide" style="background-image: url('house3.jpg');"></div>
-                  <div class="card-slide" style="background-image: url('house4.jpg');"></div>
-                  <div class="card-slide" style="background-image: url('house5.jpg');"></div>
-                  <div class="card-slide" style="background-image: url('house6.jpg');"></div>
                 </div>
                 <div class="card-slider-dots">
                   <div class="card-dot active"></div>
-                  <div class="card-dot"></div>
-                  <div class="card-dot"></div>
-                  <div class="card-dot"></div>
-                  <div class="card-dot"></div>
                   <div class="card-dot"></div>
                 </div>
               </div>
             </div>
             <div class="card-content">
               <i class="fas fa-building"></i>
-              <h3>Full House Clear-Outs</h3>
-              <p>Complete home clean-outs</p>
+              <h3>Full House Clear-Outs Calgary</h3>
+              <p>Complete home clean-outs in Calgary</p>
               <ul>
                 <li><i class="fas fa-check-circle"></i> Whole home clean-outs</li>
                 <li><i class="fas fa-check-circle"></i> Basements & attics</li>
                 <li><i class="fas fa-check-circle"></i> Hoarding situations</li>
               </ul>
             </div>
-          </div>
+          </a>
           
           <!-- HANDYMAN CARD -->
-          <div class="service-card" onclick="showService('handyman')">
-            <div class="card-image-spot" id="handyman-card-slider">
+          <a href="handyman-calgary.html" class="service-card">
+            <div class="card-image-spot">
               <div class="card-slider-container">
                 <div class="card-slider">
                   <div class="card-slide active" style="background-image: url('handy.jpg');"></div>
@@ -1052,47 +1032,45 @@
             </div>
             <div class="card-content">
               <i class="fas fa-tools"></i>
-              <h3>Handyman Services</h3>
-              <p>Small repairs & fixes</p>
+              <h3>Handyman Services Calgary</h3>
+              <p>Small repairs & fixes in Calgary</p>
               <ul>
                 <li><i class="fas fa-check-circle"></i> Furniture assembly</li>
                 <li><i class="fas fa-check-circle"></i> Shelving installation</li>
                 <li><i class="fas fa-check-circle"></i> Picture hanging</li>
               </ul>
             </div>
-          </div>
+          </a>
           
           <!-- LIGHT CLEANING CARD -->
-          <div class="service-card" onclick="showService('cleaning')">
-            <div class="card-image-spot" id="cleaning-card-slider">
+          <a href="cleaning-calgary.html" class="service-card">
+            <div class="card-image-spot">
               <div class="card-slider-container">
                 <div class="card-slider">
                   <div class="card-slide active" style="background-image: url('carpetcleanbefore.jpg');"></div>
                   <div class="card-slide" style="background-image: url('carpetcleanafter.jpg');"></div>
-                  <div class="card-slide" style="background-image: url('deepclean.jpg');"></div>
                 </div>
                 <div class="card-slider-dots">
                   <div class="card-dot active"></div>
-                  <div class="card-dot"></div>
                   <div class="card-dot"></div>
                 </div>
               </div>
             </div>
             <div class="card-content">
               <i class="fas fa-broom"></i>
-              <h3>Light Cleaning</h3>
-              <p>Post-clean-up touch-ups</p>
+              <h3>Light Cleaning Calgary</h3>
+              <p>Post-clean-up touch-ups in Calgary</p>
               <ul>
                 <li><i class="fas fa-check-circle"></i> Sweeping & vacuuming</li>
                 <li><i class="fas fa-check-circle"></i> Surface wiping</li>
                 <li><i class="fas fa-check-circle"></i> Garage floor sweeping</li>
               </ul>
             </div>
-          </div>
+          </a>
 
-          <!-- SHED & DECK DEMOLITION CARD - NEW SERVICE -->
-          <div class="service-card" onclick="showService('sheddemolition')">
-            <div class="card-image-spot" id="shed-card-slider">
+          <!-- SHED & DECK DEMOLITION CARD -->
+          <a href="shed-deck-demolition-calgary.html" class="service-card">
+            <div class="card-image-spot">
               <div class="card-slider-container">
                 <div class="card-slider">
                   <div class="card-slide active" style="background-image: url('shed rml1.png');"></div>
@@ -1104,15 +1082,28 @@
             </div>
             <div class="card-content">
               <i class="fas fa-tools"></i>
-              <h3>Shed & Deck Demolition</h3>
-              <p>Safe & complete removal of old structures</p>
+              <h3>Shed & Deck Demolition Calgary</h3>
+              <p>Safe & complete removal of old structures in Calgary</p>
               <ul>
                 <li><i class="fas fa-check-circle"></i> Full shed tear-down</li>
                 <li><i class="fas fa-check-circle"></i> Deck removal & disposal</li>
                 <li><i class="fas fa-check-circle"></i> Site clean-up included</li>
               </ul>
             </div>
+          </a>
+        </div>
+
+        <!-- LOCAL SERVICE AREAS SECTION - NEW -->
+        <div style="background: #f9f9f9; border-radius: 50px; padding: 50px; margin: 60px 0; text-align: center;">
+          <h2 style="font-size: 2.5rem; color: #0a4b4f; margin-bottom: 30px;">Proudly Serving Calgary & Surrounding Areas</h2>
+          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 800px; margin: 0 auto;">
+            <div style="background: white; padding: 15px 30px; border-radius: 50px; font-weight: 600; color: #0a4b4f; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">Calgary</div>
+            <div style="background: white; padding: 15px 30px; border-radius: 50px; font-weight: 600; color: #0a4b4f; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">Airdrie</div>
+            <div style="background: white; padding: 15px 30px; border-radius: 50px; font-weight: 600; color: #0a4b4f; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">Chestermere</div>
+            <div style="background: white; padding: 15px 30px; border-radius: 50px; font-weight: 600; color: #0a4b4f; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">Okotoks</div>
+            <div style="background: white; padding: 15px 30px; border-radius: 50px; font-weight: 600; color: #0a4b4f; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">Cochrane</div>
           </div>
+          <p style="margin-top: 30px; color: #666;">We're your neighbors - a local Calgary family business ready to help!</p>
         </div>
 
         <!-- EMAIL SECTION ON HOME PAGE -->
@@ -1128,394 +1119,19 @@
         <div class="about-preview">
           <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
             <div style="flex: 1; min-width: 250px;">
-              <h2 style="font-size: 2.5rem;">Family Owned</h2>
-              <p style="font-size: 1.2rem; margin: 20px 0;">Just my wife and I, handling every job personally.</p>
+              <h2 style="font-size: 2.5rem;">Family Owned & Local</h2>
+              <p style="font-size: 1.2rem; margin: 20px 0;">Just my wife and I, handling every job personally in Calgary and surrounding areas. We're your neighbors!</p>
               <div style="display: flex; gap: 30px;">
                 <div><span style="font-size: 2rem; font-weight: 800; color: #c75c2f;">2+</span><br><span>Years</span></div>
                 <div><span style="font-size: 2rem; font-weight: 800; color: #c75c2f;">100%</span><br><span>Family</span></div>
               </div>
             </div>
             <div class="area-card" style="flex: 1;">
-              <h3>Calgary + Area</h3>
+              <h3>Calgary & Area</h3>
               <p style="color: #dddddd;">Airdrie • Chestermere • Okotoks • Cochrane</p>
-              <p style="color: #dddddd;">1510 30 Ave SW</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SERVICES PAGE (WITH NEW SERVICE ADDED) -->
-      <div id="services" style="display: none;">
-        <h2 class="section-title">All Services <span class="discount-badge">10% OFF</span></h2>
-        <div class="services-grid">
-          <div class="service-card" onclick="showService('junkremoval')"><div class="card-content"><h3>Junk Removal</h3><p>Fast, friendly removal for homes & businesses</p></div></div>
-          <div class="service-card" onclick="showService('estate')"><div class="card-content"><h3>Estate Clean-Outs</h3><p>Full property clearance with compassion</p></div></div>
-          <div class="service-card" onclick="showService('garage')"><div class="card-content"><h3>Garage Reset</h3><p>1-day garage transformation</p></div></div>
-          <div class="service-card" onclick="showService('fullhouse')"><div class="card-content"><h3>Full House</h3><p>Complete home clean-outs</p></div></div>
-          <div class="service-card" onclick="showService('handyman')"><div class="card-content"><h3>Handyman</h3><p>Small repairs & fixes</p></div></div>
-          <div class="service-card" onclick="showService('cleaning')"><div class="card-content"><h3>Cleaning</h3><p>Post-clean-up touch-ups</p></div></div>
-          <div class="service-card" onclick="showService('sheddemolition')"><div class="card-content"><h3>Shed & Deck Demolition</h3><p>Safe & complete removal of old structures</p></div></div>
-        </div>
-      </div>
-
-      <!-- JUNK REMOVAL PAGE -->
-      <div id="junkremoval-page" style="display: none;">
-        <div class="service-detail">
-          <div class="service-header">
-            <i class="fas fa-truck"></i>
-            <h1>Junk Removal</h1>
-            <p>Fast, friendly, and affordable junk removal for homes and businesses in Calgary and surrounding areas. We haul it all so you don't have to lift a finger.</p>
-          </div>
-          
-          <div class="service-showcase">
-            <div class="showcase-image" id="junk-showcase-slider1">
-              <div class="card-slider-container">
-                <div class="card-slider">
-                  <div class="card-slide active" style="background-image: url('junkremoval1before.jpg');"></div>
-                  <div class="card-slide" style="background-image: url('junkremoval1after.jpg');"></div>
-                </div>
-                <div class="card-slider-dots">
-                  <div class="card-dot active"></div>
-                  <div class="card-dot"></div>
-                </div>
-              </div>
-            </div>
-            <div class="showcase-image" id="junk-showcase-slider2">
-              <div class="card-slider-container">
-                <div class="card-slider">
-                  <div class="card-slide active" style="background-image: url('junkremoval2before.jpg');"></div>
-                  <div class="card-slide" style="background-image: url('junkremoval2after.jpg');"></div>
-                </div>
-                <div class="card-slider-dots">
-                  <div class="card-dot active"></div>
-                  <div class="card-dot"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="service-description">
-            <h3>What We Remove</h3>
-            <p>Furniture, appliances, electronics, yard waste, construction debris, and more. Same-day service available. We do all the heavy lifting so you don't have to.</p>
-          </div>
-          <div style="text-align: center; margin: 40px 0;">
-            <a href="mailto:aladdin.g.services@gmail.com?subject=Quote%20Request%20for%20Junk%20Removal&body=%0A%0A---%20PLEASE%20FILL%20OUT%20THIS%20FORM%20---%0A%0AName:%0A%0AEmail:%0A%0APhone:%0A%0AService%3A%20Junk%20Removal%0A%0AMessage%20(describe%20your%20project):%0A%0ALocation%20(Calgary%20area):%0A%0A---%20THANK%20YOU%20---%0A%0AThank%20You%20for%20Choosing%20ALADDIN%20GENERAL%20SERVICES%20INC.%0AWe%20appreciate%20your%20trust%20in%20our%20family%20business.%20Your%20request%20is%20important%20to%20us%20and%20we'll%20respond%20within%201%20hour.%0A%0ABest%20Regards,%0A%0AALADDIN%20GENERAL%20SERVICES%20INC.%0ACLEAN-OUT%20SPECIALISTS%0AJUNK%20REMOVAL" class="email-direct-btn">
-              <i class="fas fa-envelope"></i> Get Free Quote
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- ESTATE PAGE -->
-      <div id="estate-page" style="display: none;">
-        <div class="service-detail">
-          <div class="service-header">
-            <i class="fas fa-home"></i>
-            <h1>Estate Clean-Outs</h1>
-            <p>Full property clearance with respect and discretion. We handle the heavy lifting so families can heal.</p>
-          </div>
-          
-          <div class="service-showcase">
-            <div class="showcase-image" id="estate-showcase-slider1">
-              <div class="card-slider-container">
-                <div class="card-slider">
-                  <div class="card-slide active" style="background-image: url('house1.jpg');"></div>
-                  <div class="card-slide" style="background-image: url('house2.jpg');"></div>
-                  <div class="card-slide" style="background-image: url('house3.jpg');"></div>
-                </div>
-                <div class="card-slider-dots">
-                  <div class="card-dot active"></div>
-                  <div class="card-dot"></div>
-                  <div class="card-dot"></div>
-                </div>
-              </div>
-            </div>
-            <div class="showcase-image" id="estate-showcase-slider2">
-              <div class="card-slider-container">
-                <div class="card-slider">
-                  <div class="card-slide active" style="background-image: url('house4.jpg');"></div>
-                  <div class="card-slide" style="background-image: url('house5.jpg');"></div>
-                  <div class="card-slide" style="background-image: url('house6.jpg');"></div>
-                </div>
-                <div class="card-slider-dots">
-                  <div class="card-dot active"></div>
-                  <div class="card-dot"></div>
-                  <div class="card-dot"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="service-description">
-            <h3>With Compassion & Care</h3>
-            <p>We coordinate donations, provide itemized receipts, and work with realtors and lawyers to ensure a smooth process during difficult times.</p>
-          </div>
-          <div style="text-align: center; margin: 40px 0;">
-            <a href="mailto:aladdin.g.services@gmail.com?subject=Quote%20Request%20for%20Estate%20Clean-Out&body=%0A%0A---%20PLEASE%20FILL%20OUT%20THIS%20FORM%20---%0A%0AName:%0A%0AEmail:%0A%0APhone:%0A%0AService%3A%20Estate%20Clean-Out%0A%0AMessage%20(describe%20your%20project):%0A%0ALocation%20(Calgary%20area):%0A%0A---%20THANK%20YOU%20---%0A%0AThank%20You%20for%20Choosing%20ALADDIN%20GENERAL%20SERVICES%20INC.%0AWe%20appreciate%20your%20trust%20in%20our%20family%20business.%20Your%20request%20is%20important%20to%20us%20and%20we'll%20respond%20within%201%20hour.%0A%0ABest%20Regards,%0A%0AALADDIN%20GENERAL%20SERVICES%20INC.%0ACLEAN-OUT%20SPECIALISTS%0AJUNK%20REMOVAL" class="email-direct-btn">
-              <i class="fas fa-envelope"></i> Get Free Quote
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- GARAGE PAGE -->
-      <div id="garage-page" style="display: none;">
-        <div class="service-detail">
-          <div class="service-header">
-            <i class="fas fa-warehouse"></i>
-            <h1>Garage Reset</h1>
-            <p>One-day garage transformation. We remove junk, sweep clean, and organize your space.</p>
-          </div>
-          
-          <div class="service-showcase">
-            <div class="showcase-image" id="garage-showcase-slider">
-              <div class="card-slider-container">
-                <div class="card-slider">
-                  <div class="card-slide active" style="background-image: url('garagebf.jpg');"></div>
-                  <div class="card-slide" style="background-image: url('garageaf.jpg');"></div>
-                </div>
-                <div class="card-slider-dots">
-                  <div class="card-dot active"></div>
-                  <div class="card-dot"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="service-description">
-            <h3>3 Levels of Service</h3>
-            <p><strong>Clear-Out:</strong> Remove junk + sweep • <strong>Refresh:</strong> Sort, sweep & organize • <strong>Reset:</strong> Full transformation with tool organization</p>
-          </div>
-          <div style="text-align: center; margin: 40px 0;">
-            <a href="mailto:aladdin.g.services@gmail.com?subject=Quote%20Request%20for%20Garage%20Reset&body=%0A%0A---%20PLEASE%20FILL%20OUT%20THIS%20FORM%20---%0A%0AName:%0A%0AEmail:%0A%0APhone:%0A%0AService%3A%20Garage%20Reset%0A%0AMessage%20(describe%20your%20project):%0A%0ALocation%20(Calgary%20area):%0A%0A---%20THANK%20YOU%20---%0A%0AThank%20You%20for%20Choosing%20ALADDIN%20GENERAL%20SERVICES%20INC.%0AWe%20appreciate%20your%20trust%20in%20our%20family%20business.%20Your%20request%20is%20important%20to%20us%20and%20we'll%20respond%20within%201%20hour.%0A%0ABest%20Regards,%0A%0AALADDIN%20GENERAL%20SERVICES%20INC.%0ACLEAN-OUT%20SPECIALISTS%0AJUNK%20REMOVAL" class="email-direct-btn">
-              <i class="fas fa-envelope"></i> Get Free Quote
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- FULL HOUSE PAGE -->
-      <div id="fullhouse-page" style="display: none;">
-        <div class="service-detail">
-          <div class="service-header">
-            <i class="fas fa-building"></i>
-            <h1>Full House Clear-Outs</h1>
-            <p>Moving, downsizing, or dealing with a hoarding situation? We clear entire homes from top to bottom.</p>
-          </div>
-          
-          <div class="service-showcase">
-            <div class="showcase-image" id="fullhouse-showcase-slider1">
-              <div class="card-slider-container">
-                <div class="card-slider">
-                  <div class="card-slide active" style="background-image: url('house1.jpg');"></div>
-                  <div class="card-slide" style="background-image: url('house2.jpg');"></div>
-                  <div class="card-slide" style="background-image: url('house3.jpg');"></div>
-                </div>
-                <div class="card-slider-dots">
-                  <div class="card-dot active"></div>
-                  <div class="card-dot"></div>
-                  <div class="card-dot"></div>
-                </div>
-              </div>
-            </div>
-            <div class="showcase-image" id="fullhouse-showcase-slider2">
-              <div class="card-slider-container">
-                <div class="card-slider">
-                  <div class="card-slide active" style="background-image: url('house4.jpg');"></div>
-                  <div class="card-slide" style="background-image: url('house5.jpg');"></div>
-                  <div class="card-slide" style="background-image: url('house6.jpg');"></div>
-                </div>
-                <div class="card-slider-dots">
-                  <div class="card-dot active"></div>
-                  <div class="card-dot"></div>
-                  <div class="card-dot"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="service-description">
-            <h3>Complete Home Clean-Outs</h3>
-            <p>Basements, attics, garages, and every room in between. We handle it all so you can focus on your next chapter.</p>
-          </div>
-          <div style="text-align: center; margin: 40px 0;">
-            <a href="mailto:aladdin.g.services@gmail.com?subject=Quote%20Request%20for%20Full%20House%20Clear-Out&body=%0A%0A---%20PLEASE%20FILL%20OUT%20THIS%20FORM%20---%0A%0AName:%0A%0AEmail:%0A%0APhone:%0A%0AService%3A%20Full%20House%20Clear-Out%0A%0AMessage%20(describe%20your%20project):%0A%0ALocation%20(Calgary%20area):%0A%0A---%20THANK%20YOU%20---%0A%0AThank%20You%20for%20Choosing%20ALADDIN%20GENERAL%20SERVICES%20INC.%0AWe%20appreciate%20your%20trust%20in%20our%20family%20business.%20Your%20request%20is%20important%20to%20us%20and%20we'll%20respond%20within%201%20hour.%0A%0ABest%20Regards,%0A%0AALADDIN%20GENERAL%20SERVICES%20INC.%0ACLEAN-OUT%20SPECIALISTS%0AJUNK%20REMOVAL" class="email-direct-btn">
-              <i class="fas fa-envelope"></i> Get Free Quote
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- HANDYMAN PAGE -->
-      <div id="handyman-page" style="display: none;">
-        <div class="service-detail">
-          <div class="service-header">
-            <i class="fas fa-tools"></i>
-            <h1>Handyman Services</h1>
-            <p>Small repairs and fixes to complete your space reset. Available as add-ons to any service.</p>
-          </div>
-          
-          <div class="service-showcase">
-            <div class="showcase-image" style="background-image: url('handy.jpg'); background-size: cover; background-position: center;"></div>
-          </div>
-          
-          <div class="service-description">
-            <h3>Services Include</h3>
-            <p>Furniture assembly, shelving installation, picture hanging, drywall patching, and more. Just ask!</p>
-          </div>
-          <div style="text-align: center; margin: 40px 0;">
-            <a href="mailto:aladdin.g.services@gmail.com?subject=Quote%20Request%20for%20Handyman%20Services&body=%0A%0A---%20PLEASE%20FILL%20OUT%20THIS%20FORM%20---%0A%0AName:%0A%0AEmail:%0A%0APhone:%0A%0AService%3A%20Handyman%20Services%0A%0AMessage%20(describe%20your%20project):%0A%0ALocation%20(Calgary%20area):%0A%0A---%20THANK%20YOU%20---%0A%0AThank%20You%20for%20Choosing%20ALADDIN%20GENERAL%20SERVICES%20INC.%0AWe%20appreciate%20your%20trust%20in%20our%20family%20business.%20Your%20request%20is%20important%20to%20us%20and%20we'll%20respond%20within%201%20hour.%0A%0ABest%20Regards,%0A%0AALADDIN%20GENERAL%20SERVICES%20INC.%0ACLEAN-OUT%20SPECIALISTS%0AJUNK%20REMOVAL" class="email-direct-btn">
-              <i class="fas fa-envelope"></i> Get Free Quote
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- CLEANING PAGE -->
-      <div id="cleaning-page" style="display: none;">
-        <div class="service-detail">
-          <div class="service-header">
-            <i class="fas fa-broom"></i>
-            <h1>Light Cleaning</h1>
-            <p>Post-clean-up touch-ups to leave your space fresh and ready.</p>
-          </div>
-          
-          <div class="service-showcase">
-            <div class="showcase-image" id="cleaning-showcase-slider">
-              <div class="card-slider-container">
-                <div class="card-slider">
-                  <div class="card-slide active" style="background-image: url('carpetcleanbefore.jpg');"></div>
-                  <div class="card-slide" style="background-image: url('carpetcleanafter.jpg');"></div>
-                  <div class="card-slide" style="background-image: url('deepclean.jpg');"></div>
-                </div>
-                <div class="card-slider-dots">
-                  <div class="card-dot active"></div>
-                  <div class="card-dot"></div>
-                  <div class="card-dot"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="service-description">
-            <h3>What's Included</h3>
-            <p>Sweeping & vacuuming, surface wiping, garage floor sweeping, and light tidying after your junk removal or clean-out.</p>
-          </div>
-          <div style="text-align: center; margin: 40px 0;">
-            <a href="mailto:aladdin.g.services@gmail.com?subject=Quote%20Request%20for%20Light%20Cleaning&body=%0A%0A---%20PLEASE%20FILL%20OUT%20THIS%20FORM%20---%0A%0AName:%0A%0AEmail:%0A%0APhone:%0A%0AService%3A%20Light%20Cleaning%0A%0AMessage%20(describe%20your%20project):%0A%0ALocation%20(Calgary%20area):%0A%0A---%20THANK%20YOU%20---%0A%0AThank%20You%20for%20Choosing%20ALADDIN%20GENERAL%20SERVICES%20INC.%0AWe%20appreciate%20your%20trust%20in%20our%20family%20business.%20Your%20request%20is%20important%20to%20us%20and%20we'll%20respond%20within%201%20hour.%0A%0ABest%20Regards,%0A%0AALADDIN%20GENERAL%20SERVICES%20INC.%0ACLEAN-OUT%20SPECIALISTS%0AJUNK%20REMOVAL" class="email-direct-btn">
-              <i class="fas fa-envelope"></i> Get Free Quote
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- SHED & DECK DEMOLITION PAGE - NEW SERVICE PAGE -->
-      <div id="sheddemolition-page" style="display: none;">
-        <div class="service-detail">
-          <div class="service-header">
-            <i class="fas fa-tools"></i>
-            <h1>Shed & Deck Demolition</h1>
-            <p>Professional demolition and removal of old sheds, decks, and small structures. We handle the heavy work so you don't have to.</p>
-          </div>
-          
-          <div class="service-showcase">
-            <div class="showcase-image" style="background-image: url('shed rml1.png'); background-size: cover; background-position: center;"></div>
-          </div>
-          
-          <div class="service-description">
-            <h3>Complete Structure Removal</h3>
-            <p>We specialize in safe and efficient demolition of sheds, decks, gazebos, and other small structures. Our team handles the entire process from tear-down to disposal, leaving your property clean and ready for your next project.</p>
-            <ul style="margin-top: 20px; list-style: none;">
-              <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #c75c2f; margin-right: 10px;"></i> Full shed tear-down and removal</li>
-              <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #c75c2f; margin-right: 10px;"></i> Deck demolition and debris disposal</li>
-              <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #c75c2f; margin-right: 10px;"></i> Site clean-up included</li>
-              <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #c75c2f; margin-right: 10px;"></i> Environmentally responsible disposal</li>
-            </ul>
-          </div>
-          <div style="text-align: center; margin: 40px 0;">
-            <a href="mailto:aladdin.g.services@gmail.com?subject=Quote%20Request%20for%20Shed%20%26%20Deck%20Demolition&body=%0A%0A---%20PLEASE%20FILL%20OUT%20THIS%20FORM%20---%0A%0AName:%0A%0AEmail:%0A%0APhone:%0A%0AService%3A%20Shed%20%26%20Deck%20Demolition%0A%0AMessage%20(describe%20your%20project):%0A%0ALocation%20(Calgary%20area):%0A%0A---%20THANK%20YOU%20---%0A%0AThank%20You%20for%20Choosing%20ALADDIN%20GENERAL%20SERVICES%20INC.%0AWe%20appreciate%20your%20trust%20in%20our%20family%20business.%20Your%20request%20is%20important%20to%20us%20and%20we'll%20respond%20within%201%20hour.%0A%0ABest%20Regards,%0A%0AALADDIN%20GENERAL%20SERVICES%20INC.%0ACLEAN-OUT%20SPECIALISTS%0AJUNK%20REMOVAL" class="email-direct-btn">
-              <i class="fas fa-envelope"></i> Get Free Quote
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- ABOUT PAGE -->
-      <div id="about" style="display: none;">
-        <h2 class="section-title">About Us</h2>
-        <div class="about-preview" style="padding: 50px;">
-          <div style="display: flex; flex-wrap: wrap; gap: 50px; align-items: center;">
-            <div style="flex: 1;">
-              <h3 style="font-size: 2.5rem;">A Family Business</h3>
-              <p style="font-size: 1.2rem; line-height: 1.8; margin: 30px 0;">We're not a franchise. Not a call center. Just my wife and I, boots on the ground, handling every job personally. Estate clean-outs require trust. We earn it, one home at a time.</p>
-              <div style="display: flex; gap: 40px;">
-                <div><span style="font-size: 2.5rem; font-weight: 800; color: #c75c2f;">2+</span><br><span>Years</span></div>
-                <div><span style="font-size: 2.5rem; font-weight: 800; color: #c75c2f;">100%</span><br><span>Family</span></div>
-              </div>
-            </div>
-            <div class="area-card" style="flex: 1; padding: 40px;">
-              <h3 style="color: #f3b34c;">Calgary + Area</h3>
-              <p style="color: #dddddd; margin: 20px 0;">Airdrie • Chestermere • Okotoks • Cochrane</p>
               <p style="color: #dddddd;">1510 30 Ave SW, Calgary</p>
             </div>
           </div>
-        </div>
-      </div>
-
-      <!-- CONTACT PAGE (WITH MAP ADDED) -->
-      <div id="contact" style="display: none;">
-        <h2 class="section-title">Contact Us</h2>
-        
-        <!-- EMAIL SECTION ON CONTACT PAGE -->
-        <div class="email-section" style="margin-top: 0;">
-          <h2>📧 Get Your Free Quote</h2>
-          <p>Click the button below and your email app will open with a pre-filled form. We'll respond within 1 hour.</p>
-          <a href="mailto:aladdin.g.services@gmail.com?subject=Quote%20Request%20from%20Aladdin%20Website&body=%0A%0A---%20PLEASE%20FILL%20OUT%20THIS%20FORM%20---%0A%0AName:%0A%0AEmail:%0A%0APhone:%0A%0AService%20Needed%20(Estate%20Clean-Out%2C%20Garage%20Reset%2C%20Junk%20Removal%2C%20Shed%20Demolition%2C%20etc):%0A%0AMessage%20(describe%20your%20project):%0A%0ALocation%20(Calgary%20area):%0A%0A---%20THANK%20YOU%20---%0A%0AThank%20You%20for%20Choosing%20ALADDIN%20GENERAL%20SERVICES%20INC.%0AWe%20appreciate%20your%20trust%20in%20our%20family%20business.%20Your%20request%20is%20important%20to%20us%20and%20we'll%20respond%20within%201%20hour.%0A%0ABest%20Regards,%0A%0AALADDIN%20GENERAL%20SERVICES%20INC.%0ACLEAN-OUT%20SPECIALISTS%0AJUNK%20REMOVAL" class="email-direct-btn">
-            <i class="fas fa-envelope"></i> Request Free Quote
-          </a>
-        </div>
-        
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin: 40px 0;">
-          <div class="contact-info-card">
-            <h3 style="color: #0a4b4f; font-size: 2rem; margin-bottom: 30px;">Contact Info</h3>
-            <div class="contact-info-item">
-              <i class="fas fa-phone-alt" style="font-size: 30px; color: #c75c2f;"></i>
-              <div><h4 style="color: #0a4b4f;">Call Us</h4><p><a href="tel:+18252887720" style="color: #c75c2f; text-decoration: none;">(825) 288-7720</a></p></div>
-            </div>
-            <div class="contact-info-item">
-              <i class="fas fa-envelope" style="font-size: 30px; color: #c75c2f;"></i>
-              <div><h4 style="color: #0a4b4f;">Email Us</h4><p><a href="mailto:aladdin.g.services@gmail.com" style="color: #c75c2f; text-decoration: none;">aladdin.g.services@gmail.com</a></p></div>
-            </div>
-            <div class="contact-info-item">
-              <i class="fas fa-map-marker-alt" style="font-size: 30px; color: #c75c2f;"></i>
-              <div><h4 style="color: #0a4b4f;">Visit Us</h4><p style="color: #666666;">1510 30 Ave SW, Calgary, AB T2T1P3</p></div>
-            </div>
-          </div>
-          <div class="contact-info-card">
-            <h3 style="color: #0a4b4f; font-size: 2rem; margin-bottom: 30px;">Hours</h3>
-            <div class="hours-card">
-              <p style="margin-bottom: 15px;"><i class="fas fa-clock" style="color: #c75c2f; margin-right: 10px;"></i> Mon-Sat: 7am - 8pm</p>
-              <p><i class="fas fa-clock" style="color: #c75c2f; margin-right: 10px;"></i> Sun: By appointment</p>
-            </div>
-          </div>
-        </div>
-        
-        <!-- GOOGLE MAP SECTION - ADDED HERE (CONTACT PAGE ONLY) -->
-        <div class="map-section">
-          <h3 style="color: #0a4b4f; font-size: 2rem; margin-bottom: 30px; text-align: center;">Find Us Here</h3>
-          <div class="map-container">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d208.25828468712476!2d-114.09525308920932!3d51.026840803565975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537171386c7046b9%3A0x8f7eaa61f0bde6ac!2sALADDIN%20GENERAL%20SERVICE%20INC!5e0!3m2!1sen!2sca!4v1772673790137!5m2!1sen!2sca" 
-              style="border:0;" 
-              allowfullscreen="" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-          </div>
-          <p style="margin-top: 15px; color: #666; text-align: center;">
-            <i class="fas fa-map-pin" style="color: #c75c2f;"></i> 
-            1510 30 Ave SW, Calgary, AB T2T1P3
-          </p>
         </div>
       </div>
     </div>
@@ -1550,21 +1166,21 @@
         </div>
         <div class="footer-links">
           <div class="footer-col">
-            <h4>Services</h4>
-            <a onclick="showService('junkremoval')">Junk Removal</a>
-            <a onclick="showService('estate')">Estate Clean-Outs</a>
-            <a onclick="showService('garage')">Garage Reset</a>
-            <a onclick="showService('fullhouse')">Full House</a>
-            <a onclick="showService('handyman')">Handyman</a>
-            <a onclick="showService('cleaning')">Cleaning</a>
-            <a onclick="showService('sheddemolition')">Shed & Deck Demolition</a>
+            <h4>Calgary Services</h4>
+            <a href="junk-removal-calgary.html">Junk Removal Calgary</a>
+            <a href="estate-cleanouts-calgary.html">Estate Clean-Outs Calgary</a>
+            <a href="garage-reset-calgary.html">Garage Reset Calgary</a>
+            <a href="full-house-clearouts-calgary.html">Full House Clear-Outs Calgary</a>
+            <a href="handyman-calgary.html">Handyman Calgary</a>
+            <a href="cleaning-calgary.html">Cleaning Calgary</a>
+            <a href="shed-deck-demolition-calgary.html">Shed & Deck Demolition Calgary</a>
           </div>
           <div class="footer-col">
             <h4>Quick Links</h4>
-            <a onclick="showPage('home')">Home</a>
-            <a onclick="showPage('services')">Services</a>
-            <a onclick="showPage('about')">About</a>
-            <a onclick="showPage('contact')">Contact</a>
+            <a href="index.html">Home</a>
+            <a href="#services">Services</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
           </div>
         </div>
       </div>
@@ -1576,7 +1192,7 @@
       </div>
       
       <div class="copyright">
-        © 2025 ALADDIN GENERAL SERVICE INC. Family owned & operated.
+        © 2025 ALADDIN GENERAL SERVICE INC. Family owned & operated in Calgary.
       </div>
     </div>
   </div>
@@ -1607,68 +1223,9 @@
       }, 6000);
     }
     
-    // AUTO-SLIDING CARD SLIDERS
-    function initCardSliders() {
-      const cardSliders = document.querySelectorAll('.card-slider-container');
-      
-      cardSliders.forEach((container) => {
-        const slides = container.querySelectorAll('.card-slide');
-        const dots = container.querySelectorAll('.card-dot');
-        
-        if (slides.length <= 1) return;
-        
-        let currentIndex = 0;
-        
-        slides[0].classList.add('active');
-        if (dots[0]) dots[0].classList.add('active');
-        
-        setInterval(() => {
-          slides[currentIndex].classList.remove('active');
-          if (dots[currentIndex]) dots[currentIndex].classList.remove('active');
-          
-          currentIndex = (currentIndex + 1) % slides.length;
-          
-          slides[currentIndex].classList.add('active');
-          if (dots[currentIndex]) dots[currentIndex].classList.add('active');
-        }, 5000);
-      });
-    }
-    
-    // PAGE NAVIGATION
-    function showPage(page) {
-      const pages = ['home', 'services', 'about', 'contact', 
-                     'junkremoval-page', 'estate-page', 'garage-page', 
-                     'fullhouse-page', 'handyman-page', 'cleaning-page', 'sheddemolition-page'];
-      pages.forEach(p => {
-        const el = document.getElementById(p);
-        if (el) el.style.display = 'none';
-      });
-      
-      if(page === 'home') document.getElementById('home').style.display = 'block';
-      else if(page === 'services') document.getElementById('services').style.display = 'block';
-      else if(page === 'about') document.getElementById('about').style.display = 'block';
-      else if(page === 'contact') document.getElementById('contact').style.display = 'block';
-      else if(page === 'junkremoval') document.getElementById('junkremoval-page').style.display = 'block';
-      else if(page === 'estate') document.getElementById('estate-page').style.display = 'block';
-      else if(page === 'garage') document.getElementById('garage-page').style.display = 'block';
-      else if(page === 'fullhouse') document.getElementById('fullhouse-page').style.display = 'block';
-      else if(page === 'handyman') document.getElementById('handyman-page').style.display = 'block';
-      else if(page === 'cleaning') document.getElementById('cleaning-page').style.display = 'block';
-      else if(page === 'sheddemolition') document.getElementById('sheddemolition-page').style.display = 'block';
-      
-      setTimeout(initCardSliders, 100);
-      
-      window.scrollTo(0, 0);
-    }
-    
-    function showService(service) {
-      showPage(service);
-    }
-    
     // Initialize on page load
     window.onload = function() {
-      showPage('home');
-      initCardSliders();
+      // Just initialize slider, no page navigation needed anymore
     };
   </script>
 </body>
