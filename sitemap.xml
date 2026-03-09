@@ -1,9 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Home Page -->
   <url>
     <loc>https://www.aladdingeneralservices.ca/</loc>
-    <lastmod>2025-03-02</lastmod>
+    <lastmod>2025-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  
+  <!-- Main Service Pages -->
+  <url>
+    <loc>https://www.aladdingeneralservices.ca/junk-removal-calgary.html</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.aladdingeneralservices.ca/estate-cleanouts-calgary.html</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.aladdingeneralservices.ca/garage-reset-calgary.html</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.aladdingeneralservices.ca/full-house-clearouts-calgary.html</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.aladdingeneralservices.ca/handyman-calgary.html</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.aladdingeneralservices.ca/cleaning-calgary.html</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.aladdingeneralservices.ca/shed-deck-demolition-calgary.html</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Information Pages -->
+  <url>
+    <loc>https://www.aladdingeneralservices.ca/about.html</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.aladdingeneralservices.ca/contact.html</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Thank You Page -->
+  <url>
+    <loc>https://www.aladdingeneralservices.ca/thank-you.html</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>
