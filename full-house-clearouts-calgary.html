@@ -10,8 +10,498 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   
-  <!-- Link to your external CSS file -->
-  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+    
+    /* TOP CONTACT BAR */
+    .top-contact-bar {
+      background: #0a4b4f;
+      color: white;
+      padding: 12px 0;
+      font-size: 0.95rem;
+      border-radius: 0 0 25px 25px;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .top-contact-bar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .contact-info-top {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+    .contact-info-top a {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.3s;
+    }
+    .contact-info-top a:hover {
+      color: #f3b34c;
+    }
+    .contact-info-top i {
+      color: #f3b34c;
+      font-size: 1.1rem;
+    }
+    
+    /* REVIEW BUTTON STYLES */
+    .review-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #f3b34c;
+      color: #0a4b4f !important;
+      font-weight: 700;
+      padding: 8px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s;
+      font-size: 0.95rem;
+      border: 2px solid #ffffff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .review-btn:hover {
+      background: #ffc107;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(243, 179, 76, 0.4);
+      color: #0a4b4f !important;
+    }
+    .review-btn i {
+      color: #ffffff;
+      font-size: 1rem;
+    }
+    
+    /* QR CODE STYLES */
+    .qr-container {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      padding: 15px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+    }
+    .qr-container img {
+      width: 120px;
+      height: 120px;
+      border: 3px solid #ffffff;
+      border-radius: 10px;
+      padding: 5px;
+      background: white;
+    }
+    .qr-container p {
+      color: #f3b34c;
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+    
+    /* MAIN CONTENT WRAPPER */
+    .main-content {
+      flex: 1 0 auto;
+      position: relative;
+      z-index: 2;
+      background-color: #ffffff;
+      border-radius: 40px 40px 0 0;
+      margin-top: 10px;
+    }
+    
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+      flex-wrap: wrap;
+      border-bottom: 2px solid #e6d7c0;
+      background: #ffffff;
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-radius: 0 0 30px 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .navbar-logo {
+      height: 60px;
+      width: auto;
+      max-width: 180px;
+      object-fit: contain;
+      transition: all 0.3s ease;
+      filter: drop-shadow(0 0 5px rgba(199, 92, 47, 0.2));
+      cursor: pointer;
+    }
+    
+    .navbar-logo:hover {
+      transform: scale(1.05);
+      filter: drop-shadow(0 0 15px rgba(199, 92, 47, 0.4));
+      transition: all 0.3s ease;
+    }
+    
+    .text-logo {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #0a4b4f;
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+    }
+    .text-logo span {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #c75c2f;
+      display: block;
+      letter-spacing: 2px;
+      margin-top: 3px;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      font-weight: 600;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #4a4a4a;
+      transition: all 0.3s;
+      font-size: 1rem;
+      cursor: pointer;
+      position: relative;
+      padding: 5px 0;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #c75c2f;
+      transition: width 0.3s;
+    }
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    .nav-links a:hover {
+      color: #c75c2f;
+    }
+    
+    /* BUTTONS */
+    .btn {
+      display: inline-block;
+      background: #c75c2f;
+      color: #ffffff;
+      font-weight: 700;
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s;
+      box-shadow: 0 8px 15px rgba(199, 92, 47, 0.2);
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+    }
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 20px rgba(199, 92, 47, 0.3);
+      background: #b34f24;
+    }
+    .btn-secondary {
+      background: #0a4b4f;
+      box-shadow: 0 8px 15px rgba(10, 75, 79, 0.2);
+    }
+    .btn-secondary:hover {
+      background: #0c5e63;
+    }
+    
+    /* SERVICE DETAIL PAGES */
+    .service-detail {
+      padding: 40px 0;
+    }
+    
+    .service-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .service-header h1 {
+      font-size: 3.5rem;
+      color: #0a4b4f;
+      margin-bottom: 20px;
+    }
+    .service-header i {
+      font-size: 80px;
+      color: #c75c2f;
+      margin-bottom: 20px;
+    }
+    .service-header p {
+      color: #666666;
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .service-showcase {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin: 50px 0;
+    }
+    
+    .showcase-image {
+      height: 400px;
+      border-radius: 30px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .service-description {
+      background: #f9f9f9;
+      border-radius: 30px;
+      padding: 40px;
+      margin: 40px 0;
+      border: 1px solid #eaeaea;
+    }
+    .service-description h3 {
+      color: #0a4b4f;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .service-description p {
+      color: #666666;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    
+    /* EMAIL SECTION */
+    .email-section {
+      background: linear-gradient(135deg, #f9f9f9, #ffffff);
+      border-radius: 60px;
+      padding: 60px;
+      margin: 60px 0;
+      text-align: center;
+      border: 1px solid #c75c2f;
+      box-shadow: 0 20px 40px rgba(199, 92, 47, 0.1);
+    }
+    
+    .email-section h2 {
+      color: #0a4b4f;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    
+    .email-section p {
+      color: #666666;
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .email-direct-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: #c75c2f;
+      color: #ffffff;
+      font-weight: 700;
+      padding: 18px 45px;
+      border-radius: 60px;
+      text-decoration: none;
+      transition: all 0.3s;
+      box-shadow: 0 8px 20px rgba(199, 92, 47, 0.3);
+      font-size: 1.3rem;
+      border: 2px solid #ffffff;
+      cursor: pointer;
+      width: fit-content;
+      margin: 0 auto;
+    }
+    .email-direct-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(199, 92, 47, 0.4);
+      background: #b34f24;
+    }
+    .email-direct-btn i {
+      font-size: 1.6rem;
+    }
+    
+    /* FOOTER */
+    .footer {
+      background: #0a4b4f;
+      color: #ffffff;
+      padding: 60px 0 32px;
+      border-radius: 48px 48px 0 0;
+      margin-top: 60px;
+      position: relative;
+      z-index: 2;
+    }
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    
+    .footer-logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+    }
+    
+    .footer-logo {
+      height: 70px;
+      width: auto;
+      max-width: 180px;
+      object-fit: contain;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      background: transparent;
+      display: inline-block;
+      border: none;
+    }
+    
+    .footer-logo:hover {
+      transform: scale(1.05);
+      filter: drop-shadow(0 0 10px rgba(255,255,255,0.5));
+    }
+    
+    .footer-text-logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.2;
+    }
+    .footer-text-logo span {
+      font-size: 0.9rem;
+      color: #f3b34c;
+      display: block;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin-top: 3px;
+    }
+    
+    .footer-links {
+      display: flex;
+      gap: 70px;
+      flex-wrap: wrap;
+    }
+    .footer-col h4 {
+      color: #f3b34c;
+      margin-bottom: 20px;
+    }
+    .footer-col a {
+      display: block;
+      color: #dddddd;
+      text-decoration: none;
+      margin-bottom: 12px;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+    .footer-col a:hover {
+      color: #f3b34c;
+      transform: translateX(5px);
+    }
+    .footer-email {
+      color: #f3b34c;
+      font-size: 1.1rem;
+      margin-top: 15px;
+    }
+    .footer-phone {
+      color: #f3b34c;
+      font-size: 1.1rem;
+    }
+    .copyright {
+      margin-top: 48px;
+      border-top: 1px solid #2d6b6f;
+      padding-top: 24px;
+      text-align: center;
+      color: #dddddd;
+    }
+    
+    /* FLOATING CALL BUTTON */
+    .floating-call {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #c75c2f;
+      color: #ffffff;
+      border-radius: 100px;
+      padding: 16px 30px;
+      font-weight: bold;
+      box-shadow: 0 8px 15px rgba(199, 92, 47, 0.3);
+      z-index: 99;
+      border: 2px solid #ffffff;
+      animation: gentlePulse 3s infinite;
+    }
+    @keyframes gentlePulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+    }
+    .floating-call a {
+      color: #ffffff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    @media (max-width: 700px) {
+      .navbar { flex-direction: column; gap: 16px; }
+      .logo-container { justify-content: center; }
+      .nav-links { gap: 20px; flex-wrap: wrap; justify-content: center; }
+      .service-showcase { grid-template-columns: 1fr; }
+      .email-section { padding: 30px; }
+      .email-section h2 { font-size: 2rem; }
+    }
+
+    ul {
+      list-style: none;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    ul li i {
+      color: #c75c2f;
+      margin-right: 10px;
+    }
+  </style>
 </head>
 <body>
 
@@ -93,24 +583,24 @@
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px;">
           <div>
             <h4 style="color: #0a4b4f; font-size: 1.5rem; margin-bottom: 15px;">What We Clear:</h4>
-            <ul style="list-style: none;">
-              <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #c75c2f; margin-right: 10px;"></i> Entire house contents</li>
-              <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #c75c2f; margin-right: 10px;"></i> Basements & attics</li>
-              <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #c75c2f; margin-right: 10px;"></i> Garages & sheds</li>
-              <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #c75c2f; margin-right: 10px;"></i> Furniture & appliances</li>
-              <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #c75c2f; margin-right: 10px;"></i> Clothing & household items</li>
-              <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #c75c2f; margin-right: 10px;"></i> Electronics & miscellaneous</li>
+            <ul>
+              <li><i class="fas fa-check-circle"></i> Entire house contents</li>
+              <li><i class="fas fa-check-circle"></i> Basements & attics</li>
+              <li><i class="fas fa-check-circle"></i> Garages & sheds</li>
+              <li><i class="fas fa-check-circle"></i> Furniture & appliances</li>
+              <li><i class="fas fa-check-circle"></i> Clothing & household items</li>
+              <li><i class="fas fa-check-circle"></i> Electronics & miscellaneous</li>
             </ul>
           </div>
           <div>
             <h4 style="color: #0a4b4f; font-size: 1.5rem; margin-bottom: 15px;">Our Approach:</h4>
-            <ul style="list-style: none;">
-              <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #c75c2f; margin-right: 10px;"></i> Free in-home estimates</li>
-              <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #c75c2f; margin-right: 10px;"></i> Flexible scheduling</li>
-              <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #c75c2f; margin-right: 10px;"></i> Donation coordination available</li>
-              <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #c75c2f; margin-right: 10px;"></i> Recycling & proper disposal</li>
-              <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #c75c2f; margin-right: 10px;"></i> We work with hoarding situations</li>
-              <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #c75c2f; margin-right: 10px;"></i> Compassionate & discreet</li>
+            <ul>
+              <li><i class="fas fa-check-circle"></i> Free in-home estimates</li>
+              <li><i class="fas fa-check-circle"></i> Flexible scheduling</li>
+              <li><i class="fas fa-check-circle"></i> Donation coordination available</li>
+              <li><i class="fas fa-check-circle"></i> Recycling & proper disposal</li>
+              <li><i class="fas fa-check-circle"></i> We work with hoarding situations</li>
+              <li><i class="fas fa-check-circle"></i> Compassionate & discreet</li>
             </ul>
           </div>
         </div>
@@ -184,41 +674,6 @@
           <div style="background: white; padding: 12px 25px; border-radius: 50px; font-weight: 600; color: #0a4b4f; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">Chestermere</div>
           <div style="background: white; padding: 12px 25px; border-radius: 50px; font-weight: 600; color: #0a4b4f; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">Okotoks</div>
           <div style="background: white; padding: 12px 25px; border-radius: 50px; font-weight: 600; color: #0a4b4f; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">Cochrane</div>
-        </div>
-      </div>
-
-      <!-- CALGARY NEIGHBORHOODS SECTION -->
-      <div style="margin: 40px 0;">
-        <h3 style="color: #0a4b4f; font-size: 1.8rem; text-align: center; margin-bottom: 30px;">Calgary Neighborhoods We Serve</h3>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; background: white; border-radius: 30px; padding: 30px; border: 1px solid #eaeaea;">
-          <div>• Downtown Calgary</div>
-          <div>• Beltline</div>
-          <div>• Kensington</div>
-          <div>• Inglewood</div>
-          <div>• Mission</div>
-          <div>• Marda Loop</div>
-          <div>• Bridgeland</div>
-          <div>• Crescent Heights</div>
-          <div>• Hillhurst</div>
-          <div>• Sunnyside</div>
-          <div>• Bankview</div>
-          <div>• Ramsay</div>
-          <div>• Altadore</div>
-          <div>• Garrison Woods</div>
-          <div>• Mount Royal</div>
-          <div>• Elbow Park</div>
-          <div>• Britannia</div>
-          <div>• Killarney</div>
-          <div>• Glendale</div>
-          <div>• Glenbrook</div>
-          <div>• Varsity</div>
-          <div>• Brentwood</div>
-          <div>• Signal Hill</div>
-          <div>• Aspen Woods</div>
-          <div>• Lakeview</div>
-          <div>• Chinook Park</div>
-          <div>• Canyon Meadows</div>
-          <div>• Evergreen</div>
         </div>
       </div>
 
@@ -315,5 +770,7 @@
     </div>
   </div>
 
+</body>
+</html>
 </body>
 </html>
