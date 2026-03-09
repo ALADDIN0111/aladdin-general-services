@@ -6,6 +6,9 @@
   <title>Full House Clear-Outs Calgary | ALADDIN GENERAL SERVICES INC</title>
   <meta name="description" content="Professional full house clear-outs in Calgary. Complete home clean-outs for moving, downsizing, or hoarding situations. We handle everything. Free quotes! (825) 288-7720">
   
+  <!-- FAVICON -->
+  <link rel="icon" type="image/jpeg" href="logo4.jpg">
+  
   <!-- Google Font & Font Awesome -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -245,6 +248,62 @@
     }
     .btn-secondary:hover {
       background: #0c5e63;
+    }
+    
+    /* CARD IMAGE SLIDER - AUTO SLIDE */
+    .card-slider-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    
+    .card-slider {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .card-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.8s ease-in-out;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    
+    .card-slide.active {
+      opacity: 1;
+    }
+    
+    .card-slider-dots {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 5;
+      display: flex;
+      gap: 8px;
+    }
+    
+    .card-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.7);
+      cursor: pointer;
+      transition: all 0.3s;
+      z-index: 10;
+    }
+    
+    .card-dot.active {
+      background: #c75c2f;
+      transform: scale(1.2);
     }
     
     /* SERVICE DETAIL PAGES */
@@ -569,10 +628,40 @@
         </p>
       </div>
 
-      <!-- IMAGE SHOWCASE -->
-      <div class="service-showcase">
-        <div class="showcase-image" style="background-image: url('house3.jpg'); background-size: cover; background-position: center; border-radius: 30px;"></div>
-        <div class="showcase-image" style="background-image: url('house4.jpg'); background-size: cover; background-position: center; border-radius: 30px;"></div>
+      <!-- IMAGE SHOWCASE WITH FULL SLIDER - ALL 6 HOUSE IMAGES -->
+      <div style="margin: 50px 0;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+          <!-- First slider with house images 1,2,3 -->
+          <div class="showcase-image" style="position: relative;">
+            <div class="card-slider-container" style="height: 100%;">
+              <div class="card-slider">
+                <div class="card-slide active" style="background-image: url('house1.jpg');"></div>
+                <div class="card-slide" style="background-image: url('house2.jpg');"></div>
+                <div class="card-slide" style="background-image: url('house3.jpg');"></div>
+              </div>
+              <div class="card-slider-dots">
+                <div class="card-dot active"></div>
+                <div class="card-dot"></div>
+                <div class="card-dot"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Second slider with house images 4,5,6 -->
+          <div class="showcase-image" style="position: relative;">
+            <div class="card-slider-container" style="height: 100%;">
+              <div class="card-slider">
+                <div class="card-slide active" style="background-image: url('house4.jpg');"></div>
+                <div class="card-slide" style="background-image: url('house5.jpg');"></div>
+                <div class="card-slide" style="background-image: url('house6.jpg');"></div>
+              </div>
+              <div class="card-slider-dots">
+                <div class="card-dot active"></div>
+                <div class="card-dot"></div>
+                <div class="card-dot"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- SERVICE DESCRIPTION -->
@@ -770,7 +859,48 @@
     </div>
   </div>
 
-</body>
-</html>
+  <script>
+    // AUTO-SLIDING CARD SLIDERS
+    function initCardSliders() {
+      const cardSliders = document.querySelectorAll('.card-slider-container');
+      
+      cardSliders.forEach((container) => {
+        const slides = container.querySelectorAll('.card-slide');
+        const dots = container.querySelectorAll('.card-dot');
+        
+        if (slides.length <= 1) return;
+        
+        // Clear any existing intervals
+        if (container.sliderInterval) {
+          clearInterval(container.sliderInterval);
+        }
+        
+        let currentIndex = 0;
+        
+        // Make sure first slide is active
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        slides[0].classList.add('active');
+        if (dots[0]) dots[0].classList.add('active');
+        
+        // Set new interval
+        container.sliderInterval = setInterval(() => {
+          slides[currentIndex].classList.remove('active');
+          if (dots[currentIndex]) dots[currentIndex].classList.remove('active');
+          
+          currentIndex = (currentIndex + 1) % slides.length;
+          
+          slides[currentIndex].classList.add('active');
+          if (dots[currentIndex]) dots[currentIndex].classList.add('active');
+        }, 4000);
+      });
+    }
+    
+    // Initialize on page load
+    window.onload = function() {
+      initCardSliders();
+    };
+  </script>
 </body>
 </html>
