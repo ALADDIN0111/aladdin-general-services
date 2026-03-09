@@ -4,9 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>ALADDIN GENERAL SERVICES INC · Junk Removal & Estate Clean-Out Specialists Calgary</title>
+  <meta name="description" content="Professional junk removal, estate clean-outs, garage reset, shed demolition in Calgary. Family owned & operated. Free quotes! (825) 288-7720">
+  
+  <!-- FAVICON - Add this line -->
+  <link rel="icon" type="image/jpeg" href="logo4.jpg">
+  
   <!-- Google Font & Font Awesome -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
   <style>
     * {
       margin: 0;
@@ -68,11 +74,6 @@
     .contact-info-top i {
       color: #f3b34c;
       font-size: 1.1rem;
-    }
-    .contact-info-top span {
-      display: flex;
-      align-items: center;
-      gap: 8px;
     }
     
     /* REVIEW BUTTON STYLES */
@@ -829,6 +830,17 @@
       .email-section h2 { font-size: 2rem; }
       .map-container iframe { height: 350px; }
     }
+
+    ul {
+      list-style: none;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    ul li i {
+      color: #c75c2f;
+      margin-right: 10px;
+    }
   </style>
 </head>
 <body>
@@ -863,9 +875,13 @@
   <div class="container">
     <div class="navbar">
       <div class="logo-container">
-        <img src="logo4.jpg" alt="ALADDIN Logo" class="navbar-logo">
+        <a href="index.html">
+          <img src="logo4.jpg" alt="ALADDIN Logo" class="navbar-logo">
+        </a>
         <div class="text-logo">
-          ALADDIN GENERAL SERVICES INC.
+          <a href="index.html" style="text-decoration: none; color: inherit;">
+            ALADDIN GENERAL SERVICES INC.
+          </a>
           <span>JUNK REMOVAL & ESTATE CLEAN-OUT SPECIALISTS</span>
         </div>
       </div>
@@ -913,16 +929,20 @@
         <h2 class="section-title" id="services">Our Calgary Services <span class="discount-badge">10% OFF</span></h2>
         <div class="services-grid">
           
-          <!-- JUNK REMOVAL CARD -->
+          <!-- JUNK REMOVAL CARD WITH FULL SLIDER -->
           <a href="junk-removal-calgary.html" class="service-card">
             <div class="card-image-spot">
-              <div class="card-slider-container">
+              <div class="card-slider-container" id="junk-card-slider">
                 <div class="card-slider">
                   <div class="card-slide active" style="background-image: url('junkremoval1before.jpg');"></div>
                   <div class="card-slide" style="background-image: url('junkremoval1after.jpg');"></div>
+                  <div class="card-slide" style="background-image: url('junkremoval2before.jpg');"></div>
+                  <div class="card-slide" style="background-image: url('junkremoval2after.jpg');"></div>
                 </div>
                 <div class="card-slider-dots">
                   <div class="card-dot active"></div>
+                  <div class="card-dot"></div>
+                  <div class="card-dot"></div>
                   <div class="card-dot"></div>
                 </div>
               </div>
@@ -940,16 +960,24 @@
             </div>
           </a>
           
-          <!-- ESTATE CLEAN-OUTS CARD -->
+          <!-- ESTATE CLEAN-OUTS CARD WITH FULL SLIDER (ALL HOUSE IMAGES) -->
           <a href="estate-cleanouts-calgary.html" class="service-card">
             <div class="card-image-spot">
-              <div class="card-slider-container">
+              <div class="card-slider-container" id="estate-card-slider">
                 <div class="card-slider">
                   <div class="card-slide active" style="background-image: url('house1.jpg');"></div>
                   <div class="card-slide" style="background-image: url('house2.jpg');"></div>
+                  <div class="card-slide" style="background-image: url('house3.jpg');"></div>
+                  <div class="card-slide" style="background-image: url('house4.jpg');"></div>
+                  <div class="card-slide" style="background-image: url('house5.jpg');"></div>
+                  <div class="card-slide" style="background-image: url('house6.jpg');"></div>
                 </div>
                 <div class="card-slider-dots">
                   <div class="card-dot active"></div>
+                  <div class="card-dot"></div>
+                  <div class="card-dot"></div>
+                  <div class="card-dot"></div>
+                  <div class="card-dot"></div>
                   <div class="card-dot"></div>
                 </div>
               </div>
@@ -969,7 +997,7 @@
           <!-- GARAGE RESET CARD -->
           <a href="garage-reset-calgary.html" class="service-card">
             <div class="card-image-spot">
-              <div class="card-slider-container">
+              <div class="card-slider-container" id="garage-card-slider">
                 <div class="card-slider">
                   <div class="card-slide active" style="background-image: url('garagebf.jpg');"></div>
                   <div class="card-slide" style="background-image: url('garageaf.jpg');"></div>
@@ -992,16 +1020,24 @@
             </div>
           </a>
           
-          <!-- FULL HOUSE CARD -->
+          <!-- FULL HOUSE CLEAR-OUTS CARD WITH FULL SLIDER (ALL HOUSE IMAGES) -->
           <a href="full-house-clearouts-calgary.html" class="service-card">
             <div class="card-image-spot">
-              <div class="card-slider-container">
+              <div class="card-slider-container" id="fullhouse-card-slider">
                 <div class="card-slider">
                   <div class="card-slide active" style="background-image: url('house1.jpg');"></div>
                   <div class="card-slide" style="background-image: url('house2.jpg');"></div>
+                  <div class="card-slide" style="background-image: url('house3.jpg');"></div>
+                  <div class="card-slide" style="background-image: url('house4.jpg');"></div>
+                  <div class="card-slide" style="background-image: url('house5.jpg');"></div>
+                  <div class="card-slide" style="background-image: url('house6.jpg');"></div>
                 </div>
                 <div class="card-slider-dots">
                   <div class="card-dot active"></div>
+                  <div class="card-dot"></div>
+                  <div class="card-dot"></div>
+                  <div class="card-dot"></div>
+                  <div class="card-dot"></div>
                   <div class="card-dot"></div>
                 </div>
               </div>
@@ -1021,7 +1057,7 @@
           <!-- HANDYMAN CARD -->
           <a href="handyman-calgary.html" class="service-card">
             <div class="card-image-spot">
-              <div class="card-slider-container">
+              <div class="card-slider-container" id="handyman-card-slider">
                 <div class="card-slider">
                   <div class="card-slide active" style="background-image: url('handy.jpg');"></div>
                 </div>
@@ -1045,13 +1081,15 @@
           <!-- LIGHT CLEANING CARD -->
           <a href="cleaning-calgary.html" class="service-card">
             <div class="card-image-spot">
-              <div class="card-slider-container">
+              <div class="card-slider-container" id="cleaning-card-slider">
                 <div class="card-slider">
                   <div class="card-slide active" style="background-image: url('carpetcleanbefore.jpg');"></div>
                   <div class="card-slide" style="background-image: url('carpetcleanafter.jpg');"></div>
+                  <div class="card-slide" style="background-image: url('deepclean.jpg');"></div>
                 </div>
                 <div class="card-slider-dots">
                   <div class="card-dot active"></div>
+                  <div class="card-dot"></div>
                   <div class="card-dot"></div>
                 </div>
               </div>
@@ -1071,7 +1109,7 @@
           <!-- SHED & DECK DEMOLITION CARD -->
           <a href="shed-deck-demolition-calgary.html" class="service-card">
             <div class="card-image-spot">
-              <div class="card-slider-container">
+              <div class="card-slider-container" id="shed-card-slider">
                 <div class="card-slider">
                   <div class="card-slide active" style="background-image: url('shed rml1.png');"></div>
                 </div>
@@ -1093,7 +1131,7 @@
           </a>
         </div>
 
-        <!-- LOCAL SERVICE AREAS SECTION - NEW -->
+        <!-- LOCAL SERVICE AREAS SECTION -->
         <div style="background: #f9f9f9; border-radius: 50px; padding: 50px; margin: 60px 0; text-align: center;">
           <h2 style="font-size: 2.5rem; color: #0a4b4f; margin-bottom: 30px;">Proudly Serving Calgary & Surrounding Areas</h2>
           <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 800px; margin: 0 auto;">
@@ -1143,9 +1181,13 @@
       <div class="footer-content">
         <div>
           <div class="footer-logo-container">
-            <img src="logo4.jpg" alt="ALADDIN Logo" class="footer-logo">
+            <a href="index.html">
+              <img src="logo4.jpg" alt="ALADDIN Logo" class="footer-logo">
+            </a>
             <div class="footer-text-logo">
-              ALADDIN GENERAL SERVICES INC.
+              <a href="index.html" style="text-decoration: none; color: white;">
+                ALADDIN GENERAL SERVICES INC.
+              </a>
               <span>JUNK REMOVAL & ESTATE CLEAN-OUT SPECIALISTS</span>
             </div>
           </div>
@@ -1158,7 +1200,6 @@
             <div class="footer-phone">
               <i class="fas fa-phone-alt"></i> (825) 288-7720
             </div>
-            <!-- REVIEW BUTTON IN FOOTER -->
             <a href="https://g.page/r/CazmvfBhqn6PEBE/review" target="_blank" class="review-btn">
               <i class="fas fa-star"></i> Leave us a Review
             </a>
@@ -1185,7 +1226,6 @@
         </div>
       </div>
       
-      <!-- QR CODE SECTION WITH CORRECT FILENAME -->
       <div class="qr-container">
         <img src="qr AGS.png" alt="Scan to review Aladdin General Services on Google">
         <p><i class="fas fa-qrcode"></i> Scan with your phone camera to leave a review</p>
@@ -1223,9 +1263,46 @@
       }, 6000);
     }
     
+    // AUTO-SLIDING CARD SLIDERS - FIXED VERSION
+    function initCardSliders() {
+      const cardSliders = document.querySelectorAll('.card-slider-container');
+      
+      cardSliders.forEach((container) => {
+        const slides = container.querySelectorAll('.card-slide');
+        const dots = container.querySelectorAll('.card-dot');
+        
+        if (slides.length <= 1) return;
+        
+        // Clear any existing intervals
+        if (container.sliderInterval) {
+          clearInterval(container.sliderInterval);
+        }
+        
+        let currentIndex = 0;
+        
+        // Make sure first slide is active
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        slides[0].classList.add('active');
+        if (dots[0]) dots[0].classList.add('active');
+        
+        // Set new interval
+        container.sliderInterval = setInterval(() => {
+          slides[currentIndex].classList.remove('active');
+          if (dots[currentIndex]) dots[currentIndex].classList.remove('active');
+          
+          currentIndex = (currentIndex + 1) % slides.length;
+          
+          slides[currentIndex].classList.add('active');
+          if (dots[currentIndex]) dots[currentIndex].classList.add('active');
+        }, 4000); // Changed to 4 seconds for better visibility
+      });
+    }
+    
     // Initialize on page load
     window.onload = function() {
-      // Just initialize slider, no page navigation needed anymore
+      initCardSliders();
     };
   </script>
 </body>
