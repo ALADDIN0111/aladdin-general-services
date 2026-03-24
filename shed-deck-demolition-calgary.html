@@ -744,13 +744,62 @@
         </div>
       </div>
 
-      <!-- CTA SECTION -->
-      <div class="email-section" style="margin-top: 40px;">
-        <h2>📧 Get Your Free Demolition Quote</h2>
-        <p>Click the button below and your email app will open with a pre-filled form. We'll respond within 1 hour.</p>
-        <a href="mailto:aladdin.g.services@gmail.com?subject=Quote%20Request%20for%20Shed%20%26%20Deck%20Demolition%20in%20Calgary&body=%0A%0A---%20PLEASE%20FILL%20OUT%20THIS%20FORM%20---%0A%0AName:%0A%0AEmail:%0A%0APhone:%0A%0AService%3A%20Shed%20%26%20Deck%20Demolition%20Calgary%0A%0AMessage%20(describe%20the%20structure%20you%20need%20removed%20-%20size,%20material,%20location):%0A%0ALocation%20(Calgary%20area%20or%20neighborhood):%0A%0A---%20THANK%20YOU%20---" class="email-direct-btn">
-          <i class="fas fa-envelope"></i> Get Free Quote
-        </a>
+           <!-- CONTACT FORM SECTION -->
+      <div class="contact-form-section" style="background: linear-gradient(135deg, #f9f9f9, #ffffff); border-radius: 60px; padding: 60px; margin: 60px 0; border: 1px solid #c75c2f;">
+        <h2 style="color: #0a4b4f; font-size: 2.5rem; text-align: center; margin-bottom: 20px;">📋 Get Your Free Quote</h2>
+        <p style="color: #666666; font-size: 1.2rem; text-align: center; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+          Fill out the form below and we'll respond within 1 hour!
+        </p>
+        
+        <form action="https://formspree.io/f/mpqjpvbn" method="POST" style="max-width: 600px; margin: 0 auto;">
+          <input type="hidden" name="_subject" value="New Quote Request from ALADDIN Website">
+          
+          <div style="margin-bottom: 20px;">
+            <label for="name" style="display: block; margin-bottom: 8px; font-weight: 600; color: #0a4b4f;">Full Name *</label>
+            <input type="text" id="name" name="name" required style="width: 100%; padding: 14px; border: 1px solid #eaeaea; border-radius: 30px; font-size: 1rem;">
+          </div>
+          
+          <div style="margin-bottom: 20px;">
+            <label for="email" style="display: block; margin-bottom: 8px; font-weight: 600; color: #0a4b4f;">Email Address *</label>
+            <input type="email" id="email" name="email" required style="width: 100%; padding: 14px; border: 1px solid #eaeaea; border-radius: 30px; font-size: 1rem;">
+          </div>
+          
+          <div style="margin-bottom: 20px;">
+            <label for="phone" style="display: block; margin-bottom: 8px; font-weight: 600; color: #0a4b4f;">Phone Number</label>
+            <input type="tel" id="phone" name="phone" style="width: 100%; padding: 14px; border: 1px solid #eaeaea; border-radius: 30px; font-size: 1rem;">
+          </div>
+          
+          <div style="margin-bottom: 20px;">
+            <label for="service" style="display: block; margin-bottom: 8px; font-weight: 600; color: #0a4b4f;">Service Needed *</label>
+            <select id="service" name="service" required style="width: 100%; padding: 14px; border: 1px solid #eaeaea; border-radius: 30px; font-size: 1rem; background: white;">
+              <option value="">Select a service</option>
+              <option value="Junk Removal">Junk Removal</option>
+              <option value="Estate Clean-Out">Estate Clean-Out</option>
+              <option value="Garage Reset">Garage Reset</option>
+              <option value="Full House Clear-Out">Full House Clear-Out</option>
+              <option value="Handyman Services">Handyman Services</option>
+              <option value="Light Cleaning">Light Cleaning</option>
+              <option value="Shed & Deck Demolition">Shed & Deck Demolition</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          
+          <div style="margin-bottom: 20px;">
+            <label for="location" style="display: block; margin-bottom: 8px; font-weight: 600; color: #0a4b4f;">Location (Calgary area or neighborhood)</label>
+            <input type="text" id="location" name="location" placeholder="e.g., Downtown Calgary, Airdrie, etc." style="width: 100%; padding: 14px; border: 1px solid #eaeaea; border-radius: 30px; font-size: 1rem;">
+          </div>
+          
+          <div style="margin-bottom: 20px;">
+            <label for="message" style="display: block; margin-bottom: 8px; font-weight: 600; color: #0a4b4f;">Tell us about your project *</label>
+            <textarea id="message" name="message" rows="4" required style="width: 100%; padding: 14px; border: 1px solid #eaeaea; border-radius: 20px; font-size: 1rem; resize: vertical;"></textarea>
+          </div>
+          
+          <div style="text-align: center;">
+            <button type="submit" style="background: #c75c2f; color: white; font-weight: 700; padding: 16px 45px; border-radius: 60px; border: none; font-size: 1.2rem; cursor: pointer; transition: all 0.3s; box-shadow: 0 8px 20px rgba(199, 92, 47, 0.3);">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </div>
+        </form>
       </div>
 
       <!-- RELATED SERVICES -->
