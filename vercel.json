@@ -35,6 +35,10 @@
           "value": "1; mode=block"
         },
         {
+          "key": "Permissions-Policy",
+          "value": "geolocation=(), microphone=(), camera=()"
+        },
+        {
           "key": "Content-Security-Policy",
           "value": "default-src 'self' https:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; font-src 'self' https:; img-src 'self' data: https:; frame-src https://www.google.com;"
         }
