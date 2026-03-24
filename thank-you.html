@@ -2,148 +2,429 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thank You - Aladdin General Service</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Thank You | ALADDIN GENERAL SERVICES INC</title>
+  <meta name="description" content="Thank you for contacting ALADDIN GENERAL SERVICES INC. We'll respond to your quote request within 1 hour.">
+  
+  <!-- FAVICON -->
+  <link rel="icon" type="image/jpeg" href="logo4.jpg">
+  
+  <!-- Google Font & Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  
   <style>
-    body {
-      background: linear-gradient(135deg, #faf9f8 0%, #f5f3f0 100%);
-      font-family: 'Inter', sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      line-height: 1.5;
       min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
-    .thank-you-card {
-      background: white;
-      border-radius: 50px;
-      padding: 60px 40px;
-      max-width: 600px;
-      margin: 40px 20px;
-      box-shadow: 0 30px 50px rgba(10,75,79,0.1);
-      text-align: center;
-      border: 1px solid #f0e0d6;
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
       position: relative;
-      overflow: hidden;
+      z-index: 2;
     }
-    .thank-you-card::before {
-      content: "✨";
-      position: absolute;
-      top: -20px;
-      left: -20px;
-      font-size: 150px;
-      opacity: 0.05;
-      transform: rotate(-15deg);
-    }
-    .checkmark {
+    
+    /* TOP CONTACT BAR */
+    .top-contact-bar {
       background: #0a4b4f;
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
+      color: white;
+      padding: 12px 0;
+      font-size: 0.95rem;
+      border-radius: 0 0 25px 25px;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .top-contact-bar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .contact-info-top {
       display: flex;
       align-items: center;
-      justify-content: center;
-      margin: 0 auto 30px;
-      border: 8px solid #f3b34c30;
-    }
-    .checkmark i {
-      color: white;
-      font-size: 48px;
-    }
-    h1 {
-      color: #0a4b4f;
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-    }
-    p {
-      color: #3a4e5a;
-      font-size: 1.2rem;
-      line-height: 1.6;
-      margin-bottom: 30px;
-    }
-    .btn-group {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
+      gap: 25px;
       flex-wrap: wrap;
-      margin-top: 20px;
     }
-    .btn {
-      display: inline-block;
-      background: #c75c2f;
+    .contact-info-top a {
       color: white;
-      font-weight: 600;
-      padding: 16px 32px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.3s;
+    }
+    .contact-info-top a:hover {
+      color: #f3b34c;
+    }
+    .contact-info-top i {
+      color: #f3b34c;
+      font-size: 1.1rem;
+    }
+    
+    .review-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #f3b34c;
+      color: #0a4b4f !important;
+      font-weight: 700;
+      padding: 8px 20px;
       border-radius: 50px;
       text-decoration: none;
       transition: all 0.3s;
+      font-size: 0.95rem;
+      border: 2px solid #ffffff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .review-btn:hover {
+      background: #ffc107;
+      transform: translateY(-2px);
+    }
+    
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+      flex-wrap: wrap;
+      border-bottom: 2px solid #e6d7c0;
+      background: #ffffff;
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-radius: 0 0 30px 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .navbar-logo {
+      height: 60px;
+      width: auto;
+      max-width: 180px;
+      object-fit: contain;
+      transition: all 0.3s ease;
+      filter: drop-shadow(0 0 5px rgba(199, 92, 47, 0.2));
+      cursor: pointer;
+    }
+    
+    .navbar-logo:hover {
+      transform: scale(1.05);
+    }
+    
+    .text-logo {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #0a4b4f;
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+    }
+    .text-logo span {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #c75c2f;
+      display: block;
+      letter-spacing: 2px;
+      margin-top: 3px;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      font-weight: 600;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #4a4a4a;
+      transition: all 0.3s;
+      font-size: 1rem;
+      cursor: pointer;
+      position: relative;
+      padding: 5px 0;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #c75c2f;
+      transition: width 0.3s;
+    }
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    .nav-links a:hover {
+      color: #c75c2f;
+    }
+    
+    .btn {
+      display: inline-block;
+      background: #c75c2f;
+      color: #ffffff;
+      font-weight: 700;
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s;
+      box-shadow: 0 8px 15px rgba(199, 92, 47, 0.2);
+      font-size: 1rem;
     }
     .btn:hover {
-      background: #a04426;
       transform: translateY(-3px);
+      background: #b34f24;
     }
-    .btn-secondary {
+    
+    .footer {
       background: #0a4b4f;
+      color: #ffffff;
+      padding: 60px 0 32px;
+      border-radius: 48px 48px 0 0;
+      margin-top: 60px;
     }
-    .btn-secondary:hover {
-      background: #0c5e63;
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
     }
-    .response-time {
-      background: #fef2e6;
-      border-radius: 30px;
-      padding: 20px;
+    .footer-logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+    }
+    .footer-logo {
+      height: 70px;
+      width: auto;
+      max-width: 180px;
+      object-fit: contain;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .footer-text-logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.2;
+    }
+    .footer-text-logo span {
+      font-size: 0.9rem;
+      color: #f3b34c;
+      display: block;
+      margin-top: 3px;
+    }
+    .footer-links {
+      display: flex;
+      gap: 70px;
+      flex-wrap: wrap;
+    }
+    .footer-col h4 {
+      color: #f3b34c;
+      margin-bottom: 20px;
+    }
+    .footer-col a {
+      display: block;
+      color: #dddddd;
+      text-decoration: none;
+      margin-bottom: 12px;
+    }
+    .footer-col a:hover {
+      color: #f3b34c;
+    }
+    .copyright {
+      margin-top: 48px;
+      border-top: 1px solid #2d6b6f;
+      padding-top: 24px;
+      text-align: center;
+    }
+    .qr-container {
+      text-align: center;
       margin-top: 30px;
-      border-left: 5px solid #c75c2f;
+      margin-bottom: 20px;
+      padding: 15px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+    }
+    .qr-container img {
+      width: 120px;
+      height: 120px;
+      border: 3px solid #ffffff;
+      border-radius: 10px;
+      padding: 5px;
+      background: white;
+    }
+    .qr-container p {
+      color: #f3b34c;
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+    
+    @media (max-width: 700px) {
+      .navbar { flex-direction: column; gap: 16px; }
+      .logo-container { justify-content: center; }
+      .nav-links { gap: 20px; flex-wrap: wrap; justify-content: center; }
     }
   </style>
 </head>
 <body>
-  <div class="thank-you-card">
-    <div class="checkmark">
-      <i class="fas fa-check"></i>
-    </div>
-    
-    <h1>Thanks, Calgary! 🎉</h1>
-    <p style="font-size: 1.4rem; font-weight: 600; color: #c75c2f;">Your quote request is received.</p>
-    
-    <div style="background: #f8f4f0; border-radius: 20px; padding: 20px; margin-bottom: 30px;">
-      <p style="margin-bottom: 10px; font-size: 1.1rem;">
-        <i class="fas fa-clock" style="color: #0a4b4f;"></i> 
-        <strong>We'll respond within 1 hour</strong> — usually faster!
-      </p>
-      <p style="margin: 5px 0; color: #0a4b4f;">
-        📞 In a hurry? Call us directly: 
-        <a href="tel:+18252887720" style="color: #c75c2f; font-weight: 700; text-decoration: none;">(825) 288-7720</a>
-      </p>
-    </div>
-    
-    <div style="display: flex; flex-direction: column; gap: 15px; align-items: center;">
-      <p style="margin-bottom: 5px;"><strong>While you wait:</strong></p>
-      <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
-        <a href="upload-placeholder.html" style="background: white; border: 2px solid #0a4b4f; color: #0a4b4f; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600;">
-          <i class="fas fa-camera"></i> See Our Work
+
+  <!-- TOP CONTACT BAR WITH REVIEW BUTTON -->
+  <div class="top-contact-bar">
+    <div class="container">
+      <div class="contact-info-top">
+        <a href="tel:+18252887720">
+          <i class="fas fa-phone-alt"></i> (825) 288-7720
         </a>
-        <a href="index.html" style="background: white; border: 2px solid #c75c2f; color: #c75c2f; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600;">
-          <i class="fas fa-home"></i> Back to Home
+        <a href="mailto:aladdin.g.services@gmail.com">
+          <i class="fas fa-envelope"></i> aladdin.g.services@gmail.com
+        </a>
+      </div>
+      <a href="https://g.page/r/CazmvfBhqn6PEBE/review" target="_blank" class="review-btn">
+        <i class="fas fa-star"></i> Leave us a Review
+      </a>
+    </div>
+  </div>
+
+  <!-- FLOATING CALL BUTTON -->
+  <div class="floating-call" style="position: fixed; bottom: 30px; right: 30px; background: #c75c2f; color: #ffffff; border-radius: 100px; padding: 16px 30px; font-weight: bold; box-shadow: 0 8px 15px rgba(199, 92, 47, 0.3); z-index: 99; border: 2px solid #ffffff;">
+    <a href="tel:+18252887720" style="color: #ffffff; text-decoration: none; display: flex; align-items: center; gap: 10px;">
+      <i class="fas fa-phone-alt"></i> <span>(825) 288-7720</span>
+    </a>
+  </div>
+
+  <!-- NAVBAR -->
+  <div class="container">
+    <div class="navbar">
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="logo4.jpg" alt="ALADDIN Logo" class="navbar-logo">
+        </a>
+        <div class="text-logo">
+          <a href="index.html" style="text-decoration: none; color: inherit;">
+            ALADDIN GENERAL SERVICES INC.
+          </a>
+          <span>JUNK REMOVAL & ESTATE CLEAN-OUT SPECIALISTS</span>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT - THANK YOU PAGE -->
+  <div class="main-content" style="flex: 1 0 auto; background-color: #ffffff; margin-top: 40px;">
+    <div class="container">
+      <div style="text-align: center; padding: 80px 20px;">
+        <div style="background: #0a4b4f20; width: 120px; height: 120px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 30px;">
+          <i class="fas fa-check-circle" style="font-size: 70px; color: #c75c2f;"></i>
+        </div>
+        <h1 style="font-size: 3rem; color: #0a4b4f; margin-bottom: 20px;">Thank You!</h1>
+        <p style="font-size: 1.3rem; color: #666; max-width: 600px; margin: 0 auto 20px;">
+          Your quote request has been received.
+        </p>
+        <p style="font-size: 1.1rem; color: #666; max-width: 500px; margin: 0 auto 30px;">
+          We'll review your information and get back to you <strong>within 1 hour</strong>.
+        </p>
+        <div style="background: #f9f9f9; border-radius: 30px; padding: 30px; max-width: 400px; margin: 0 auto 40px;">
+          <p style="margin-bottom: 10px;"><i class="fas fa-phone-alt" style="color: #c75c2f; margin-right: 10px;"></i> Need faster service? Call us now!</p>
+          <a href="tel:+18252887720" style="font-size: 1.8rem; color: #c75c2f; text-decoration: none; font-weight: 700;">(825) 288-7720</a>
+        </div>
+        <a href="index.html" class="btn" style="padding: 14px 40px;">
+          <i class="fas fa-home"></i> Return to Homepage
         </a>
       </div>
     </div>
-    
-    <div class="response-time">
-      <p style="margin: 0; display: flex; align-items: center; gap: 10px;">
-        <i class="fas fa-shield-alt" style="color: #0a4b4f; font-size: 1.3rem;"></i>
-        <span style="font-size: 0.95rem;">Your information is secure. No spam, ever.</span>
-      </p>
-    </div>
-    
-    <p style="margin-top: 40px; font-size: 0.9rem; color: #666;">
-      <i class="fas fa-lamp" style="color: #f3b34c;"></i> 
-      Aladdin General Service Inc — Family Owned & Operated in Calgary
-    </p>
   </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <div class="footer-logo-container">
+            <a href="index.html">
+              <img src="logo4.jpg" alt="ALADDIN Logo" class="footer-logo">
+            </a>
+            <div class="footer-text-logo">
+              <a href="index.html" style="text-decoration: none; color: white;">
+                ALADDIN GENERAL SERVICES INC.
+              </a>
+              <span>JUNK REMOVAL & ESTATE CLEAN-OUT SPECIALISTS</span>
+            </div>
+          </div>
+          <p>📍 Calgary • Airdrie • Chestermere • Okotoks • Cochrane</p>
+          <p>1510 30 Ave SW, Calgary, AB T2T1P3</p>
+          <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 10px;">
+            <div style="color: #f3b34c;">
+              <i class="fas fa-envelope"></i> aladdin.g.services@gmail.com
+            </div>
+            <div style="color: #f3b34c;">
+              <i class="fas fa-phone-alt"></i> (825) 288-7720
+            </div>
+            <a href="https://g.page/r/CazmvfBhqn6PEBE/review" target="_blank" class="review-btn">
+              <i class="fas fa-star"></i> Leave us a Review
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Calgary Services</h4>
+            <a href="junk-removal-calgary.html">Junk Removal Calgary</a>
+            <a href="estate-cleanouts-calgary.html">Estate Clean-Outs Calgary</a>
+            <a href="garage-reset-calgary.html">Garage Reset Calgary</a>
+            <a href="full-house-clearouts-calgary.html">Full House Clear-Outs Calgary</a>
+            <a href="handyman-calgary.html">Handyman Calgary</a>
+            <a href="cleaning-calgary.html">Cleaning Calgary</a>
+            <a href="shed-deck-demolition-calgary.html">Shed & Deck Demolition Calgary</a>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="index.html#services">Services</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="qr-container">
+        <img src="qr AGS.png" alt="Scan to review Aladdin General Services on Google">
+        <p><i class="fas fa-qrcode"></i> Scan with your phone camera to leave a review</p>
+      </div>
+      
+      <div class="copyright">
+        © 2025 ALADDIN GENERAL SERVICE INC. Family owned & operated in Calgary.
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
