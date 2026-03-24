@@ -250,175 +250,6 @@
       background: #0c5e63;
     }
     
-    /* CARD IMAGE SLIDER - AUTO SLIDE */
-    .card-slider-container {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
-    
-    .card-slider {
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
-    
-    .card-slide {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: opacity 0.8s ease-in-out;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-    
-    .card-slide.active {
-      opacity: 1;
-    }
-    
-    .card-slider-dots {
-      position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 5;
-      display: flex;
-      gap: 8px;
-    }
-    
-    .card-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.7);
-      cursor: pointer;
-      transition: all 0.3s;
-      z-index: 10;
-    }
-    
-    .card-dot.active {
-      background: #c75c2f;
-      transform: scale(1.2);
-    }
-    
-    /* SERVICE DETAIL PAGES */
-    .service-detail {
-      padding: 40px 0;
-    }
-    
-    .service-header {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-    .service-header h1 {
-      font-size: 3.5rem;
-      color: #0a4b4f;
-      margin-bottom: 20px;
-    }
-    .service-header i {
-      font-size: 80px;
-      color: #c75c2f;
-      margin-bottom: 20px;
-    }
-    .service-header p {
-      color: #666666;
-      font-size: 1.2rem;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    
-    .service-showcase {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-      margin: 50px 0;
-    }
-    
-    .showcase-image {
-      height: 400px;
-      border-radius: 30px;
-      overflow: hidden;
-      position: relative;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
-    
-    .service-description {
-      background: #f9f9f9;
-      border-radius: 30px;
-      padding: 40px;
-      margin: 40px 0;
-      border: 1px solid #eaeaea;
-    }
-    .service-description h3 {
-      color: #0a4b4f;
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-    .service-description p {
-      color: #666666;
-      font-size: 1.1rem;
-      line-height: 1.8;
-    }
-    
-    /* EMAIL SECTION */
-    .email-section {
-      background: linear-gradient(135deg, #f9f9f9, #ffffff);
-      border-radius: 60px;
-      padding: 60px;
-      margin: 60px 0;
-      text-align: center;
-      border: 1px solid #c75c2f;
-      box-shadow: 0 20px 40px rgba(199, 92, 47, 0.1);
-    }
-    
-    .email-section h2 {
-      color: #0a4b4f;
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-    
-    .email-section p {
-      color: #666666;
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
-    .email-direct-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      background: #c75c2f;
-      color: #ffffff;
-      font-weight: 700;
-      padding: 18px 45px;
-      border-radius: 60px;
-      text-decoration: none;
-      transition: all 0.3s;
-      box-shadow: 0 8px 20px rgba(199, 92, 47, 0.3);
-      font-size: 1.3rem;
-      border: 2px solid #ffffff;
-      cursor: pointer;
-      width: fit-content;
-      margin: 0 auto;
-    }
-    .email-direct-btn:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 30px rgba(199, 92, 47, 0.4);
-      background: #b34f24;
-    }
-    .email-direct-btn i {
-      font-size: 1.6rem;
-    }
-    
     /* FOOTER */
     .footer {
       background: #0a4b4f;
@@ -539,34 +370,6 @@
       display: flex;
       align-items: center;
       gap: 10px;
-    }
-    
-    /* ABOUT PREVIEW SECTION */
-    .about-preview {
-      background: #f9f9f9;
-      border-radius: 50px;
-      padding: 40px;
-      margin: 60px 0;
-      border: 1px solid #eaeaea;
-    }
-    
-    .about-preview h2 {
-      color: #0a4b4f;
-    }
-    
-    .about-preview p {
-      color: #666666;
-    }
-    
-    .area-card {
-      background: #0a4b4f;
-      border-radius: 30px;
-      padding: 30px;
-      color: white;
-    }
-    
-    .area-card h3 {
-      color: #f3b34c;
     }
     
     /* CONTACT PAGE STYLES */
@@ -720,9 +523,6 @@
           <h3 style="color: #0a4b4f; font-size: 1.8rem; margin-bottom: 10px;">Email Us</h3>
           <p style="color: #666; margin-bottom: 20px;">We'll respond within 1 hour</p>
           <a href="mailto:aladdin.g.services@gmail.com" style="font-size: 1.3rem; color: #c75c2f; text-decoration: none; font-weight: 600;">aladdin.g.services@gmail.com</a>
-          <div style="margin-top: 20px;">
-            <a href="mailto:aladdin.g.services@gmail.com?subject=Quote%20Request%20from%20Aladdin%20Website&body=%0A%0A---%20PLEASE%20FILL%20OUT%20THIS%20FORM%20---%0A%0AName:%0A%0AEmail:%0A%0APhone:%0A%0AService%20Needed:%0A%0AMessage:%0A%0ALocation:%0A%0A---%20THANK%20YOU%20---" class="btn" style="padding: 10px 25px;">Send Email</a>
-          </div>
         </div>
         
         <!-- LOCATION CARD -->
@@ -748,6 +548,64 @@
             <p style="font-size: 1.2rem;"><i class="fas fa-clock" style="color: #c75c2f; width: 30px;"></i> <strong style="color: #0a4b4f;">Response time:</strong> Within 1 hour</p>
           </div>
         </div>
+      </div>
+
+      <!-- CONTACT FORM SECTION -->
+      <div class="contact-form-section" style="background: linear-gradient(135deg, #f9f9f9, #ffffff); border-radius: 60px; padding: 60px; margin: 40px 0; border: 1px solid #c75c2f;">
+        <h2 style="color: #0a4b4f; font-size: 2.5rem; text-align: center; margin-bottom: 20px;">📋 Send Us a Message</h2>
+        <p style="color: #666666; font-size: 1.2rem; text-align: center; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+          Fill out the form and we'll get back to you within 1 hour!
+        </p>
+        
+        <form action="https://formspree.io/f/mpqjpvbn" method="POST" style="max-width: 600px; margin: 0 auto;">
+          <input type="hidden" name="_next" value="https://www.aladdingeneralservices.ca/thank-you.html">
+          
+          <div style="margin-bottom: 20px;">
+            <label for="name" style="display: block; margin-bottom: 8px; font-weight: 600; color: #0a4b4f;">Full Name *</label>
+            <input type="text" id="name" name="name" required style="width: 100%; padding: 14px; border: 1px solid #eaeaea; border-radius: 30px; font-size: 1rem;">
+          </div>
+          
+          <div style="margin-bottom: 20px;">
+            <label for="email" style="display: block; margin-bottom: 8px; font-weight: 600; color: #0a4b4f;">Email Address *</label>
+            <input type="email" id="email" name="email" required style="width: 100%; padding: 14px; border: 1px solid #eaeaea; border-radius: 30px; font-size: 1rem;">
+          </div>
+          
+          <div style="margin-bottom: 20px;">
+            <label for="phone" style="display: block; margin-bottom: 8px; font-weight: 600; color: #0a4b4f;">Phone Number</label>
+            <input type="tel" id="phone" name="phone" style="width: 100%; padding: 14px; border: 1px solid #eaeaea; border-radius: 30px; font-size: 1rem;">
+          </div>
+          
+          <div style="margin-bottom: 20px;">
+            <label for="service" style="display: block; margin-bottom: 8px; font-weight: 600; color: #0a4b4f;">Service Needed *</label>
+            <select id="service" name="service" required style="width: 100%; padding: 14px; border: 1px solid #eaeaea; border-radius: 30px; font-size: 1rem; background: white;">
+              <option value="">Select a service</option>
+              <option value="Junk Removal">Junk Removal</option>
+              <option value="Estate Clean-Out">Estate Clean-Out</option>
+              <option value="Garage Reset">Garage Reset</option>
+              <option value="Full House Clear-Out">Full House Clear-Out</option>
+              <option value="Handyman Services">Handyman Services</option>
+              <option value="Light Cleaning">Light Cleaning</option>
+              <option value="Shed & Deck Demolition">Shed & Deck Demolition</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          
+          <div style="margin-bottom: 20px;">
+            <label for="location" style="display: block; margin-bottom: 8px; font-weight: 600; color: #0a4b4f;">Location (Calgary area or neighborhood)</label>
+            <input type="text" id="location" name="location" placeholder="e.g., Downtown Calgary, Airdrie, etc." style="width: 100%; padding: 14px; border: 1px solid #eaeaea; border-radius: 30px; font-size: 1rem;">
+          </div>
+          
+          <div style="margin-bottom: 20px;">
+            <label for="message" style="display: block; margin-bottom: 8px; font-weight: 600; color: #0a4b4f;">Tell us about your project *</label>
+            <textarea id="message" name="message" rows="4" required style="width: 100%; padding: 14px; border: 1px solid #eaeaea; border-radius: 20px; font-size: 1rem; resize: vertical;"></textarea>
+          </div>
+          
+          <div style="text-align: center;">
+            <button type="submit" style="background: #c75c2f; color: white; font-weight: 700; padding: 16px 45px; border-radius: 60px; border: none; font-size: 1.2rem; cursor: pointer; transition: all 0.3s; box-shadow: 0 8px 20px rgba(199, 92, 47, 0.3);">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </div>
+        </form>
       </div>
 
       <!-- GOOGLE MAP SECTION -->
@@ -779,15 +637,6 @@
           <div style="background: rgba(255,255,255,0.1); padding: 12px 25px; border-radius: 50px; border: 1px solid #f3b34c;">Cochrane</div>
         </div>
         <p style="font-size: 1.1rem;">And all Calgary neighborhoods - just ask!</p>
-      </div>
-
-      <!-- QUICK CONTACT FORM SECTION (EMAIL BUTTON) -->
-      <div class="email-section" style="margin: 40px 0;">
-        <h2>📧 Get Your Free Quote in 1 Hour</h2>
-        <p>Click the button below and your email app will open with a pre-filled form. Tell us about your project and we'll respond within 1 hour!</p>
-        <a href="mailto:aladdin.g.services@gmail.com?subject=Quote%20Request%20from%20Aladdin%20Website&body=%0A%0A---%20PLEASE%20FILL%20OUT%20THIS%20FORM%20---%0A%0AName:%0A%0AEmail:%0A%0APhone:%0A%0AService%20Needed%20(Estate%20Clean-Out%2C%20Garage%20Reset%2C%20Junk%20Removal%2C%20Shed%20Demolition%2C%20etc):%0A%0AMessage%20(describe%20your%20project):%0A%0ALocation%20(Calgary%20area%20or%20neighborhood):%0A%0A---%20THANK%20YOU%20---" class="email-direct-btn">
-          <i class="fas fa-envelope"></i> Request Free Quote
-        </a>
       </div>
 
       <!-- FAQ SECTION -->
@@ -882,48 +731,7 @@
     </div>
   </div>
 
-  <script>
-    // AUTO-SLIDING CARD SLIDERS
-    function initCardSliders() {
-      const cardSliders = document.querySelectorAll('.card-slider-container');
-      
-      cardSliders.forEach((container) => {
-        const slides = container.querySelectorAll('.card-slide');
-        const dots = container.querySelectorAll('.card-dot');
-        
-        if (slides.length <= 1) return;
-        
-        // Clear any existing intervals
-        if (container.sliderInterval) {
-          clearInterval(container.sliderInterval);
-        }
-        
-        let currentIndex = 0;
-        
-        // Make sure first slide is active
-        slides.forEach(slide => slide.classList.remove('active'));
-        dots.forEach(dot => dot.classList.remove('active'));
-        
-        slides[0].classList.add('active');
-        if (dots[0]) dots[0].classList.add('active');
-        
-        // Set new interval
-        container.sliderInterval = setInterval(() => {
-          slides[currentIndex].classList.remove('active');
-          if (dots[currentIndex]) dots[currentIndex].classList.remove('active');
-          
-          currentIndex = (currentIndex + 1) % slides.length;
-          
-          slides[currentIndex].classList.add('active');
-          if (dots[currentIndex]) dots[currentIndex].classList.add('active');
-        }, 4000);
-      });
-    }
-    
-    // Initialize on page load
-    window.onload = function() {
-      initCardSliders();
-    };
-  </script>
+</body>
+</html>
 </body>
 </html>
