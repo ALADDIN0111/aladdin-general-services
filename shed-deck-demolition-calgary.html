@@ -628,7 +628,7 @@
         </p>
       </div>
 
-      <!-- IMAGE SHOWCASE - USING THE SHED RML1 IMAGE -->
+      <!-- IMAGE SHOWCASE - UPDATED TO JPG -->
       <div class="service-showcase">
         <div class="showcase-image" style="background-image: url('shed-rml1.jpg'); background-size: cover; background-position: center; border-radius: 30px;"></div>
         <div style="background: #f9f9f9; border-radius: 30px; padding: 40px; display: flex; flex-direction: column; justify-content: center;">
@@ -744,9 +744,9 @@
         </div>
       </div>
 
-           <!-- CONTACT FORM SECTION -->
+      <!-- CONTACT FORM SECTION -->
       <div class="contact-form-section" style="background: linear-gradient(135deg, #f9f9f9, #ffffff); border-radius: 60px; padding: 60px; margin: 60px 0; border: 1px solid #c75c2f;">
-        <h2 style="color: #0a4b4f; font-size: 2.5rem; text-align: center; margin-bottom: 20px;">📋 Get Your Free Quote</h2>
+        <h2 style="color: #0a4b4f; font-size: 2.5rem; text-align: center; margin-bottom: 20px;">📋 Get Your Free Demolition Quote</h2>
         <p style="color: #666666; font-size: 1.2rem; text-align: center; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
           Fill out the form below and we'll respond within 1 hour!
         </p>
@@ -796,7 +796,7 @@
           
           <div style="text-align: center;">
             <button type="submit" style="background: #c75c2f; color: white; font-weight: 700; padding: 16px 45px; border-radius: 60px; border: none; font-size: 1.2rem; cursor: pointer; transition: all 0.3s; box-shadow: 0 8px 20px rgba(199, 92, 47, 0.3);">
-              <i class="fas fa-paper-plane"></i> Send Message
+              <i class="fas fa-paper-plane"></i> Get Free Quote
             </button>
           </div>
         </form>
@@ -897,21 +897,18 @@
         
         if (slides.length <= 1) return;
         
-        // Clear any existing intervals
         if (container.sliderInterval) {
           clearInterval(container.sliderInterval);
         }
         
         let currentIndex = 0;
         
-        // Make sure first slide is active
         slides.forEach(slide => slide.classList.remove('active'));
         dots.forEach(dot => dot.classList.remove('active'));
         
         slides[0].classList.add('active');
         if (dots[0]) dots[0].classList.add('active');
         
-        // Set new interval
         container.sliderInterval = setInterval(() => {
           slides[currentIndex].classList.remove('active');
           if (dots[currentIndex]) dots[currentIndex].classList.remove('active');
@@ -924,7 +921,6 @@
       });
     }
     
-    // Initialize on page load
     window.onload = function() {
       initCardSliders();
     };
