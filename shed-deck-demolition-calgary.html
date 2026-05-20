@@ -9,9 +9,16 @@
   <!-- FAVICON -->
   <link rel="icon" type="image/jpeg" href="logo4.jpg">
   
-  <!-- Google Font & Font Awesome -->
+  <!-- PRECONNECT for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- Font Awesome - NON-BLOCKING -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
   
   <style>
     * {
@@ -365,60 +372,6 @@
       line-height: 1.8;
     }
     
-    /* EMAIL SECTION */
-    .email-section {
-      background: linear-gradient(135deg, #f9f9f9, #ffffff);
-      border-radius: 60px;
-      padding: 60px;
-      margin: 60px 0;
-      text-align: center;
-      border: 1px solid #c75c2f;
-      box-shadow: 0 20px 40px rgba(199, 92, 47, 0.1);
-    }
-    
-    .email-section h2 {
-      color: #0a4b4f;
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-    
-    .email-section p {
-      color: #666666;
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
-    .email-direct-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      background: #c75c2f;
-      color: #ffffff;
-      font-weight: 700;
-      padding: 18px 45px;
-      border-radius: 60px;
-      text-decoration: none;
-      transition: all 0.3s;
-      box-shadow: 0 8px 20px rgba(199, 92, 47, 0.3);
-      font-size: 1.3rem;
-      border: 2px solid #ffffff;
-      cursor: pointer;
-      width: fit-content;
-      margin: 0 auto;
-    }
-    .email-direct-btn:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 30px rgba(199, 92, 47, 0.4);
-      background: #b34f24;
-    }
-    .email-direct-btn i {
-      font-size: 1.6rem;
-    }
-    
     /* FOOTER */
     .footer {
       background: #0a4b4f;
@@ -546,8 +499,6 @@
       .logo-container { justify-content: center; }
       .nav-links { gap: 20px; flex-wrap: wrap; justify-content: center; }
       .service-showcase { grid-template-columns: 1fr; }
-      .email-section { padding: 30px; }
-      .email-section h2 { font-size: 2rem; }
     }
 
     ul {
@@ -575,7 +526,6 @@
           <i class="fas fa-envelope"></i> aladdin.g.services@gmail.com
         </a>
       </div>
-      <!-- REVIEW BUTTON AT THE TOP -->
       <a href="https://g.page/r/CazmvfBhqn6PEBE/review" target="_blank" class="review-btn">
         <i class="fas fa-star"></i> Leave us a Review
       </a>
@@ -595,7 +545,7 @@
     <div class="navbar">
       <div class="logo-container">
         <a href="index.html">
-          <img src="logo4.jpg" alt="ALADDIN Logo" class="navbar-logo">
+          <img src="logo4.jpg" alt="ALADDIN Logo" class="navbar-logo" width="180" height="60">
         </a>
         <div class="text-logo">
           <a href="index.html" style="text-decoration: none; color: inherit;">
@@ -628,7 +578,7 @@
         </p>
       </div>
 
-      <!-- IMAGE SHOWCASE - UPDATED TO JPG -->
+      <!-- IMAGE SHOWCASE -->
       <div class="service-showcase">
         <div class="showcase-image" style="background-image: url('shed-rml1.jpg'); background-size: cover; background-position: center; border-radius: 30px;"></div>
         <div style="background: #f9f9f9; border-radius: 30px; padding: 40px; display: flex; flex-direction: column; justify-content: center;">
@@ -736,11 +686,11 @@
       <div style="background: #f9f9f9; border-radius: 50px; padding: 50px; margin: 60px 0; text-align: center;">
         <h2 style="font-size: 2.5rem; color: #0a4b4f; margin-bottom: 30px;">Demolition Service Areas</h2>
         <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; max-width: 800px; margin: 0 auto;">
-          <div style="background: white; padding: 12px 25px; border-radius: 50px; font-weight: 600; color: #0a4b4f; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">Calgary</div>
-          <div style="background: white; padding: 12px 25px; border-radius: 50px; font-weight: 600; color: #0a4b4f; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">Airdrie</div>
-          <div style="background: white; padding: 12px 25px; border-radius: 50px; font-weight: 600; color: #0a4b4f; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">Chestermere</div>
-          <div style="background: white; padding: 12px 25px; border-radius: 50px; font-weight: 600; color: #0a4b4f; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">Okotoks</div>
-          <div style="background: white; padding: 12px 25px; border-radius: 50px; font-weight: 600; color: #0a4b4f; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">Cochrane</div>
+          <div style="background: white; padding: 12px 25px; border-radius: 50px; font-weight: 600; color: #0a4b4f;">Calgary</div>
+          <div style="background: white; padding: 12px 25px; border-radius: 50px; font-weight: 600; color: #0a4b4f;">Airdrie</div>
+          <div style="background: white; padding: 12px 25px; border-radius: 50px; font-weight: 600; color: #0a4b4f;">Chestermere</div>
+          <div style="background: white; padding: 12px 25px; border-radius: 50px; font-weight: 600; color: #0a4b4f;">Okotoks</div>
+          <div style="background: white; padding: 12px 25px; border-radius: 50px; font-weight: 600; color: #0a4b4f;">Cochrane</div>
         </div>
       </div>
 
@@ -796,7 +746,7 @@
           
           <div style="text-align: center;">
             <button type="submit" style="background: #c75c2f; color: white; font-weight: 700; padding: 16px 45px; border-radius: 60px; border: none; font-size: 1.2rem; cursor: pointer; transition: all 0.3s; box-shadow: 0 8px 20px rgba(199, 92, 47, 0.3);">
-              <i class="fas fa-paper-plane"></i> Get Free Quote
+              <i class="fas fa-paper-plane"></i> Send Message
             </button>
           </div>
         </form>
@@ -831,7 +781,7 @@
         <div>
           <div class="footer-logo-container">
             <a href="index.html">
-              <img src="logo4.jpg" alt="ALADDIN Logo" class="footer-logo">
+              <img src="logo4.jpg" alt="ALADDIN Logo" class="footer-logo" width="180" height="70">
             </a>
             <div class="footer-text-logo">
               <a href="index.html" style="text-decoration: none; color: white;">
@@ -876,7 +826,7 @@
       </div>
       
       <div class="qr-container">
-        <img src="qr AGS.png" alt="Scan to review Aladdin General Services on Google">
+        <img src="qr AGS.png" alt="Scan to review Aladdin General Services on Google" width="120" height="120">
         <p><i class="fas fa-qrcode"></i> Scan with your phone camera to leave a review</p>
       </div>
       
@@ -887,7 +837,6 @@
   </div>
 
   <script>
-    // AUTO-SLIDING CARD SLIDERS
     function initCardSliders() {
       const cardSliders = document.querySelectorAll('.card-slider-container');
       
@@ -921,9 +870,7 @@
       });
     }
     
-    window.onload = function() {
-      initCardSliders();
-    };
+    document.addEventListener('DOMContentLoaded', initCardSliders);
   </script>
 </body>
 </html>
