@@ -692,6 +692,42 @@
       color: #c75c2f;
       margin-right: 10px;
     }
+        /* RESPONSIVE FIX - Prevents horizontal scroll on mobile */
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100%;
+    }
+    
+    .container {
+      max-width: 100%;
+      overflow-x: hidden;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    
+    .main-content {
+      overflow-x: hidden;
+    }
+    
+    .services-grid {
+      overflow-x: hidden;
+    }
+    
+    img, iframe, video {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .service-card {
+      width: 100%;
+      max-width: 100%;
+    }
+    
+    .hero .slider-container {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
   </style>
 </head>
 <body>
