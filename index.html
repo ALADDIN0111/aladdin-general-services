@@ -11,7 +11,10 @@
   
   <!-- Google Font & Font Awesome -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- Font Awesome - NON-BLOCKING (Performance Fix) - THIS IS THE ONLY CHANGE -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
   
   <style>
     * {
@@ -952,7 +955,7 @@
             </div>
           </a>
 
-          <!-- SHED & DECK DEMOLITION CARD - UPDATED TO JPG -->
+          <!-- SHED & DECK DEMOLITION CARD -->
           <a href="shed-deck-demolition-calgary.html" class="service-card">
             <div class="card-image-spot">
               <div class="card-slider-container" id="shed-card-slider">
