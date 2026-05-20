@@ -9,12 +9,9 @@
   <!-- FAVICON -->
   <link rel="icon" type="image/jpeg" href="logo4.jpg">
   
-  <!-- Google Font -->
+  <!-- Google Font & Font Awesome -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome - NON-BLOCKING (Performance Fix) -->
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   
   <style>
     * {
@@ -723,7 +720,7 @@
     <div class="navbar">
       <div class="logo-container">
         <a href="index.html">
-          <img src="logo4.jpg" alt="ALADDIN Logo" class="navbar-logo" width="180" height="60">
+          <img src="logo4.jpg" alt="ALADDIN Logo" class="navbar-logo">
         </a>
         <div class="text-logo">
           <a href="index.html" style="text-decoration: none; color: inherit;">
@@ -750,7 +747,7 @@
         <!-- HERO SLIDER -->
         <div class="slider-container">
           <div class="slider">
-            <div class="slide slide1 active" fetchpriority="high"></div>
+            <div class="slide slide1 active"></div>
             <div class="slide slide2"></div>
             <div class="slide slide3"></div>
             <div class="slide slide4"></div>
@@ -778,7 +775,7 @@
         <h2 class="section-title" id="services">Our Calgary Services <span class="discount-badge">10% OFF</span></h2>
         <div class="services-grid">
           
-          <!-- JUNK REMOVAL CARD -->
+          <!-- JUNK REMOVAL CARD WITH FULL SLIDER -->
           <a href="junk-removal-calgary.html" class="service-card">
             <div class="card-image-spot">
               <div class="card-slider-container" id="junk-card-slider">
@@ -809,7 +806,7 @@
             </div>
           </a>
           
-          <!-- ESTATE CLEAN-OUTS CARD -->
+          <!-- ESTATE CLEAN-OUTS CARD WITH FULL SLIDER -->
           <a href="estate-cleanouts-calgary.html" class="service-card">
             <div class="card-image-spot">
               <div class="card-slider-container" id="estate-card-slider">
@@ -869,7 +866,7 @@
             </div>
           </a>
           
-          <!-- FULL HOUSE CLEAR-OUTS CARD -->
+          <!-- FULL HOUSE CLEAR-OUTS CARD WITH FULL SLIDER -->
           <a href="full-house-clearouts-calgary.html" class="service-card">
             <div class="card-image-spot">
               <div class="card-slider-container" id="fullhouse-card-slider">
@@ -955,7 +952,7 @@
             </div>
           </a>
 
-          <!-- SHED & DECK DEMOLITION CARD -->
+          <!-- SHED & DECK DEMOLITION CARD - UPDATED TO JPG -->
           <a href="shed-deck-demolition-calgary.html" class="service-card">
             <div class="card-image-spot">
               <div class="card-slider-container" id="shed-card-slider">
@@ -980,35 +977,31 @@
           </a>
         </div>
 
-        <!-- CUSTOMER REVIEWS SECTION (UPDATED: Logo4 background, no green overlay, 3 reviews with names) -->
-        <div style="background: #f9f9f9 url('logo4.jpg') no-repeat center center; background-size: 300px; border-radius: 50px; padding: 50px; margin: 60px 0; text-align: center;">
-          <h2 style="font-size: 2.5rem; color: #0a4b4f; margin-bottom: 40px;">What Our Calgary Customers Say</h2>
+        <!-- CUSTOMER REVIEWS SECTION -->
+        <div style="background: #f9f9f9; border-radius: 50px; padding: 50px; margin: 60px 0; text-align: center;">
+          <h2 style="font-size: 2.5rem; color: #0a4b4f; margin-bottom: 40px;">⭐ What Our Calgary Customers Say ⭐</h2>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
             
-            <!-- Review 1 -->
             <div style="background: white; border-radius: 30px; padding: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.05);">
               <div style="color: #f3b34c; margin-bottom: 15px; font-size: 1.2rem;">★★★★★</div>
-              <p style="font-style: italic; color: #333; line-height: 1.6;">"I've used Aladdin twice now for junk removal and a garage clean up. He is punctual, fairly priced, and does an excellent job. I will certainly be using his services in the future."</p>
+              <p style="font-style: italic; color: #333;">"I've used Aladdin twice now for junk removal and a garage clean up. He is punctual, fairly priced, and does an excellent job."</p>
               <p style="margin-top: 15px; font-weight: 600; color: #0a4b4f;">- William Pankhurst</p>
             </div>
             
-            <!-- Review 2 -->
             <div style="background: white; border-radius: 30px; padding: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.05);">
               <div style="color: #f3b34c; margin-bottom: 15px; font-size: 1.2rem;">★★★★★</div>
-              <p style="font-style: italic; color: #333; line-height: 1.6;">"Aladdin was very helpful, he was very polite and finished the work quickly. He checked multiple times that all junk was picked up as I wanted. I really appreciate the help."</p>
+              <p style="font-style: italic; color: #333;">"Aladdin was very helpful, he was very polite and finished the work quickly. He checked multiple times that all junk was picked up as I wanted."</p>
               <p style="margin-top: 15px; font-weight: 600; color: #0a4b4f;">- Mona Adel</p>
             </div>
             
-            <!-- Review 3 -->
             <div style="background: white; border-radius: 30px; padding: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.05);">
               <div style="color: #f3b34c; margin-bottom: 15px; font-size: 1.2rem;">★★★★★</div>
-              <p style="font-style: italic; color: #333; line-height: 1.6;">"Excellent work, strong presence, and reliability in the job. Fixed the drywall and made the space shiny."</p>
+              <p style="font-style: italic; color: #333;">"Excellent work, strong presence, and reliability in the job. Fixed the drywall and made the space shiny."</p>
               <p style="margin-top: 15px; font-weight: 600; color: #0a4b4f;">- Omar Bdour</p>
             </div>
-            
           </div>
           <div style="margin-top: 30px;">
-            <a href="https://g.page/r/CazmvfBhqn6PEBE/review" target="_blank" class="review-btn" style="padding: 12px 30px;">See All Our 5-Star Reviews</a>
+            <a href="https://g.page/r/CazmvfBhqn6PEBE/review" target="_blank" class="review-btn" style="padding: 12px 30px;">Read All 19 Reviews on Google</a>
           </div>
         </div>
 
@@ -1112,7 +1105,7 @@
         <div>
           <div class="footer-logo-container">
             <a href="index.html">
-              <img src="logo4.jpg" alt="ALADDIN Logo" class="footer-logo" width="180" height="70">
+              <img src="logo4.jpg" alt="ALADDIN Logo" class="footer-logo">
             </a>
             <div class="footer-text-logo">
               <a href="index.html" style="text-decoration: none; color: white;">
@@ -1157,7 +1150,7 @@
       </div>
       
       <div class="qr-container">
-        <img src="qr AGS.png" alt="Scan to review Aladdin General Services on Google" width="120" height="120">
+        <img src="qr AGS.png" alt="Scan to review Aladdin General Services on Google">
         <p><i class="fas fa-qrcode"></i> Scan with your phone camera to leave a review</p>
       </div>
       
