@@ -113,7 +113,7 @@
       font-size: 1rem;
     }
     
-    /* QR CODE STYLES */
+    /* QR CODE STYLES - FIXED CENTERING */
     .qr-container {
       text-align: center;
       margin-top: 30px;
@@ -121,6 +121,11 @@
       padding: 15px;
       background: rgba(255,255,255,0.1);
       border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
     }
     .qr-container img {
       width: 120px;
@@ -129,11 +134,14 @@
       border-radius: 10px;
       padding: 5px;
       background: white;
+      display: block;
+      margin: 0 auto;
     }
     .qr-container p {
       color: #f3b34c;
       font-size: 0.9rem;
       margin-top: 10px;
+      text-align: center;
     }
     
     /* MAIN CONTENT WRAPPER */
@@ -232,7 +240,7 @@
       color: #c75c2f;
     }
     
-    /* BUTTONS - added text-shadow for accessibility (low contrast fix) */
+    /* BUTTONS - added text-shadow for accessibility */
     .btn {
       display: inline-block;
       background: #c75c2f;
@@ -262,7 +270,7 @@
       background: #0c5e63;
     }
     
-    /* HERO SLIDER - added aspect-ratio to fix CLS (layout shift) */
+    /* HERO SLIDER - added aspect-ratio to fix CLS */
     .slider-container {
       position: relative;
       width: 100%;
@@ -384,7 +392,7 @@
       border-radius: 2px;
     }
     
-    /* DISCOUNT BADGE - added text-shadow for accessibility */
+    /* DISCOUNT BADGE - added text-shadow */
     .discount-badge {
       display: inline-block;
       background: #c75c2f;
@@ -533,6 +541,13 @@
       width: 20px;
     }
     
+    /* Prevent layout shift on all images */
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
     /* FOOTER */
     .footer {
       background: #0a4b4f;
@@ -628,7 +643,7 @@
       color: #dddddd;
     }
     
-    /* FLOATING CALL BUTTON - added text-shadow for accessibility */
+    /* FLOATING CALL BUTTON - added text-shadow */
     .floating-call {
       position: fixed;
       bottom: 30px;
@@ -654,13 +669,6 @@
       display: flex;
       align-items: center;
       gap: 10px;
-    }
-    
-    /* Prevent layout shift on all images */
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
     }
     
     /* ABOUT PREVIEW SECTION */
@@ -926,7 +934,7 @@
             </div>
           </a>
           
-          <!-- HOARDER CLEANOUT CARD - NEW! -->
+          <!-- HOARDER CLEANOUT CARD -->
           <a href="hoarder-cleanout.html" class="service-card">
             <div class="card-image-spot">
               <div class="card-slider-container" id="hoarder-card-slider">
@@ -1213,6 +1221,7 @@
         </div>
       </div>
       
+      <!-- QR CODE - NOW CENTERED -->
       <div class="qr-container">
         <img src="qr AGS.png" alt="Scan to review Aladdin General Services on Google" width="120" height="120">
         <p><i class="fas fa-qrcode"></i> Scan with your phone camera to leave a review</p>
