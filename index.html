@@ -9,15 +9,16 @@
   <!-- FAVICON -->
   <link rel="icon" type="image/jpeg" href="logo4.jpg">
   
-  <!-- PRECONNECT for Google Fonts (Performance Fix) -->
+  <!-- PRECONNECT for Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   
-  <!-- PRELOAD Google Fonts to reduce render-blocking -->
-  <link rel="preload" href="https://fonts.gstatic.com/s/inter/v12/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- PRELOAD hero image for faster LCP -->
+  <link rel="preload" href="logo4.jpg" as="image" fetchpriority="high">
   
-  <!-- Google Font - NON-BLOCKING (media="print" trick) -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <!-- Google Fonts - LOADED ASYNC (non-blocking) -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet"></noscript>
   
   <!-- Font Awesome - NON-BLOCKING -->
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -113,7 +114,7 @@
       font-size: 1rem;
     }
     
-    /* QR CODE STYLES - FIXED CENTERING */
+    /* QR CODE STYLES - CENTERED */
     .qr-container {
       text-align: center;
       margin-top: 30px;
@@ -178,9 +179,8 @@
     }
     
     .navbar-logo {
+      width: 180px;
       height: 60px;
-      width: auto;
-      max-width: 180px;
       object-fit: contain;
       transition: all 0.3s ease;
       filter: drop-shadow(0 0 5px rgba(199, 92, 47, 0.2));
@@ -213,6 +213,7 @@
       display: flex;
       gap: 36px;
       font-weight: 600;
+      flex-wrap: wrap;
     }
     .nav-links a {
       text-decoration: none;
@@ -240,7 +241,7 @@
       color: #c75c2f;
     }
     
-    /* BUTTONS - added text-shadow for accessibility */
+    /* BUTTONS */
     .btn {
       display: inline-block;
       background: #c75c2f;
@@ -270,7 +271,7 @@
       background: #0c5e63;
     }
     
-    /* HERO SLIDER - fixed CLS with aspect-ratio */
+    /* HERO SLIDER - FIXED CLS */
     .slider-container {
       position: relative;
       width: 100%;
@@ -392,7 +393,7 @@
       border-radius: 2px;
     }
     
-    /* DISCOUNT BADGE - added text-shadow */
+    /* DISCOUNT BADGE */
     .discount-badge {
       display: inline-block;
       background: #c75c2f;
@@ -408,7 +409,7 @@
       text-shadow: 0 0 2px rgba(0,0,0,0.3);
     }
     
-    /* CARD IMAGE SLIDER - AUTO SLIDE */
+    /* CARD IMAGE SLIDER */
     .card-slider-container {
       position: relative;
       width: 100%;
@@ -416,6 +417,7 @@
       overflow: hidden;
       aspect-ratio: 16 / 9;
       background: #eaeaea;
+      min-height: 200px;
     }
     
     .card-slider {
@@ -548,6 +550,12 @@
       display: block;
     }
     
+    /* Reserve space for all images to prevent CLS */
+    .navbar-logo, .footer-logo, .qr-container img {
+      width: 100%;
+      height: auto;
+    }
+    
     /* FOOTER */
     .footer {
       background: #0a4b4f;
@@ -574,9 +582,8 @@
     }
     
     .footer-logo {
+      width: 180px;
       height: 70px;
-      width: auto;
-      max-width: 180px;
       object-fit: contain;
       transition: all 0.3s ease;
       cursor: pointer;
@@ -693,28 +700,32 @@
       border-radius: 50px;
     }
     
-    /* MOBILE FIXES: Better CLS on mobile */
+    /* MOBILE FIXES */
     @media (max-width: 768px) {
       .navbar .navbar-logo {
         width: 140px;
         height: auto;
       }
       .slider-container {
-        min-height: 300px;
+        min-height: 250px;
         aspect-ratio: 4 / 3;
       }
       .slider-content h1 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
       }
       .slider-content p {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
       }
       .section-title {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
       }
       .discount-badge {
-        font-size: 0.7rem;
-        padding: 4px 10px;
+        font-size: 0.65rem;
+        padding: 3px 8px;
+      }
+      .btn {
+        padding: 10px 20px;
+        font-size: 0.8rem;
       }
     }
     
@@ -818,7 +829,7 @@
     </div>
   </div>
 
-  <!-- MAIN CONTENT - wrapped in <main> for accessibility landmark -->
+  <!-- MAIN CONTENT -->
   <main class="main-content">
     <div class="container">
 
@@ -855,7 +866,7 @@
         <h2 class="section-title" id="services">Our Calgary Services <span class="discount-badge">10% OFF</span></h2>
         <div class="services-grid">
           
-          <!-- JUNK REMOVAL CARD WITH FULL SLIDER -->
+          <!-- JUNK REMOVAL CARD -->
           <a href="junk-removal-calgary.html" class="service-card">
             <div class="card-image-spot">
               <div class="card-slider-container" id="junk-card-slider">
@@ -886,7 +897,7 @@
             </div>
           </a>
           
-          <!-- ESTATE CLEAN-OUTS CARD WITH FULL SLIDER -->
+          <!-- ESTATE CLEAN-OUTS CARD -->
           <a href="estate-cleanouts-calgary.html" class="service-card">
             <div class="card-image-spot">
               <div class="card-slider-container" id="estate-card-slider">
@@ -946,7 +957,7 @@
             </div>
           </a>
           
-          <!-- FULL HOUSE CLEAR-OUTS CARD WITH FULL SLIDER -->
+          <!-- FULL HOUSE CLEAR-OUTS CARD -->
           <a href="full-house-clearouts-calgary.html" class="service-card">
             <div class="card-image-spot">
               <div class="card-slider-container" id="fullhouse-card-slider">
@@ -1120,7 +1131,7 @@
           </div>
         </div>
 
-        <!-- CONTACT FORM SECTION - GET A QUOTE -->
+        <!-- CONTACT FORM SECTION -->
         <div class="contact-form-section" id="quote-form" style="background: linear-gradient(135deg, #f9f9f9, #ffffff); border-radius: 60px; padding: 60px; margin: 60px 0; border: 1px solid #c75c2f;">
           <h2 style="color: #0a4b4f; font-size: 2.5rem; text-align: center; margin-bottom: 20px;">📋 Get Your Free Quote</h2>
           <p style="color: #666666; font-size: 1.2rem; text-align: center; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
@@ -1267,7 +1278,7 @@
         </div>
       </div>
       
-      <!-- QR CODE - NOW CENTERED -->
+      <!-- QR CODE - CENTERED -->
       <div class="qr-container">
         <img src="qr AGS.png" alt="Scan to review Aladdin General Services on Google" width="120" height="120">
         <p><i class="fas fa-qrcode"></i> Scan with your phone camera to leave a review</p>
