@@ -16,10 +16,10 @@
   <!-- PRELOAD Google Fonts to reduce render-blocking -->
   <link rel="preload" href="https://fonts.gstatic.com/s/inter/v12/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2" as="font" type="font/woff2" crossorigin>
   
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <!-- Google Font - NON-BLOCKING (media="print" trick) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   
-  <!-- Font Awesome - NON-BLOCKING (Performance Fix) -->
+  <!-- Font Awesome - NON-BLOCKING -->
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
   
@@ -270,7 +270,7 @@
       background: #0c5e63;
     }
     
-    /* HERO SLIDER - added aspect-ratio to fix CLS */
+    /* HERO SLIDER - fixed CLS with aspect-ratio */
     .slider-container {
       position: relative;
       width: 100%;
@@ -643,7 +643,7 @@
       color: #dddddd;
     }
     
-    /* FLOATING CALL BUTTON - added text-shadow */
+    /* FLOATING CALL BUTTON */
     .floating-call {
       position: fixed;
       bottom: 30px;
@@ -669,6 +669,53 @@
       display: flex;
       align-items: center;
       gap: 10px;
+    }
+    
+    /* ACCESSIBILITY: Fix low contrast text */
+    .navbar .text-logo span,
+    .footer .footer-text-logo span,
+    .qr-container p,
+    .footer .footer-col h4,
+    .footer .footer-email,
+    .footer .footer-phone {
+      color: #f3b34c !important;
+    }
+    
+    .footer .footer-col a,
+    .footer p {
+      color: #e0e0e0 !important;
+    }
+    
+    .qr-container p {
+      background: rgba(0,0,0,0.3);
+      display: inline-block;
+      padding: 5px 15px;
+      border-radius: 50px;
+    }
+    
+    /* MOBILE FIXES: Better CLS on mobile */
+    @media (max-width: 768px) {
+      .navbar .navbar-logo {
+        width: 140px;
+        height: auto;
+      }
+      .slider-container {
+        min-height: 300px;
+        aspect-ratio: 4 / 3;
+      }
+      .slider-content h1 {
+        font-size: 1.8rem;
+      }
+      .slider-content p {
+        font-size: 0.9rem;
+      }
+      .section-title {
+        font-size: 1.8rem;
+      }
+      .discount-badge {
+        font-size: 0.7rem;
+        padding: 4px 10px;
+      }
     }
     
     /* ABOUT PREVIEW SECTION */
@@ -703,7 +750,6 @@
       .navbar { flex-direction: column; gap: 16px; }
       .logo-container { justify-content: center; }
       .nav-links { gap: 20px; flex-wrap: wrap; justify-content: center; }
-      .slider-content h1 { font-size: 2.5rem; }
       .email-section { padding: 30px; }
       .email-section h2 { font-size: 2rem; }
     }
@@ -1228,7 +1274,7 @@
       </div>
       
       <div class="copyright">
-        © 2025 ALADDIN GENERAL SERVICE INC. Family owned & operated in Calgary.
+        © 2026 ALADDIN GENERAL SERVICE INC. Family owned & operated in Calgary.
       </div>
     </div>
   </div>
