@@ -9,18 +9,14 @@
   <!-- FAVICON -->
   <link rel="icon" type="image/jpeg" href="logo4.jpg">
   
-  <!-- PRECONNECT for Google Fonts -->
+  <!-- PRECONNECT for Google Fonts (Performance Fix) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   
-  <!-- PRELOAD hero image for faster LCP -->
-  <link rel="preload" href="logo4.jpg" as="image" fetchpriority="high">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   
-  <!-- Google Fonts - LOADED ASYNC (non-blocking) -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet"></noscript>
-  
-  <!-- Font Awesome - NON-BLOCKING -->
+  <!-- Font Awesome - NON-BLOCKING (Performance Fix) -->
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
   
@@ -114,7 +110,7 @@
       font-size: 1rem;
     }
     
-    /* QR CODE STYLES - CENTERED */
+    /* QR CODE STYLES */
     .qr-container {
       text-align: center;
       margin-top: 30px;
@@ -122,11 +118,6 @@
       padding: 15px;
       background: rgba(255,255,255,0.1);
       border-radius: 15px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
     }
     .qr-container img {
       width: 120px;
@@ -135,14 +126,11 @@
       border-radius: 10px;
       padding: 5px;
       background: white;
-      display: block;
-      margin: 0 auto;
     }
     .qr-container p {
       color: #f3b34c;
       font-size: 0.9rem;
       margin-top: 10px;
-      text-align: center;
     }
     
     /* MAIN CONTENT WRAPPER */
@@ -179,8 +167,9 @@
     }
     
     .navbar-logo {
-      width: 180px;
       height: 60px;
+      width: auto;
+      max-width: 180px;
       object-fit: contain;
       transition: all 0.3s ease;
       filter: drop-shadow(0 0 5px rgba(199, 92, 47, 0.2));
@@ -213,7 +202,6 @@
       display: flex;
       gap: 36px;
       font-weight: 600;
-      flex-wrap: wrap;
     }
     .nav-links a {
       text-decoration: none;
@@ -255,7 +243,6 @@
       font-size: 1rem;
       border: none;
       cursor: pointer;
-      text-shadow: 0 0 2px rgba(0,0,0,0.3);
     }
     .btn:hover {
       transform: translateY(-3px);
@@ -265,23 +252,21 @@
     .btn-secondary {
       background: #0a4b4f;
       box-shadow: 0 8px 15px rgba(10, 75, 79, 0.2);
-      text-shadow: 0 0 2px rgba(0,0,0,0.3);
     }
     .btn-secondary:hover {
       background: #0c5e63;
     }
     
-    /* HERO SLIDER - FIXED CLS */
+    /* HERO SLIDER */
     .slider-container {
       position: relative;
       width: 100%;
-      aspect-ratio: 16 / 9;
-      min-height: 400px;
+      height: 600px;
+      min-height: 600px;
       overflow: hidden;
       border-radius: 0 0 50px 50px;
       margin-bottom: 40px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      background: #0a4b4f;
     }
     
     .slider {
@@ -406,18 +391,14 @@
       vertical-align: middle;
       box-shadow: 0 0 15px rgba(199, 92, 47, 0.3);
       border: 2px solid #ffffff;
-      text-shadow: 0 0 2px rgba(0,0,0,0.3);
     }
     
-    /* CARD IMAGE SLIDER */
+    /* CARD IMAGE SLIDER - AUTO SLIDE */
     .card-slider-container {
       position: relative;
       width: 100%;
       height: 100%;
       overflow: hidden;
-      aspect-ratio: 16 / 9;
-      background: #eaeaea;
-      min-height: 200px;
     }
     
     .card-slider {
@@ -495,6 +476,7 @@
     }
     
     .card-image-spot {
+      height: 220px;
       position: relative;
       overflow: hidden;
     }
@@ -512,7 +494,6 @@
       font-weight: 700;
       font-size: 0.8rem;
       margin-bottom: 15px;
-      text-shadow: 0 0 2px rgba(0,0,0,0.3);
     }
     
     .service-card h3 {
@@ -543,19 +524,6 @@
       width: 20px;
     }
     
-    /* Prevent layout shift on all images */
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-    
-    /* Reserve space for all images to prevent CLS */
-    .navbar-logo, .footer-logo, .qr-container img {
-      width: 100%;
-      height: auto;
-    }
-    
     /* FOOTER */
     .footer {
       background: #0a4b4f;
@@ -582,8 +550,9 @@
     }
     
     .footer-logo {
-      width: 180px;
       height: 70px;
+      width: auto;
+      max-width: 180px;
       object-fit: contain;
       transition: all 0.3s ease;
       cursor: pointer;
@@ -664,7 +633,6 @@
       z-index: 99;
       border: 2px solid #ffffff;
       animation: gentlePulse 3s infinite;
-      text-shadow: 0 0 2px rgba(0,0,0,0.3);
     }
     @keyframes gentlePulse {
       0%, 100% { transform: scale(1); }
@@ -676,57 +644,6 @@
       display: flex;
       align-items: center;
       gap: 10px;
-    }
-    
-    /* ACCESSIBILITY: Fix low contrast text */
-    .navbar .text-logo span,
-    .footer .footer-text-logo span,
-    .qr-container p,
-    .footer .footer-col h4,
-    .footer .footer-email,
-    .footer .footer-phone {
-      color: #f3b34c !important;
-    }
-    
-    .footer .footer-col a,
-    .footer p {
-      color: #e0e0e0 !important;
-    }
-    
-    .qr-container p {
-      background: rgba(0,0,0,0.3);
-      display: inline-block;
-      padding: 5px 15px;
-      border-radius: 50px;
-    }
-    
-    /* MOBILE FIXES */
-    @media (max-width: 768px) {
-      .navbar .navbar-logo {
-        width: 140px;
-        height: auto;
-      }
-      .slider-container {
-        min-height: 250px;
-        aspect-ratio: 4 / 3;
-      }
-      .slider-content h1 {
-        font-size: 1.5rem;
-      }
-      .slider-content p {
-        font-size: 0.8rem;
-      }
-      .section-title {
-        font-size: 1.6rem;
-      }
-      .discount-badge {
-        font-size: 0.65rem;
-        padding: 3px 8px;
-      }
-      .btn {
-        padding: 10px 20px;
-        font-size: 0.8rem;
-      }
     }
     
     /* ABOUT PREVIEW SECTION */
@@ -761,6 +678,7 @@
       .navbar { flex-direction: column; gap: 16px; }
       .logo-container { justify-content: center; }
       .nav-links { gap: 20px; flex-wrap: wrap; justify-content: center; }
+      .slider-content h1 { font-size: 2.5rem; }
       .email-section { padding: 30px; }
       .email-section h2 { font-size: 2rem; }
     }
@@ -830,7 +748,7 @@
   </div>
 
   <!-- MAIN CONTENT -->
-  <main class="main-content">
+  <div class="main-content">
     <div class="container">
 
       <!-- HOME PAGE -->
@@ -866,7 +784,7 @@
         <h2 class="section-title" id="services">Our Calgary Services <span class="discount-badge">10% OFF</span></h2>
         <div class="services-grid">
           
-          <!-- JUNK REMOVAL CARD -->
+          <!-- JUNK REMOVAL CARD WITH FULL SLIDER -->
           <a href="junk-removal-calgary.html" class="service-card">
             <div class="card-image-spot">
               <div class="card-slider-container" id="junk-card-slider">
@@ -897,7 +815,7 @@
             </div>
           </a>
           
-          <!-- ESTATE CLEAN-OUTS CARD -->
+          <!-- ESTATE CLEAN-OUTS CARD WITH FULL SLIDER -->
           <a href="estate-cleanouts-calgary.html" class="service-card">
             <div class="card-image-spot">
               <div class="card-slider-container" id="estate-card-slider">
@@ -957,7 +875,7 @@
             </div>
           </a>
           
-          <!-- FULL HOUSE CLEAR-OUTS CARD -->
+          <!-- FULL HOUSE CLEAR-OUTS CARD WITH FULL SLIDER -->
           <a href="full-house-clearouts-calgary.html" class="service-card">
             <div class="card-image-spot">
               <div class="card-slider-container" id="fullhouse-card-slider">
@@ -1131,7 +1049,7 @@
           </div>
         </div>
 
-        <!-- CONTACT FORM SECTION -->
+        <!-- CONTACT FORM SECTION - GET A QUOTE -->
         <div class="contact-form-section" id="quote-form" style="background: linear-gradient(135deg, #f9f9f9, #ffffff); border-radius: 60px; padding: 60px; margin: 60px 0; border: 1px solid #c75c2f;">
           <h2 style="color: #0a4b4f; font-size: 2.5rem; text-align: center; margin-bottom: 20px;">📋 Get Your Free Quote</h2>
           <p style="color: #666666; font-size: 1.2rem; text-align: center; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
@@ -1223,7 +1141,7 @@
         </div>
       </div>
     </div>
-  </main>
+  </div>
 
   <!-- FOOTER -->
   <div class="footer">
@@ -1278,7 +1196,6 @@
         </div>
       </div>
       
-      <!-- QR CODE - CENTERED -->
       <div class="qr-container">
         <img src="qr AGS.png" alt="Scan to review Aladdin General Services on Google" width="120" height="120">
         <p><i class="fas fa-qrcode"></i> Scan with your phone camera to leave a review</p>
