@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Hoarder Cleanout Calgary | Compassionate Hoarding Cleanup Services | ALADDIN</title>
+  <meta name="description" content="Compassionate, judgment-free hoarder cleanout services in Calgary. We handle everything with care, respect, and discretion. Free estimates. 19 five-star reviews.">
+  <meta name="keywords" content="hoarder cleanout Calgary, hoarding cleanup Calgary, hoarder cleaning services, estate cleanout Calgary, junk removal hoarding">
+  <meta name="geo.region" content="CA-AB">
+  <meta name="geo.placename" content="Calgary">
+  
+  <!-- FAVICON -->
+  <link rel="icon" type="image/jpeg" href="logo4.jpg">
+  
+  <!-- PRECONNECT for faster external resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  
+  <!-- PRELOAD Font Awesome -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+    
+    /* TOP CONTACT BAR */
+    .top-contact-bar {
+      background: #0a4b4f;
+      color: white;
+      padding: 12px 0;
+      font-size: 0.95rem;
+      border-radius: 0 0 25px 25px;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .top-contact-bar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .contact-info-top {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+    .contact-info-top a {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.3s;
+    }
+    .contact-info-top a:hover {
+      color: #f3b34c;
+    }
+    .contact-info-top i {
+      color: #f3b34c;
+      font-size: 1.1rem;
+    }
+    
+    /* REVIEW BUTTON STYLES */
+    .review-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #f3b34c;
+      color: #0a4b4f !important;
+      font-weight: 700;
+      padding: 8px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s;
+      font-size: 0.95rem;
+      border: 2px solid #ffffff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .review-btn:hover {
+      background: #ffc107;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(243, 179, 76, 0.4);
+      color: #0a4b4f !important;
+    }
+    .review-btn i {
+      color: #ffffff;
+      font-size: 1rem;
+    }
+    
+    /* MAIN CONTENT WRAPPER */
+    .main-content {
+      flex: 1 0 auto;
+      position: relative;
+      z-index: 2;
+      background-color: #ffffff;
+      border-radius: 40px 40px 0 0;
+      margin-top: 10px;
+    }
+    
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+      flex-wrap: wrap;
+      border-bottom: 2px solid #e6d7c0;
+      background: #ffffff;
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-radius: 0 0 30px 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .navbar-logo {
+      height: 60px;
+      width: auto;
+      max-width: 180px;
+      object-fit: contain;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    
+    .text-logo {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #0a4b4f;
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+    }
+    .text-logo span {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #c75c2f;
+      display: block;
+      letter-spacing: 2px;
+      margin-top: 3px;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      font-weight: 600;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #4a4a4a;
+      transition: all 0.3s;
+      font-size: 1rem;
+      cursor: pointer;
+      position: relative;
+      padding: 5px 0;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #c75c2f;
+      transition: width 0.3s;
+    }
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    .nav-links a:hover {
+      color: #c75c2f;
+    }
+    
+    /* BUTTONS */
+    .btn {
+      display: inline-block;
+      background: #c75c2f;
+      color: #ffffff;
+      font-weight: 700;
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s;
+      box-shadow: 0 8px 15px rgba(199, 92, 47, 0.2);
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+    }
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 20px rgba(199, 92, 47, 0.3);
+      background: #b34f24;
+    }
+    
+    /* BEFORE/AFTER SLIDER COMPONENT */
+    .ba-container {
+      background: #f9f9f9;
+      border-radius: 30px;
+      padding: 30px;
+      margin-bottom: 40px;
+      border: 1px solid #eaeaea;
+    }
+    .ba-title {
+      font-size: 1.8rem;
+      color: #0a4b4f;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .ba-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .ba-card {
+      flex: 1;
+      min-width: 250px;
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+    .ba-card:hover {
+      transform: translateY(-5px);
+    }
+    .ba-card h3 {
+      background: #0a4b4f;
+      color: #f3b34c;
+      padding: 12px;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+    .ba-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .ba-label {
+      padding: 10px;
+      text-align: center;
+      font-weight: 600;
+      color: #c75c2f;
+    }
+    .ba-pair {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .ba-single {
+      flex: 1;
+      min-width: 250px;
+    }
+    
+    /* FLOATING CALL BUTTON */
+    .floating-call {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #c75c2f;
+      color: #ffffff;
+      border-radius: 100px;
+      padding: 16px 30px;
+      font-weight: bold;
+      box-shadow: 0 8px 15px rgba(199, 92, 47, 0.3);
+      z-index: 99;
+      border: 2px solid #ffffff;
+      animation: gentlePulse 3s infinite;
+    }
+    @keyframes gentlePulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+    }
+    .floating-call a {
+      color: #ffffff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    /* FOOTER */
+    .footer {
+      background: #0a4b4f;
+      color: #ffffff;
+      padding: 60px 0 32px;
+      border-radius: 48px 48px 0 0;
+      margin-top: 60px;
+      position: relative;
+      z-index: 2;
+    }
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    .footer-logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+    }
+    .footer-logo {
+      height: 70px;
+      width: auto;
+      max-width: 180px;
+      object-fit: contain;
+      cursor: pointer;
+    }
+    .footer-text-logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.2;
+    }
+    .footer-text-logo span {
+      font-size: 0.9rem;
+      color: #f3b34c;
+      display: block;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin-top: 3px;
+    }
+    .footer-links {
+      display: flex;
+      gap: 70px;
+      flex-wrap: wrap;
+    }
+    .footer-col h4 {
+      color: #f3b34c;
+      margin-bottom: 20px;
+    }
+    .footer-col a {
+      display: block;
+      color: #dddddd;
+      text-decoration: none;
+      margin-bottom: 12px;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+    .footer-col a:hover {
+      color: #f3b34c;
+      transform: translateX(5px);
+    }
+    .footer-email, .footer-phone {
+      color: #f3b34c;
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+    .copyright {
+      margin-top: 48px;
+      border-top: 1px solid #2d6b6f;
+      padding-top: 24px;
+      text-align: center;
+      color: #dddddd;
+    }
+    .qr-container {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      padding: 15px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+    }
+    .qr-container img {
+      width: 120px;
+      height: 120px;
+      border: 3px solid #ffffff;
+      border-radius: 10px;
+      padding: 5px;
+      background: white;
+    }
+    
+    @media (max-width: 700px) {
+      .navbar { flex-direction: column; gap: 16px; }
+      .logo-container { justify-content: center; }
+      .nav-links { gap: 20px; flex-wrap: wrap; justify-content: center; }
+      .ba-pair { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP CONTACT BAR -->
+  <div class="top-contact-bar">
+    <div class="container">
+      <div class="contact-info-top">
+        <a href="tel:+18252887720"><i class="fas fa-phone-alt"></i> (825) 288-7720</a>
+        <a href="mailto:aladdin.g.services@gmail.com"><i class="fas fa-envelope"></i> aladdin.g.services@gmail.com</a>
+      </div>
+      <a href="https://g.page/r/CazmvfBhqn6PEBE/review" target="_blank" class="review-btn">
+        <i class="fas fa-star"></i> Leave us a Review
+      </a>
+    </div>
+  </div>
+
+  <!-- FLOATING CALL BUTTON -->
+  <div class="floating-call">
+    <a href="tel:+18252887720"><i class="fas fa-phone-alt"></i> <span>(825) 288-7720</span></a>
+  </div>
+
+  <!-- NAVBAR -->
+  <div class="container">
+    <div class="navbar">
+      <div class="logo-container">
+        <a href="index.html"><img src="logo4.jpg" alt="ALADDIN Logo" class="navbar-logo" width="180" height="60"></a>
+        <div class="text-logo">
+          <a href="index.html" style="text-decoration: none; color: inherit;">ALADDIN GENERAL SERVICES INC.</a>
+          <span>JUNK REMOVAL & ESTATE CLEAN-OUT SPECIALISTS</span>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+    <div class="container">
+
+      <!-- PAGE HEADER -->
+      <div style="text-align: center; padding: 40px 0 20px;">
+        <h1 style="font-size: 3.5rem; color: #0a4b4f; margin-bottom: 20px;">Hoarder Cleanout Calgary</h1>
+        <p style="font-size: 1.3rem; color: #666; max-width: 800px; margin: 0 auto;">
+          Compassionate, respectful, and judgment-free hoarding cleanup services in Calgary & surrounding areas.
+        </p>
+      </div>
+
+      <!-- COMPASSION SECTION -->
+      <div style="background: #f9f9f9; border-radius: 60px; padding: 50px; margin: 40px 0; text-align: center;">
+        <i class="fas fa-heart" style="font-size: 70px; color: #c75c2f; margin-bottom: 20px;"></i>
+        <h2 style="font-size: 2.5rem; color: #0a4b4f; margin-bottom: 20px;">We Help Without Judgment</h2>
+        <p style="font-size: 1.2rem; line-height: 1.8; max-width: 900px; margin: 0 auto; color: #333;">
+          Hoarding is a complex issue that requires patience, empathy, and discretion. We work with you — not against you — 
+          to create a clean, safe, and healthy living space. Every situation is unique, and we adapt to your pace and comfort level.
+        </p>
+      </div>
+
+      <!-- OUR APPROACH -->
+      <div style="margin: 60px 0;">
+        <h2 style="font-size: 2.5rem; color: #0a4b4f; text-align: center; margin-bottom: 40px;">Our Compassionate Process</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+          <div style="text-align: center; padding: 30px; background: white; border-radius: 30px; border: 1px solid #eaeaea;">
+            <i class="fas fa-phone-alt" style="font-size: 50px; color: #c75c2f; margin-bottom: 15px;"></i>
+            <h3 style="color: #0a4b4f;">1. Free Confidential Call</h3>
+            <p>We listen without judgment and answer your questions honestly.</p>
+          </div>
+          <div style="text-align: center; padding: 30px; background: white; border-radius: 30px; border: 1px solid #eaeaea;">
+            <i class="fas fa-hand-holding-heart" style="font-size: 50px; color: #c75c2f; margin-bottom: 15px;"></i>
+            <h3 style="color: #0a4b4f;">2. In-Person Assessment</h3>
+            <p>We visit your home discreetly and create a personalized plan.</p>
+          </div>
+          <div style="text-align: center; padding: 30px; background: white; border-radius: 30px; border: 1px solid #eaeaea;">
+            <i class="fas fa-users" style="font-size: 50px; color: #c75c2f; margin-bottom: 15px;"></i>
+            <h3 style="color: #0a4b4f;">3. Work at Your Pace</h3>
+            <p>We sort, clear, clean, and dispose — always with your consent.</p>
+          </div>
+          <div style="text-align: center; padding: 30px; background: white; border-radius: 30px; border: 1px solid #eaeaea;">
+            <i class="fas fa-home" style="font-size: 50px; color: #c75c2f; margin-bottom: 15px;"></i>
+            <h3 style="color: #0a4b4f;">4. Safe Living Space</h3>
+            <p>You get a clean, organized home you can feel good about.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- BEFORE & AFTER GALLERY - YOUR 6 IMAGES -->
+      <div style="margin: 60px 0;">
+        <h2 style="font-size: 2.5rem; color: #0a4b4f; text-align: center; margin-bottom: 20px;">Real Results: Before & After</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 40px;">Actual hoarder cleanout projects in Calgary. We transform spaces with care.</p>
+        
+        <!-- PAIR 1: H (House/Living Area) -->
+        <div class="ba-container">
+          <h3 class="ba-title">🏠 Living Area Cleanout</h3>
+          <div class="ba-pair">
+            <div class="ba-single">
+              <div class="ba-card">
+                <h3>⬅️ BEFORE</h3>
+                <img src="H,BF.jpg" alt="Before hoarder cleanout - living area before cleanup" width="100%" height="auto" loading="lazy">
+                <div class="ba-label">Before - Calgary Home</div>
+              </div>
+            </div>
+            <div class="ba-single">
+              <div class="ba-card">
+                <h3>➡️ AFTER</h3>
+                <img src="H,AF.jpg" alt="After hoarder cleanout - living area after cleanup" width="100%" height="auto" loading="lazy">
+                <div class="ba-label">After - Clean & Safe</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- PAIR 2: K (Kitchen) -->
+        <div class="ba-container">
+          <h3 class="ba-title">🍽️ Kitchen Cleanout</h3>
+          <div class="ba-pair">
+            <div class="ba-single">
+              <div class="ba-card">
+                <h3>⬅️ BEFORE</h3>
+                <img src="K,BF.jpg" alt="Before hoarder cleanout - kitchen before cleanup" width="100%" height="auto" loading="lazy">
+                <div class="ba-label">Before - Calgary Kitchen</div>
+              </div>
+            </div>
+            <div class="ba-single">
+              <div class="ba-card">
+                <h3>➡️ AFTER</h3>
+                <img src="K,AF.jpg" alt="After hoarder cleanout - kitchen after cleanup" width="100%" height="auto" loading="lazy">
+                <div class="ba-label">After - Spotless & Functional</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- PAIR 3: R (Room/Bedroom) -->
+        <div class="ba-container">
+          <h3 class="ba-title">🛏️ Bedroom Cleanout</h3>
+          <div class="ba-pair">
+            <div class="ba-single">
+              <div class="ba-card">
+                <h3>⬅️ BEFORE</h3>
+                <img src="R,BF.jpg" alt="Before hoarder cleanout - bedroom before cleanup" width="100%" height="auto" loading="lazy">
+                <div class="ba-label">Before - Calgary Bedroom</div>
+              </div>
+            </div>
+            <div class="ba-single">
+              <div class="ba-card">
+                <h3>➡️ AFTER</h3>
+                <img src="R,AF.jpg" alt="After hoarder cleanout - bedroom after cleanup" width="100%" height="auto" loading="lazy">
+                <div class="ba-label">After - Peaceful & Clean</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WHY CHOOSE ALADDIN FOR HOARDER CLEANOUT -->
+      <div style="background: #0a4b4f; border-radius: 60px; padding: 50px; margin: 60px 0; color: white; text-align: center;">
+        <h2 style="font-size: 2.5rem; color: #f3b34c; margin-bottom: 30px;">Why Trust ALADDIN?</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px;">
+          <div><i class="fas fa-star" style="font-size: 40px; color: #f3b34c;"></i><br><strong>19 Five-Star Reviews</strong><br>On Google</div>
+          <div><i class="fas fa-user-shield" style="font-size: 40px; color: #f3b34c;"></i><br><strong>Fully Insured</strong><br>Peace of mind</div>
+          <div><i class="fas fa-hand-sparkles" style="font-size: 40px; color: #f3b34c;"></i><br><strong>Judgment-Free</strong><br>Compassionate team</div>
+          <div><i class="fas fa-clock" style="font-size: 40px; color: #f3b34c;"></i><br><strong>We Work at Your Pace</strong><br>No pressure</div>
+        </div>
+      </div>
+
+      <!-- CONTACT FORM SECTION -->
+      <div style="background: linear-gradient(135deg, #f9f9f9, #ffffff); border-radius: 60px; padding: 60px; margin: 60px 0; border: 1px solid #c75c2f;">
+        <h2 style="color: #0a4b4f; font-size: 2.5rem; text-align: center; margin-bottom: 20px;">📋 Get a Free, Confidential Quote</h2>
+        <p style="color: #666666; font-size: 1.2rem; text-align: center; margin-bottom: 40px;">
+          No judgment. No obligation. Just help.
+        </p>
+        
+        <form action="https://formspree.io/f/mpqjpvbn" method="POST" style="max-width: 600px; margin: 0 auto;">
+          <input type="hidden" name="_subject" value="Hoarder Cleanout Request - ALADDIN">
+          <input type="hidden" name="service_type" value="Hoarder Cleanout">
+          
+          <div style="margin-bottom: 20px;">
+            <label for="name" style="display: block; margin-bottom: 8px; font-weight: 600; color: #0a4b4f;">Full Name *</label>
+            <input type="text" id="name" name="name" required style="width: 100%; padding: 14px; border: 1px solid #eaeaea; border-radius: 30px; font-size: 1rem;">
+          </div>
+          
+          <div style="margin-bottom: 20px;">
+            <label for="email" style="display: block; margin-bottom: 8px; font-weight: 600; color: #0a4b4f;">Email Address *</label>
+            <input type="email" id="email" name="email" required style="width: 100%; padding: 14px; border: 1px solid #eaeaea; border-radius: 30px; font-size: 1rem;">
+          </div>
+          
+          <div style="margin-bottom: 20px;">
+            <label for="phone" style="display: block; margin-bottom: 8px; font-weight: 600; color: #0a4b4f;">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required style="width: 100%; padding: 14px; border: 1px solid #eaeaea; border-radius: 30px; font-size: 1rem;">
+          </div>
+          
+          <div style="margin-bottom: 20px;">
+            <label for="location" style="display: block; margin-bottom: 8px; font-weight: 600; color: #0a4b4f;">Location (Calgary area)</label>
+            <input type="text" id="location" name="location" style="width: 100%; padding: 14px; border: 1px solid #eaeaea; border-radius: 30px; font-size: 1rem;">
+          </div>
+          
+          <div style="margin-bottom: 20px;">
+            <label for="message" style="display: block; margin-bottom: 8px; font-weight: 600; color: #0a4b4f;">Tell us about your situation (confidential) *</label>
+            <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 14px; border: 1px solid #eaeaea; border-radius: 20px; font-size: 1rem; resize: vertical;"></textarea>
+          </div>
+          
+          <div style="text-align: center;">
+            <button type="submit" class="btn" style="background: #c75c2f; padding: 16px 45px; font-size: 1.2rem;">
+              <i class="fas fa-paper-plane"></i> Send Confidential Request
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <div class="footer-logo-container">
+            <a href="index.html"><img src="logo4.jpg" alt="ALADDIN Logo" class="footer-logo" width="180" height="70"></a>
+            <div class="footer-text-logo">
+              <a href="index.html" style="text-decoration: none; color: white;">ALADDIN GENERAL SERVICES INC.</a>
+              <span>JUNK REMOVAL & ESTATE CLEAN-OUT SPECIALISTS</span>
+            </div>
+          </div>
+          <p>📍 Calgary • Airdrie • Chestermere • Okotoks • Cochrane</p>
+          <p>1510 30 Ave SW, Calgary, AB T2T1P3</p>
+          <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 10px;">
+            <div class="footer-email"><i class="fas fa-envelope"></i> aladdin.g.services@gmail.com</div>
+            <div class="footer-phone"><i class="fas fa-phone-alt"></i> (825) 288-7720</div>
+            <a href="https://g.page/r/CazmvfBhqn6PEBE/review" target="_blank" class="review-btn"><i class="fas fa-star"></i> Leave us a Review</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Calgary Services</h4>
+            <a href="junk-removal-calgary.html">Junk Removal Calgary</a>
+            <a href="estate-cleanouts-calgary.html">Estate Clean-Outs Calgary</a>
+            <a href="hoarder-cleanout.html">Hoarder Cleanout Calgary</a>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="index.html#services">Services</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="qr-container">
+        <img src="qr AGS.png" alt="Scan to review Aladdin General Services on Google" width="120" height="120">
+        <p><i class="fas fa-qrcode"></i> Scan with your phone camera to leave a review</p>
+      </div>
+      
+      <div class="copyright">
+        © 2025 ALADDIN GENERAL SERVICE INC. Family owned & operated in Calgary. Compassionate hoarder cleanout specialists.
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
