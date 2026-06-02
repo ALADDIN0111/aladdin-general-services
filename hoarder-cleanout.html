@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>Hoarder Cleanout Calgary | Compassionate Hoarding Cleanup Services | ALADDIN</title>
-  <meta name="description" content="Compassionate, judgment-free hoarder cleanout services in Calgary. We handle everything with care, respect, and discretion. Free estimates. 19 five-star reviews.">
+  <meta name="description" content="Compassionate, judgment-free hoarder cleanout services in Calgary. We handle everything with care, respect, and discretion. Free estimates. 5-star reviews.">
   <meta name="keywords" content="hoarder cleanout Calgary, hoarding cleanup Calgary, hoarder cleaning services, estate cleanout Calgary, junk removal hoarding">
   <meta name="geo.region" content="CA-AB">
   <meta name="geo.placename" content="Calgary">
@@ -112,6 +112,29 @@
     .review-btn i {
       color: #ffffff;
       font-size: 1rem;
+    }
+    
+    /* QR CODE STYLES */
+    .qr-container {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      padding: 15px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+    }
+    .qr-container img {
+      width: 120px;
+      height: 120px;
+      border: 3px solid #ffffff;
+      border-radius: 10px;
+      padding: 5px;
+      background: white;
+    }
+    .qr-container p {
+      color: #f3b34c;
+      font-size: 0.9rem;
+      margin-top: 10px;
     }
     
     /* MAIN CONTENT WRAPPER */
@@ -224,7 +247,7 @@
       background: #b34f24;
     }
     
-    /* BEFORE/AFTER SLIDER COMPONENT */
+    /* BEFORE/AFTER SECTION STYLES */
     .ba-container {
       background: #f9f9f9;
       border-radius: 30px;
@@ -238,15 +261,17 @@
       margin-bottom: 20px;
       text-align: center;
     }
-    .ba-wrapper {
+    .ba-pair {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
     }
-    .ba-card {
+    .ba-single {
       flex: 1;
       min-width: 250px;
+    }
+    .ba-card {
       background: white;
       border-radius: 20px;
       overflow: hidden;
@@ -273,16 +298,6 @@
       text-align: center;
       font-weight: 600;
       color: #c75c2f;
-    }
-    .ba-pair {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .ba-single {
-      flex: 1;
-      min-width: 250px;
     }
     
     /* FLOATING CALL BUTTON */
@@ -328,6 +343,7 @@
       justify-content: space-between;
       gap: 40px;
     }
+    
     .footer-logo-container {
       display: flex;
       align-items: center;
@@ -335,6 +351,7 @@
       margin-bottom: 15px;
       flex-wrap: wrap;
     }
+    
     .footer-logo {
       height: 70px;
       width: auto;
@@ -342,6 +359,7 @@
       object-fit: contain;
       cursor: pointer;
     }
+    
     .footer-text-logo {
       font-size: 1.8rem;
       font-weight: 700;
@@ -356,6 +374,7 @@
       letter-spacing: 1px;
       margin-top: 3px;
     }
+    
     .footer-links {
       display: flex;
       gap: 70px;
@@ -377,10 +396,14 @@
       color: #f3b34c;
       transform: translateX(5px);
     }
-    .footer-email, .footer-phone {
+    .footer-email {
       color: #f3b34c;
       font-size: 1.1rem;
-      margin-top: 10px;
+      margin-top: 15px;
+    }
+    .footer-phone {
+      color: #f3b34c;
+      font-size: 1.1rem;
     }
     .copyright {
       margin-top: 48px;
@@ -388,22 +411,6 @@
       padding-top: 24px;
       text-align: center;
       color: #dddddd;
-    }
-    .qr-container {
-      text-align: center;
-      margin-top: 30px;
-      margin-bottom: 20px;
-      padding: 15px;
-      background: rgba(255,255,255,0.1);
-      border-radius: 15px;
-    }
-    .qr-container img {
-      width: 120px;
-      height: 120px;
-      border: 3px solid #ffffff;
-      border-radius: 10px;
-      padding: 5px;
-      background: white;
     }
     
     @media (max-width: 700px) {
@@ -416,7 +423,7 @@
 </head>
 <body>
 
-  <!-- TOP CONTACT BAR -->
+  <!-- TOP CONTACT BAR WITH REVIEW BUTTON -->
   <div class="top-contact-bar">
     <div class="container">
       <div class="contact-info-top">
@@ -575,7 +582,7 @@
       <div style="background: #0a4b4f; border-radius: 60px; padding: 50px; margin: 60px 0; color: white; text-align: center;">
         <h2 style="font-size: 2.5rem; color: #f3b34c; margin-bottom: 30px;">Why Trust ALADDIN?</h2>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px;">
-          <div><i class="fas fa-star" style="font-size: 40px; color: #f3b34c;"></i><br><strong> Five-Star Reviews</strong><br>On Google</div>
+          <div><i class="fas fa-star" style="font-size: 40px; color: #f3b34c;"></i><br><strong>5-Star Reviews</strong><br>On Google</div>
           <div><i class="fas fa-user-shield" style="font-size: 40px; color: #f3b34c;"></i><br><strong>Fully Insured</strong><br>Peace of mind</div>
           <div><i class="fas fa-hand-sparkles" style="font-size: 40px; color: #f3b34c;"></i><br><strong>Judgment-Free</strong><br>Compassionate team</div>
           <div><i class="fas fa-clock" style="font-size: 40px; color: #f3b34c;"></i><br><strong>We Work at Your Pace</strong><br>No pressure</div>
@@ -626,27 +633,52 @@
         </form>
       </div>
 
+      <!-- OTHER SERVICES SECTION - QUICK LINKS (ADDED - matches your service pages) -->
+      <div style="background: #f9f9f9; border-radius: 50px; padding: 50px; margin: 60px 0; text-align: center;">
+        <h2 style="font-size: 2rem; color: #0a4b4f; margin-bottom: 30px;">Other Services We Offer in Calgary</h2>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+          <a href="junk-removal-calgary.html" style="background: #0a4b4f; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s;">🗑️ Junk Removal</a>
+          <a href="estate-cleanouts-calgary.html" style="background: #0a4b4f; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s;">🏠 Estate Cleanouts</a>
+          <a href="hoarder-cleanout.html" style="background: #0a4b4f; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s;">🤝 Hoarder Cleanout</a>
+          <a href="garage-reset-calgary.html" style="background: #0a4b4f; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s;">🚗 Garage Reset</a>
+          <a href="full-house-clearouts-calgary.html" style="background: #0a4b4f; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s;">🏚️ Full House Clearouts</a>
+          <a href="handyman-calgary.html" style="background: #0a4b4f; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s;">🔧 Handyman Services</a>
+          <a href="cleaning-calgary.html" style="background: #0a4b4f; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s;">🧹 Light Cleaning</a>
+          <a href="shed-deck-demolition-calgary.html" style="background: #0a4b4f; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s;">🏗️ Shed & Deck Demolition</a>
+        </div>
+      </div>
+
     </div>
   </div>
 
-  <!-- FOOTER -->
+  <!-- FOOTER - UPDATED with Hoarder Cleanout link -->
   <div class="footer">
     <div class="container">
       <div class="footer-content">
         <div>
           <div class="footer-logo-container">
-            <a href="index.html"><img src="logo4.jpg" alt="ALADDIN Logo" class="footer-logo" width="180" height="70"></a>
+            <a href="index.html">
+              <img src="logo4.jpg" alt="ALADDIN Logo" class="footer-logo" width="180" height="70">
+            </a>
             <div class="footer-text-logo">
-              <a href="index.html" style="text-decoration: none; color: white;">ALADDIN GENERAL SERVICES INC.</a>
+              <a href="index.html" style="text-decoration: none; color: white;">
+                ALADDIN GENERAL SERVICES INC.
+              </a>
               <span>JUNK REMOVAL & ESTATE CLEAN-OUT SPECIALISTS</span>
             </div>
           </div>
           <p>📍 Calgary • Airdrie • Chestermere • Okotoks • Cochrane</p>
           <p>1510 30 Ave SW, Calgary, AB T2T1P3</p>
           <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 10px;">
-            <div class="footer-email"><i class="fas fa-envelope"></i> aladdin.g.services@gmail.com</div>
-            <div class="footer-phone"><i class="fas fa-phone-alt"></i> (825) 288-7720</div>
-            <a href="https://g.page/r/CazmvfBhqn6PEBE/review" target="_blank" class="review-btn"><i class="fas fa-star"></i> Leave us a Review</a>
+            <div class="footer-email">
+              <i class="fas fa-envelope"></i> aladdin.g.services@gmail.com
+            </div>
+            <div class="footer-phone">
+              <i class="fas fa-phone-alt"></i> (825) 288-7720
+            </div>
+            <a href="https://g.page/r/CazmvfBhqn6PEBE/review" target="_blank" class="review-btn">
+              <i class="fas fa-star"></i> Leave us a Review
+            </a>
           </div>
         </div>
         <div class="footer-links">
@@ -655,6 +687,11 @@
             <a href="junk-removal-calgary.html">Junk Removal Calgary</a>
             <a href="estate-cleanouts-calgary.html">Estate Clean-Outs Calgary</a>
             <a href="hoarder-cleanout.html">Hoarder Cleanout Calgary</a>
+            <a href="garage-reset-calgary.html">Garage Reset Calgary</a>
+            <a href="full-house-clearouts-calgary.html">Full House Clear-Outs Calgary</a>
+            <a href="handyman-calgary.html">Handyman Calgary</a>
+            <a href="cleaning-calgary.html">Cleaning Calgary</a>
+            <a href="shed-deck-demolition-calgary.html">Shed & Deck Demolition Calgary</a>
           </div>
           <div class="footer-col">
             <h4>Quick Links</h4>
@@ -672,10 +709,12 @@
       </div>
       
       <div class="copyright">
-        © 2025 ALADDIN GENERAL SERVICE INC. Family owned & operated in Calgary. Compassionate hoarder cleanout specialists.
+        © 2026 ALADDIN GENERAL SERVICE INC. Family owned & operated in Calgary. Compassionate hoarder cleanout specialists.
       </div>
     </div>
   </div>
 
+</body>
+</html>
 </body>
 </html>
