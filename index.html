@@ -9,18 +9,17 @@
   <!-- FAVICON -->
   <link rel="icon" type="image/jpeg" href="logo4.jpg">
   
-  <!-- PRECONNECT for faster external resources -->
+  <!-- PRECONNECT for Google Fonts (Performance Fix) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   
   <!-- PRELOAD Google Fonts to reduce render-blocking -->
   <link rel="preload" href="https://fonts.gstatic.com/s/inter/v12/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2" as="font" type="font/woff2" crossorigin>
   
-  <!-- Google Font with display=swap (already correct) -->
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   
-  <!-- Font Awesome - NON-BLOCKING -->
+  <!-- Font Awesome - NON-BLOCKING (Performance Fix) -->
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
   
@@ -206,7 +205,6 @@
       display: flex;
       gap: 36px;
       font-weight: 600;
-      flex-wrap: wrap;
     }
     .nav-links a {
       text-decoration: none;
@@ -234,7 +232,7 @@
       color: #c75c2f;
     }
     
-    /* BUTTONS - improved contrast for accessibility */
+    /* BUTTONS - added text-shadow for accessibility (low contrast fix) */
     .btn {
       display: inline-block;
       background: #c75c2f;
@@ -264,11 +262,10 @@
       background: #0c5e63;
     }
     
-    /* HERO SLIDER - fixed aspect ratio to prevent layout shift */
+    /* HERO SLIDER - added aspect-ratio to fix CLS (layout shift) */
     .slider-container {
       position: relative;
       width: 100%;
-      height: auto;
       aspect-ratio: 16 / 9;
       min-height: 400px;
       overflow: hidden;
@@ -387,7 +384,7 @@
       border-radius: 2px;
     }
     
-    /* DISCOUNT BADGE - improved contrast */
+    /* DISCOUNT BADGE - added text-shadow for accessibility */
     .discount-badge {
       display: inline-block;
       background: #c75c2f;
@@ -536,41 +533,6 @@
       width: 20px;
     }
     
-    /* FLOATING CALL BUTTON - improved contrast */
-    .floating-call {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: #c75c2f;
-      color: #ffffff;
-      border-radius: 100px;
-      padding: 16px 30px;
-      font-weight: bold;
-      box-shadow: 0 8px 15px rgba(199, 92, 47, 0.3);
-      z-index: 99;
-      border: 2px solid #ffffff;
-      animation: gentlePulse 3s infinite;
-      text-shadow: 0 0 2px rgba(0,0,0,0.3);
-    }
-    @keyframes gentlePulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.03); }
-    }
-    .floating-call a {
-      color: #ffffff;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    
-    /* Prevent layout shift on all images */
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-    
     /* FOOTER */
     .footer {
       background: #0a4b4f;
@@ -666,6 +628,69 @@
       color: #dddddd;
     }
     
+    /* FLOATING CALL BUTTON - added text-shadow for accessibility */
+    .floating-call {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #c75c2f;
+      color: #ffffff;
+      border-radius: 100px;
+      padding: 16px 30px;
+      font-weight: bold;
+      box-shadow: 0 8px 15px rgba(199, 92, 47, 0.3);
+      z-index: 99;
+      border: 2px solid #ffffff;
+      animation: gentlePulse 3s infinite;
+      text-shadow: 0 0 2px rgba(0,0,0,0.3);
+    }
+    @keyframes gentlePulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+    }
+    .floating-call a {
+      color: #ffffff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    /* Prevent layout shift on all images */
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    /* ABOUT PREVIEW SECTION */
+    .about-preview {
+      background: #f9f9f9;
+      border-radius: 50px;
+      padding: 40px;
+      margin: 60px 0;
+      border: 1px solid #eaeaea;
+    }
+    
+    .about-preview h2 {
+      color: #0a4b4f;
+    }
+    
+    .about-preview p {
+      color: #666666;
+    }
+    
+    .area-card {
+      background: #0a4b4f;
+      border-radius: 30px;
+      padding: 30px;
+      color: white;
+    }
+    
+    .area-card h3 {
+      color: #f3b34c;
+    }
+    
     @media (max-width: 700px) {
       .navbar { flex-direction: column; gap: 16px; }
       .logo-container { justify-content: center; }
@@ -731,18 +756,15 @@
       </div>
       <div class="nav-links">
         <a href="index.html">Home</a>
-        <a href="junk-removal-calgary.html">Junk Removal</a>
-        <a href="estate-cleanouts-calgary.html">Estate Cleanouts</a>
-        <a href="hoarder-cleanout.html">Hoarder Cleanout</a>
-        <a href="garage-reset-calgary.html">Garage Reset</a>
-        <a href="full-house-clearouts-calgary.html">House Clearouts</a>
+        <a href="#services">Services</a>
         <a href="about.html">About</a>
+        <a href="hoarder-cleanout.html">Hoarder Cleanout</a>
         <a href="contact.html">Contact</a>
       </div>
     </div>
   </div>
 
-  <!-- MAIN CONTENT - wrapped in <main> for accessibility -->
+  <!-- MAIN CONTENT - wrapped in <main> for accessibility landmark -->
   <main class="main-content">
     <div class="container">
 
@@ -904,7 +926,7 @@
             </div>
           </a>
           
-          <!-- HOARDER CLEANOUT CARD -->
+          <!-- HOARDER CLEANOUT CARD - NEW! -->
           <a href="hoarder-cleanout.html" class="service-card">
             <div class="card-image-spot">
               <div class="card-slider-container" id="hoarder-card-slider">
@@ -1173,9 +1195,9 @@
             <h4>Calgary Services</h4>
             <a href="junk-removal-calgary.html">Junk Removal Calgary</a>
             <a href="estate-cleanouts-calgary.html">Estate Clean-Outs Calgary</a>
-            <a href="hoarder-cleanout.html">Hoarder Cleanout Calgary</a>
             <a href="garage-reset-calgary.html">Garage Reset Calgary</a>
             <a href="full-house-clearouts-calgary.html">Full House Clear-Outs Calgary</a>
+            <a href="hoarder-cleanout.html">Hoarder Cleanout Calgary</a>
             <a href="handyman-calgary.html">Handyman Calgary</a>
             <a href="cleaning-calgary.html">Cleaning Calgary</a>
             <a href="shed-deck-demolition-calgary.html">Shed & Deck Demolition Calgary</a>
@@ -1183,10 +1205,9 @@
           <div class="footer-col">
             <h4>Quick Links</h4>
             <a href="index.html">Home</a>
-            <a href="junk-removal-calgary.html">Junk Removal</a>
-            <a href="estate-cleanouts-calgary.html">Estate Cleanouts</a>
-            <a href="hoarder-cleanout.html">Hoarder Cleanout</a>
+            <a href="#services">Services</a>
             <a href="about.html">About</a>
+            <a href="hoarder-cleanout.html">Hoarder Cleanout</a>
             <a href="contact.html">Contact</a>
           </div>
         </div>
@@ -1198,7 +1219,7 @@
       </div>
       
       <div class="copyright">
-        © 2026 ALADDIN GENERAL SERVICE INC. Family owned & operated in Calgary.
+        © 2025 ALADDIN GENERAL SERVICE INC. Family owned & operated in Calgary.
       </div>
     </div>
   </div>
